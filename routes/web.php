@@ -17,6 +17,8 @@ use App\Models\inmuebles;
 Auth::routes();
 
 Route::get('/', [App\Http\Controllers\inicioController::class, 'index'])->name('inicio');
+
+Route::get('/inicioshow', [App\Http\Controllers\inicioController::class, 'inicioshow'])->name('inicioshow');
 // Route::get('/', function () {
 //     return view('inicio');
 // });
@@ -24,7 +26,7 @@ Route::get('/', [App\Http\Controllers\inicioController::class, 'index'])->name('
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/inmuebles', [inmueblesController::class, 'index']);
+                Route::get('/inmuebles', [inmueblesController::class, 'index']);
 
                 Route::get('inmuebles', [App\Http\Controllers\inmueblesController::class, 'index'])->name('inmuebles.index');
 

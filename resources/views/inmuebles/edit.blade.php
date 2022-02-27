@@ -57,12 +57,14 @@
                   <div class="form-group">
                     <strong>Tipo de inmueble</strong>
                     <select name="tipoinmueble" id="inputCategoria_id" class="form-control custom-select">
-                      <option value="">Selecccione el inmueble</option>
-                      <option value="1">Casa</option>
-                      <option value="2">Apartamento</option>
-                      <option value="3">Local</option>
-                      <option value="4">Lote</option>
-                      <option value="5">finca</option>
+                      <option value="{{ old('tipoinmueble', $inmuebles->tipoinmueble) }}">Selecccione el inmueble</option>
+                      <option value="Casa">Casa</option>
+                      <option value="Apartamento">Apartamento</option>
+                      <option value="Hanitacion">Habitacion</option>
+                      <option value="Lote">Lote</option>
+                      <option value="Finca">Finca</option>
+                      <option value="Local">Local</option>
+                      <option value="Finca">Finca</option>
                       {{-- @foreach($categorias as $categoria)
                         <option value="{{ $categoria->id }}">{{ $categoria->nombrecate }}</option>
                       @endforeach --}}
@@ -73,8 +75,8 @@
                     <strong>Gestion </strong>
                     <select name="gestion" id="inputCategoria_id" class="form-control custom-select">
                       <option value="">Selecccione la gestion</option>
-                      <option value="1">Arriendo</option>
-                      <option value="2">Venta</option>
+                      <option value="Arriendo">Arriendo</option>
+                      <option value="Venta">Venta</option>
                       {{-- @foreach($categorias as $categoria)
                         <option value="{{ $categoria->id }}">{{ $categoria->nombrecate }}</option>
                       @endforeach --}}

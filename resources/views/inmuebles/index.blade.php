@@ -40,8 +40,8 @@
 
    <div class="row pt-4 d-flex justify-content-center">
     <div class="col-md-8">
-      <a class="btn btn-md btn-primary" href="{{ route('inmuebles.create') }}">Agregar categoria</a>
-      <table class="table">
+      <a class="btn btn-md btn-primary" href="{{ route('inmuebles.create') }}">Agregar inmueble</a>
+      <table class="table table-responsive">
           <thead>
             <tr>
               <th scope="col">ID</th>
@@ -51,6 +51,7 @@
               <th scope="col">Tipo inmueble</th>
               <th scope="col">Gestion</th>
               <th scope="col">Valor</th>
+              <th class="text-right">Acciones</th>
             </tr>
           </thead>
           <tbody>
@@ -64,7 +65,8 @@
               <td>{{ $inmueble->gestion }}</td>
               <td>{{ $inmueble->valor }}</td>
               <td class="td-actions text-right">
-              <a href="{{ route('inmuebles.edit', $inmueble->id) }}"><button type="button" class="btn btn-success">Editar</button></a>
+              <a href="{{ route('inmuebles.edit', $inmueble->id) }}"><button type="button" class="btn btn-warning">Editar</button></a>
+              <a href="{{ route('inmuebles.show', $inmueble->id) }}"><button type="button" class="btn btn-success">Ver</button></a>
               <form action="{{ route('inmuebles.destroy', $inmueble->id) }}" method="POST" style="display: inline-block;" onsubmit="return confirm('Seguro?')">
                 @csrf
                 @method('DELETE')
