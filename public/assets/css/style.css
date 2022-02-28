@@ -223,7 +223,11 @@ label{
 /*-- //header-bot --*/
 /*-- banner-top --*/
 .ban-top{
-	background:#000;
+	background:rgb(0, 7, 68, 0.9);
+	position: absolute;
+    top: 17px;
+    z-index: 100;
+    width: 100%;
     
 }
 .dropdown-menu.columns-3 {

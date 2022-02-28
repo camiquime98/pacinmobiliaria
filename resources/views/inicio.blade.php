@@ -86,7 +86,7 @@
             </div> --}}
             <!-- //header-bot -->
             <!-- banner -->
-            <div class="ban-top" style="background-color: #0a3daf">
+            <div class="ban-top">
                 <div class="container">
                     <div class="top_nav_left">
                         <nav class="navbar navbar-default">
