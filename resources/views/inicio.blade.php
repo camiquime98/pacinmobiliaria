@@ -249,39 +249,57 @@
               {{-- {!! $inmuebles->links() !!} --}}
               </div>
 
-            <div class="container">
-              <div class="row">
-                
-                <div class="col-md-2">
-                  <div class="product-men">
-                    <div class="men-pro-item simpleCart_shelfItem">
-                      @foreach($inmuebles as $inmueble)  
-                      <div class="men-thumb-item">
-                            <img src="assets/images/a8.png" alt="" class="pro-image-front">
-                            <img src="assets/images/a8.png" alt="" class="pro-image-back">
-                                <div class="men-cart-pro">
-                                    <div class="inner-men-cart-pro">
-                                        <a href="{{ route('inicioshow') }}" class="link-product-add-cart">{{ $inmueble->zona }}</a>
-                                    </div>
-                                </div>
-                                <span class="product-new-top">1+1 Offer</span>
+            <div class="container" style="margin-top: 40px;">
+                <div class="row">
+					@foreach($inmuebles as $inmueble) 
+                  <div class="col-md-3 col-sm-12">
+                    <div class="product-men">
+                      <div class="men-pro-item simpleCart_shelfItem">
+                         
+                        <div class="men-thumb-item">
+                              <img src="assets/images/a8.png" alt="" class="pro-image-front">
+                              <img src="assets/images/a8.png" alt="" class="pro-image-back">
+                                  <div class="men-cart-pro">
+                                      <div class="inner-men-cart-pro">
+                                          <a href="{{ route('inicioshow', $inmueble->id) }}" class="link-product-add-cart">{{ $inmueble->municipio }}
+										  
+										</a>
+                                      </div>
+                                  </div>
+                                  <span class="product-new-top">{{ $inmueble->gestion }}</span>
+                                  
+                          </div>
+                          <div class="item-info-product ">
+							<a href="{{ route('inicioshow', $inmueble->id) }}">   
+							<div class="row" style="margin: 0px; padding: 0px;"> 
+								  <div class="col-md-4">
+									  <h5 style="font-weight: 300; font-size: 0.7em;">Habitaciones</h5>
+									  <p style="font-weight: 300; font-size: 0.7em;">{{ $inmueble->alcobas }}</p></div>
+								  <div class="col-md-4">
+									  <h5 style="font-weight: 300; font-size: 0.7em;">Baños</h5>
+									  <p style="font-weight: 300; font-size: 0.7em;">{{ $inmueble->banos }}</p></div>
+								  <div class="col-md-4">
+									  <h5 style="font-weight: 300; font-size: 0.7em;">Area</h5>
+									<p style="font-weight: 300; font-size: 0.7em;">{{ $inmueble->area }}</p></div>
+							  </div>
+							</a><hr>
+								<center><h5>ZONA - {{ $inmueble->zona }}</h5></center>
+                              <h4><p class="p-1" style="text-align: justify"></p></h4>
+                              <div class="info-product-price">
                                 
-                        </div>
-                        <div class="item-info-product ">
-                            <h4><a href="single.html">Next Blue Blazer</a></h4>
-                            <div class="info-product-price">
-                              
-                                <span class="item_price">${{ $inmueble->valor }}</span>
-                                <del>$520.000</del>
-                                @endforeach
-                            </div>
-                            <a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
-                        </div>
-                    </div>
+                                  <span class="item_price">${{ $inmueble->valor }}</span>
+                                  <del>$520.000</del>
+                                  
+                              </div>
+                              <center><a href="{{ route('inicioshow', $inmueble->id) }}" class="item_add single-item hvr-outline-out button2">{{ $inmueble->tipoinmueble }}</a></center>								
+                          </div>
+                      </div>
+					 
+                  </div>
+                  </div>
+				  @endforeach
                 </div>
-                </div>
-              </div>
-              
+                
             </div>
             <div class="new_arrivals">
                 <div class="container">

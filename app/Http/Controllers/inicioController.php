@@ -9,13 +9,13 @@ class inicioController extends Controller
 {
     public function index()
     {
-        $inmuebles =inmuebles::paginate(5);
+        $inmuebles = inmuebles::paginate(5);
         return view('inicio', compact('inmuebles'));
     }
 
-    public function inicioshow()
+    public function indexshow($id)
     {
-        // $inmuebles=inmuebles::findOrFail($id);
-        return view('inicioshow');
+        $inmuebles=inmuebles::findOrFail($id);
+        return view('inicioshow', compact('inmuebles'));
     }
 }

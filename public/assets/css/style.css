@@ -1267,6 +1267,7 @@ h2.resp-accordion {
 }
 .product-men img {
     width: 100%;
+	height: 200px;
 }
 .product-easy {
     padding: 40px 0;
@@ -1335,7 +1336,8 @@ h2.resp-accordion {
     background: #603cff none repeat scroll 0 0;
     color: #fff;
     display: inline-block;
-    left: 5px;
+    left: 10px;
+	right: 10px;
     padding: 0 10px 1px;
     position: absolute;
     text-transform: lowercase;
@@ -1425,7 +1427,7 @@ h2.resp-accordion {
     transition: all 0.5s ease-out 0s;
 }
 .men-thumb-item:hover .inner-men-cart-pro .link-product-add-cart {
-    top: 83.5%;
+    top: 73.5%;
 }
 .link-product-add-cart:hover {
     background: #FDA30E none repeat scroll 0 0;

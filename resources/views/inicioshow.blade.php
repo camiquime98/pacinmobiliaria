@@ -2,24 +2,66 @@
 @extends('layouts.header.navbar')
 @section('content')
 <div class="container">
-    <div class="main-content">
-
-      <div class="row">
-        
-        <div class="col-md-6">
-            <div class="card">
-              <div class="card-header card-header-primary">
-                <div class="card-title"><p class="card-category">Vista detallada del inmueble - publico</p></div>
-              </div>
-             </div>
-            
-        </div>
-        <div class="col-md-6">
-          
-        </div>
-        
+  <div class="main-content">
+    <div class="row p-3">
+      <div class="col-md-8 col-sm-12">
+          <div class="card">
+            <div class="card-header card-header-primary">
+              <div class="card-title"><h2 style="color: coral;">{{ $inmuebles->gestion }} - {{ $inmuebles->municipio }}</h2><p class="card-category">Vista detallada del inmueble</p></div>
+              <hr>
+            </div>
+           </div>
       </div>
+      <div class="col-md-4 col-sm-12">
+        <div class="card">
+          <div class="card-header">
+            <div class="row">
+              <div class="col-5"><b><h2 style="color: rgb(52, 172, 219);">VALOR</h2></b></div>
+              <div class="col-7 text-end">
+                <b><h3 style="color: coral;">${{ $inmuebles->valor }}</h3></b>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <b><h4 style="color: rgb(52, 172, 219);">Residencia</h4></b><hr>
+            <div class="row t-3">
+              <div class="col-6">Departamento</div>
+              <div class="col-6 text-end"><p>{{ $inmuebles->departamento }}</p></div>
+              <div class="col-6">Ciudad</div>
+              <div class="col-6 text-end"><p>{{ $inmuebles->municipio }}</p></div>
+              <div class="col-6">Barrio</div>
+              <div class="col-6 text-end"><p>{{ $inmuebles->barrio }}</p></div>
+              <div class="col-6">Zona</div>
+              <div class="col-6 text-end"><p>{{ $inmuebles->zona }}</p></div>
+              <div class="col-6">Direccion</div>
+              <div class="col-6 text-end"><p>{{ $inmuebles->direccion }}</p></div>
+              <div class="col-6">Estrato</div>
+              <div class="col-6 text-end"></div>
+            </div><br>
+            <b><h4 style="color: rgb(52, 172, 219);">Detalle - inmueble</h4></b><hr>
+            <div class="row t-3">
+              <div class="col-6"><p>Tipo de inmueble</p></div>
+              <div class="col-6 text-end"><p>{{ $inmuebles->tipoinmueble }}</p></div>
+              <div class="col-6"><p>Categoria</p></div>
+              <div class="col-6 text-end"><p>{{ $inmuebles->gestion }}</p></div>
+              <div class="col-6"><p>Habitaciones</p></div>
+              <div class="col-6 text-end"><p>{{ $inmuebles->alcobas }}</p></div>
+              <div class="col-6"><p>Baños</p></div>
+              <div class="col-6 text-end"><p>{{ $inmuebles->banos }}</p></div>
+              <div class="col-6"><p>Area</p></div>
+              <div class="col-6 text-end"><p>{{ $inmuebles->area }}</p></div>
+              <div class="col-6"><p>Descripcion</p></div>
+              <div class="col-6 text-end">
+                <p style="text-align: justify">{{ $inmuebles->descripcion }}</p>
+              </div>
+            </div><hr>
+            
+          </div>
+        </div>
+      </div>
+      
     </div>
+  </div>
 </div>
              {{-- <div class="card-boy">
                <div class="author">

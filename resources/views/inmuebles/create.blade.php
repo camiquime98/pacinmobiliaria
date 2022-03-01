@@ -1,12 +1,15 @@
 @extends('layouts.app')
 @section('content')
-  <div class="container-fluid">
-    <div class="main-content">
+  <div class="container-fluid m-0 p-0">
+    <div class="main-content" style="margin-top: 70px">
+      <div class="container-fluid p-3" style="background: azure;">
+        <b><h1 style="color: forestgreen;">CREACIÓN - INMUEBLE</h1></b>
+      </div><hr>
       <form action="{{ route('inmuebles.store') }}" method="post" class="form-horizontal p-2" enctype="multipart/form-data">
         @csrf
       <div class="row d-flex justify-content-center p-3">
         <div class="col-md-5">
-          <h4 style="color:rgb(247, 131, 29)">Datos basicos</h4>
+          <h4 style="color:rgb(247, 131, 29)">Datos residencia</h4>
           <hr>
           <div class="row">
             <div class="col-md-6 p-3">
@@ -84,7 +87,36 @@
             </div>
             <div class="col-md-12 p-3">
               <strong>Descripcion</strong>
-              <textarea class="form-control" name="descripcion" placeholder="Descripcion" value="{{ old('valor') }}" autofocus></textarea>
+              <textarea class="form-control" name="descripcion" placeholder="Descripcion" value="{{ old('descripcion') }}" autofocus></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-8 col-sm-12">
+          <div class="row">
+            <div class="col-md-12">
+              <h3>Datos del propietario</h3>
+            </div>
+            <hr>
+            <div class="col-md-4">
+              <strong>Nombres</strong>
+              <input type="text" class="form-control" name="nombres" placeholder="Nombres completos" value="{{ old('nombres') }}" autofocus>
+            </div>
+            <div class="col-md-4">
+              <strong>Apellidos</strong>
+              <input type="text" class="form-control" name="apellidos" placeholder="Apellidos completos" value="{{ old('apellidos') }}" autofocus>
+            </div>
+            <div class="col-md-4">
+
+            </div>
+            <div class="col-md-4">
+
+            </div>
+            <div class="col-md-4">
+
+            </div>
+            <div class="col-md-4">
+
             </div>
           </div>
         </div>

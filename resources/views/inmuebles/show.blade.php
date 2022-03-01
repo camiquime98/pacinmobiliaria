@@ -1,8 +1,7 @@
 @extends('layouts.app')
 @section('content')
-<div class="container">
+<div class="container" style="margin-top: 90px">
     <div class="main-content">
-
       <div class="row p-3">
         <div class="col-md-8 col-sm-12">
             <div class="card">
@@ -52,11 +51,13 @@
                 <div class="col-6"><p>Area</p></div>
                 <div class="col-6 text-end"><p>{{ $inmuebles->area }}</p></div>
                 <div class="col-6"><p>Descripcion</p></div>
-                <div class="col-6 text-end"><p>{{ $inmuebles->descripcion }}</p></div>
+                <div class="col-6 text-end">
+                  <p style="text-align: justify">{{ $inmuebles->descripcion }}</p>
+                </div>
               </div><hr>
-              <div class="row">
+              <div class="row p-3">
                 <div class="col-lg-6 col-sm-12 text-center"><a href="{{ route('inmuebles.edit', $inmuebles->id) }}"><button type="button" class="btn col-lg-10 text-white btn-warning">Editar</button></a></div>
-              <div class="col-lg-6 col-sm-12 text-center"><a href="{{ route('inmuebles.index') }}"><button type="button" class="btn col-lg-10 text-white btn-success">volver</button></a></div>
+                <div class="col-lg-6 col-sm-12 text-center"><a href="{{ route('inmuebles.index') }}"><button type="button" class="btn col-lg-10 text-white btn-success">volver</button></a></div>
               </div>
               
             </div>
