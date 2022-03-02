@@ -1,83 +1,133 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+@include('layouts.header.headerinicio')
+@include('layouts.header.header')  
+{{-- @include('layouts.footer.footer') --}}
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-</head>
 <body>
+  
+  <a href="https://api.whatsapp.com/send?phone=+573143013069&text=Buen%20d%C3%ADa,%20deseo%20obtener%20m%C3%A1s%20informaci%C3%B3n%20" class="float" target="_blank">
+  <i class="fa fa-whatsapp my-float"></i>
+  </a>
+
+
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <div class="ban-top">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                            @endif
-
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
+                <div class="top_nav_left">
+                    <nav class="navbar navbar-default navbar-expand-md navbar-light shadow-sm">
+                      <div class="container-fluid">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                                          
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                          </button>
+                        </div>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
+                          <ul class="nav navbar-nav menu__list">
+                            <li class="active menu__item menu__item--current"><a class="menu__link" href="{{ url('/home') }}">Home <span class="sr-only">(current)</span></a></li>
+                            <li class="dropdown menu__item">
+                                <a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">women's wear <span class="caret"></span></a>
+                                    <ul class="dropdown-menu multi-column columns-3">
+                                        <div class="row">
+                                            <div class="col-sm-3 multi-gd-img">
+                                                <ul class="multi-column-dropdown">
+                                                    <li><a href="womens.html">Clothing</a></li>
+                                                    <li><a href="womens.html">Wallets</a></li>
+                                                    <li><a href="womens.html">Footwear</a></li>
+                                                    <li><a href="womens.html">Watches</a></li>
+                                                    <li><a href="womens.html">Accessories</a></li>
+                                                    <li><a href="womens.html">Bags</a></li>
+                                                    <li><a href="womens.html">Caps & Hats</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-3 multi-gd-img">
+                                                <ul class="multi-column-dropdown">
+                                                    <li><a href="womens.html">Jewellery</a></li>
+                                                    <li><a href="womens.html">Sunglasses</a></li>
+                                                    <li><a href="womens.html">Perfumes</a></li>
+                                                    <li><a href="womens.html">Beauty</a></li>
+                                                    <li><a href="womens.html">Shirts</a></li>
+                                                    <li><a href="womens.html">Sunglasses</a></li>
+                                                    <li><a href="womens.html">Swimwear</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-6 multi-gd-img multi-gd-text ">
+                                                <a href="womens.html"><img src="assets/images/woo.jpg" alt=" "/></a>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </ul>
                             </li>
-                        @endguest
-                    </ul>
+                            <li class=" menu__item"><a class="menu__link" href="electronics.html">Electronics</a></li>                            
+                                <li class="menu__item">
+                                    <a class="menu__link" href="{{ route('inmuebles.index')}}">inmuebles</a>
+                                </li>  
+                          </ul>
+                        </div>
+                      </div>
+                    </nav>	
                 </div>
-            </div>
-        </nav>
+                
+<div class="top_nav_right">
+                    <!-- Authentication Links -->
+<nav class="navbar">
+@guest
+@if (Route::has('login'))
+    <li class="menu-item">
+        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+    </li>
+@endif
 
-        <main class="py-4">
+@if (Route::has('register'))
+    <li class="menu__item">
+        <a class="menu__link" href="{{ route('register') }}">{{ __('Register') }}</a>
+    </li>
+@endif
+@else
+
+    <li class="menu__item dropdown d-flex justify-content-center">
+        <a id="navbarDropdown" style="color: rgb(182, 217, 248); font-size:13px" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+            {{ Auth::user()->name }}
+        </a>
+    
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="{{ route('logout') }}"
+               onclick="event.preventDefault();
+                             document.getElementById('logout-form').submit();">
+                {{ __('Logout') }}
+            </a>
+    
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                @csrf
+            </form>
+        </div>
+    </li>
+    
+</nav>@endguest
+	
+                </div>
+                
+                <div class="clearfix"></div>
+            </div>
+        </div>
+
+        <main class="" style="background: rgb(253, 253, 253);">
             @yield('content')
         </main>
+
+
     </div>
+    
+    
+    @include('layouts.footer.footer')  
+    @livewireScripts  
 </body>
+
 </html>

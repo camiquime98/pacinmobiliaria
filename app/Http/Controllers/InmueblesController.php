@@ -65,7 +65,11 @@ class InmueblesController extends Controller
      */
     public function show($id)
     {
-        //
+        $inmuebles=inmuebles::findOrFail($id);
+        return view('inmuebles.show', compact('inmuebles'));
+
+        // $inmuebles = inmuebles::findOrFail($id);
+        //  return view('inmuebles.show')->with('inmuebles',$inmuebles);
     }
 
     /**
