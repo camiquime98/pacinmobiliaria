@@ -4,7 +4,6 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="keywords" content="Smart Shop Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
   Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-  <meta name="csrf-token" content="{{ csrf_token() }}">
   
   <!-- //for-mobile-apps -->
   <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
@@ -18,9 +17,12 @@
   
   <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
   <link href='//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,900,900italic,700italic' rel='stylesheet' type='text/css'>
-
+  
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
   
       <!-- CSRF Token -->
+      <meta name="csrf-token" content="{{ csrf_token() }}">
   
       <title>{{ config('app.name', 'Laravel') }}</title>
   
@@ -40,6 +42,7 @@
       <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+      @livewireStyles 
   
-      @livewireStyles
     </head>

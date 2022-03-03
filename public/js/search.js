@@ -1,17 +1,17 @@
 window.addEventListener('load',function(){
-	
-	document.getElementById("search").keyup(function(){
-	document.getElementById("resultados").innerHTML = "Hola"
+	  
+	var boton = document.getElementById("boton");
+
+// cuando se pulsa en el enlace
+boton.onclick = function(e) {	
 	
 	if((document.getElementById("search").value.length)>=1)
-	
-	
-fetch('/inmuebles/buscador?search=${document.getElementById("search").value}',{ method:'get'})
+	var x =document.getElementById("search").value;
+	document.getElementById("resultados").innerHTML = "Hola"
+fetch('inmuebles/buscador?search='+ x,{ method:'get'})
 .then(response => response.text())
 .then(html => { document.getElementById("resultados").innerHTML = html
-document.getElementById("resultados").innerHTML = "Hola"
+
  })
-
-
-});
+}
 });
