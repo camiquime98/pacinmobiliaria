@@ -24,6 +24,14 @@ class inmuebles extends Model
         'valor',
         'descripcion',
         // 'imagen',
+        'nombrepro',
+        'apellidopro',
+        'cedulapro',
+        'direccionpro',
+        'departamentopro',
+        'municipiopro',
+        'celularpro',
+        
     ];
 
     public static function search($search)
