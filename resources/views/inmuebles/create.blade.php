@@ -1,5 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.app') 
 @section('content')
+
+ 
   <div class="container-fluid m-0 p-0">
     <div class="main-content" style="margin-top: 70px">
       <div class="container-fluid p-3" style="background: azure;">
@@ -32,10 +34,14 @@
               <strong>Dirección</strong>
               <input type="text" class="form-control" name="direccion" placeholder="Ingrese la direccion" value="{{ old('direccion') }}" autofocus>
             </div>
-            {{-- <div class="col-md-6 p-3">
+            <div class="col-md-6 p-3">
               <strong>Estrato</strong>
               <input type="text" class="form-control" name="direccion" placeholder="Nivel de estrato" value="{{ old('direccion') }}" autofocus>
-            </div> --}}
+            </div>
+            <div class="col-md-12">
+              <form action="{{ route('inmuebles.store')}}" method="post" class="dropzone" id="my-awesone-dropzone">
+              </form>
+            </div>
           </div>
         </div>
         <div class="col-md-5">

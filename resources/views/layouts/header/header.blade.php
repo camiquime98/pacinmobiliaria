@@ -35,6 +35,7 @@
   
       <!-- Styles -->
       <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.min.css">
       <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet" type="text/css" media="all">
           
       <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>

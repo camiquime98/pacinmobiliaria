@@ -1,5 +1,7 @@
 <script src="js/jquery.easing.min.js"></script>
-<script src="{{ asset('js/app.js') }}" defer></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/min/dropzone.min.js"></script>
+
 <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
 <!-- //js -->
 <!-- cart -->
