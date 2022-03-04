@@ -88,7 +88,7 @@
           </div>
           <div class="col-md-12 p-3">
             <strong>Descripcion</strong>
-            <textarea class="form-control" name="descripcion" placeholder="Descripcion" value="{{ old('descripcion', $inmuebles->descripcion) }}" autofocus></textarea>
+            <input class="form-control" name="descripcion" placeholder="Descripcion" value="{{ old('descripcion', $inmuebles->descripcion) }}" autofocus>
           </div>
         </div>
       </div>

@@ -29,7 +29,14 @@ return new class extends Migration
             $table->string('banos')->nullable();
             $table->string('area')->nullable();
             $table->string('valor')->nullable();
-            $table->string('descripcion', 200)->nullable();
+            $table->string('descripcion', 100)->nullable();
+            $table->string('nombrepro')->nullable();
+            $table->string('apellidopro')->nullable();
+            $table->string('cedulapro')->nullable();
+            $table->string('direccionpro')->nullable();
+            $table->string('departamentopro')->nullable();
+            $table->string('municipiopro')->nullable();
+            $table->string('celularpro')->nullable();
 
 
             $table->timestamps();

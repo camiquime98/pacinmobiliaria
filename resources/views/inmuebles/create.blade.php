@@ -87,36 +87,48 @@
             </div>
             <div class="col-md-12 p-3">
               <strong>Descripcion</strong>
-              <textarea class="form-control" name="descripcion" placeholder="Descripcion" value="{{ old('descripcion') }}" autofocus></textarea>
+              <input class="form-control" name="descripcion" placeholder="Descripcion" value="{{ old('descripcion') }}" autofocus>
             </div>
           </div>
         </div>
 
-        <div class="col-md-8 col-sm-12">
-          <div class="row">
+        <div class="col-md-10 col-sm-12">
+          <div class="row d-flex justify-content-center p-3">
             <div class="col-md-12">
-              <h3>Datos del propietario</h3>
+              <h3 style="color:rgb(247, 131, 29)">Datos del propietario</h3>
             </div>
             <hr>
-            <div class="col-md-4">
+            <div class="col-md-4 p-3">
               <strong>Nombres</strong>
-              <input type="text" class="form-control" name="nombres" placeholder="Nombres completos" value="{{ old('nombres') }}" autofocus>
+              <input type="text" class="form-control" name="nombrepro" placeholder="Nombres completos" value="{{ old('nombres') }}" autofocus>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 p-3">
               <strong>Apellidos</strong>
-              <input type="text" class="form-control" name="apellidos" placeholder="Apellidos completos" value="{{ old('apellidos') }}" autofocus>
+              <input type="text" class="form-control" name="apellidopro" placeholder="Apellidos completos" value="{{ old('apellidos') }}" autofocus>
             </div>
-            <div class="col-md-4">
-
+            <div class="col-md-4 p-3">
+              <strong>Cedula</strong>
+              <input type="text" class="form-control" name="cedulapro" placeholder="Apellidos completos" value="{{ old('apellidos') }}" autofocus>
             </div>
-            <div class="col-md-4">
-
+            <div class="col-md-4 p-3">
+              <strong>Direccion de residencia</strong>
+              <input type="text" class="form-control" name="direccionpro" placeholder="Apellidos completos" value="{{ old('apellidos') }}" autofocus>
             </div>
-            <div class="col-md-4">
-
+            <div class="col-md-4 p-3">
+              <strong>Departamento</strong>
+              <input type="text" class="form-control" name="departamentopro" placeholder="Apellidos completos" value="{{ old('apellidos') }}" autofocus>
             </div>
-            <div class="col-md-4">
-
+            <div class="col-md-4 p-3">
+              <strong>Municipio</strong>
+              <input type="text" class="form-control" name="municipiopro" placeholder="Apellidos completos" value="{{ old('apellidos') }}" autofocus>
+            </div>
+            <div class="col-md-4 p-3">
+              <strong>Celular</strong>
+              <input type="text" class="form-control" name="celularpro" placeholder="Apellidos completos" value="{{ old('apellidos') }}" autofocus>
+            </div>
+            <div class="col-md-4 p-3">
+              <strong>Correo electronico</strong>
+              <input type="text" class="form-control" name="correopro" placeholder="Apellidos completos" value="{{ old('apellidos') }}" autofocus>
             </div>
           </div>
         </div>
