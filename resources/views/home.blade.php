@@ -4,10 +4,10 @@
 
 <div class="container" id="inmuebles">
 	<div class="row">
-
+		@foreach($inmuebles as $inmueble) 
 	  <div class="col-md-3 col-sm-12">
 		<div class="product-men">
-			@foreach($inmuebles as $inmueble) 	
+				
 		  <div class="men-pro-item simpleCart_shelfItem">
 
 			<div class="men-thumb-item">
@@ -32,9 +32,10 @@
 				  <a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
 			  </div>
 		  </div>
-		  @endforeach
+		  
 	  </div>
 	  </div>
+	  @endforeach
 	</div>
 
   </div>
