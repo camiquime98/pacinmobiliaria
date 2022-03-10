@@ -18,7 +18,8 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
                       <ul class="nav navbar-nav menu__list">
-                        <li class="active menu_ io</a></li>
+                          <li class=" menu__item"><a class="menu__link" href="electronics.html">Contactanos</a></li>
+                        {{-- <li class="active menu_ io</a></li>
                         <li class="dropdown menu__item">
                             <a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">men's wear <span class="caret"></span></a>
                                 <ul class="dropdown-menu multi-column columns-3">
@@ -51,8 +52,8 @@
                                         <div class="clearfix"></div>
                                     </div>
                                 </ul>
-                        </li>
-                        <li class="dropdown menu__item">
+                        </li> --}}
+                        {{-- <li class="dropdown menu__item">
                             <a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">women's wear <span class="caret"></span></a>
                                 <ul class="dropdown-menu multi-column columns-3">
                                     <div class="row">
@@ -84,29 +85,23 @@
                                         <div class="clearfix"></div>
                                     </div>
                                 </ul>
-                        </li>
+                        </li> --}}
                       </ul>
                     </div>
                   </div>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav ms-auto ">
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <li class="menu__item">
+                                    <a class="menu__link" href="{{ route('login') }}">{{ __('Login') }}</a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                <li class="menu__item">
+                                    <a class="menu__link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else

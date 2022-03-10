@@ -230,6 +230,13 @@ label{
     width: 100%;
     
 }
+.ban-top-home{
+	background:rgb(0, 7, 68, 0.9);
+	position: absolute;
+    z-index: 100;
+    width: 100%;
+    
+}
 .dropdown-menu.columns-3 {
     min-width: 300px;
 	min-height: 200px;

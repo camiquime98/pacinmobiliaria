@@ -16,13 +16,14 @@ return new class extends Migration
         Schema::create('inmuebles', function (Blueprint $table) {
             $table->id();
 
-            $table->string('image_path')->nullable();
+            $table->string('image')->nullable();
             // $table->string('pais')->nullable();
             $table->string('departamento')->nullable();
             $table->string('municipio')->nullable();
             $table->string('barrio')->nullable();
             $table->string('zona')->nullable();
             $table->string('direccion')->nullable();
+            $table->string('estrato')->nullable();
             $table->string('tipoinmueble')->nullable();
             $table->string('gestion')->nullable();
             $table->string('alcobas')->nullable();

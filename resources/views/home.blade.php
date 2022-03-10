@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.header.navbarinicio')
 @section('content')
 @livewire("buscador-usuarios")
 
@@ -29,7 +29,7 @@
 					  <del>$520.000</del>
 
 				  </div>
-				  <a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
+				  <a href="{{ route('inmuebles.show', $inmueble->id) }}" class="item_add single-item hvr-outline-out button2"> Ver mas </a>									
 			  </div>
 		  </div>
 		  

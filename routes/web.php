@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\inicioController;
+use App\Http\Controllers\ImageController;
 use App\Models\inmuebles;
 use App\Http\livewire\Userstable;
 
@@ -20,6 +21,8 @@ Auth::routes();
 Route::get('/', [App\Http\Controllers\inicioController::class, 'index'])->name('inicio');
 
 Route::get('/inicioshow{id}', [App\Http\Controllers\inicioController::class, 'indexshow'])->name('inicioshow');
+
+
 // Route::get('/', function () {
 //     return view('inicio');
 // });
@@ -44,4 +47,35 @@ Route::group(['middleware' => ['auth', 'MDadmin']], function()
                 
     Route::post('/inmuebles', [App\Http\Controllers\inmueblesController::class, 'store'])->name('inmuebles.store');
 
+
+
+
+    
+
+    Route::get('/imageinmueble', [App\Http\Controllers\ImageController::class, 'index'])->name('imageinmueble.index');
+    Route::get('/imageinmueble/upload_image', [App\Http\Controllers\ImageController::class, 'upload_image'])->name('imageinmueble.upload_image');
+    Route::get('/imageinmueble/fetch_image', [App\Http\Controllers\ImageController::class, 'fetch_image'])->name('imageinmueble.fetch_image');
+    Route::get('/imageinmueble/delete_image', [App\Http\Controllers\ImageController::class, 'delete_image'])->name('imageinmueble.delete_image');
+
+
+
+
 });
+
+
+ 
+
+
+// Route::post('dropzone/upload_image', 'ImageController@upload_image')->name('dropzone.upload_image');
+
+
+ 
+
+
+// Route::get('dropzone/fetch_image', 'ImageController@fetch_image')->name('dropzone.fetch_image');
+
+
+ 
+
+
+// Route::get('dropzone/delete_image', 'ImageController@delete_image')->name('dropzone.delete_image');

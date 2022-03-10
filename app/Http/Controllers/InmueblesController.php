@@ -42,6 +42,7 @@ class InmueblesController extends Controller
             'barrio' => 'required',
             'zona' => 'required',
             'direccion' => 'required',
+            'estrato' => 'required',
             'tipoinmueble' => 'required',
             'gestion' => 'required',
             'alcobas' => 'required',
@@ -49,6 +50,15 @@ class InmueblesController extends Controller
             'area' => 'required',
             'valor' => 'required',
             'descripcion' => 'required',
+            'nombrepro' => 'required',
+            'apellidopro' => 'required',
+            'cedulapro' => 'required',
+            'direccionpro' => 'required',
+            'departamentopro' => 'required',
+            'municipiopro' => 'required',
+            'celularpro' => 'required',
+            'correopro' => 'required',
+            // 'imagenes.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
         inmuebles::create($request->all());

@@ -10,8 +10,6 @@
   <a href="https://api.whatsapp.com/send?phone=+573143013069&text=Buen%20d%C3%ADa,%20deseo%20obtener%20m%C3%A1s%20informaci%C3%B3n%20" class="float" target="_blank">
   <i class="fa fa-whatsapp my-float"></i>
   </a>
-
-
     <div id="app">
         <div class="ban-top">
             <div class="container">
@@ -68,6 +66,9 @@
                             <li class=" menu__item"><a class="menu__link" href="electronics.html">Electronics</a></li>                            
                                 <li class="menu__item">
                                     <a class="menu__link" href="{{ route('inmuebles.index')}}">inmuebles</a>
+                                </li>  
+                                <li class="menu__item">
+                                    <a class="menu__link" href="{{ route('imageinmueble.index')}}">Imagenes</a>
                                 </li>  
                           </ul>
                         </div>

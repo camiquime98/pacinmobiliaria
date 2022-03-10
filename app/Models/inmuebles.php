@@ -16,6 +16,7 @@ class inmuebles extends Model
         'barrio',
         'zona',
         'direccion',
+        'estrato',
         'tipoinmueble',
         'gestion',
         'alcobas',
@@ -23,7 +24,7 @@ class inmuebles extends Model
         'area',
         'valor',
         'descripcion',
-        // 'imagen',
+        // 'image',
         'nombrepro',
         'apellidopro',
         'cedulapro',
@@ -31,6 +32,7 @@ class inmuebles extends Model
         'departamentopro',
         'municipiopro',
         'celularpro',
+        'correopro',
         
     ];
 
@@ -38,8 +40,10 @@ class inmuebles extends Model
     {
         return empty($search) ? static::query()
             : static::query()->where('id', 'like', '%'.$search.'%')
-                ->orWhere('name', 'like', '%'.$search.'%')
-                ->orWhere('email', 'like', '%'.$search.'%');
+                ->orWhere('nombrepro', 'like', '%'.$search.'%')
+                ->orWhere('cedulapro', 'like', '%'.$search.'%')
+                ->orWhere('departamento', 'like', '%'.$search.'%')
+                ->orWhere('celularpro', 'like', '%'.$search.'%');
                 // orWhere('barrio', 'like', '%'.$search.'%');
                 // orWhere('zona', 'like', '%'.$search.'%');
     }
