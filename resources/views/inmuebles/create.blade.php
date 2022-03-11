@@ -71,7 +71,7 @@
             </div>
             <div class="col-md-6 col-sm-12 p-3">
             
-              <input type="text" class=" inputinmueble" name="estrato" placeholder="Nivel del estrato" value="{{ old('direccion') }}" autofocus>  
+              <input type="text" class=" inputinmueble" name="estrato" placeholder="Nivel del estrato" value="{{ old('estrato') }}" autofocus>  
           </div>
           </div>
         

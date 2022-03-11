@@ -38,6 +38,8 @@ return new class extends Migration
             $table->string('departamentopro')->nullable();
             $table->string('municipiopro')->nullable();
             $table->string('celularpro')->nullable();
+            $table->string('correopro')->nullable();
+
 
 
             $table->timestamps();
