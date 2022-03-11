@@ -57,7 +57,7 @@
             <div class="panel-body">
     
     
-              <form id="dropzoneForm" class="dropzone" action="{{ route('imageinmueble.upload_image') }}">
+              <form id="dropzoneForm" class="dropzone" action="{{ route('dropzone.store') }}" accept-charset="UTF-8" enctype="multipart/form-data">
     
     
                 @csrf

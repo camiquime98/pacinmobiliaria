@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Http\UploadedFile;
 
 class ImageController extends Controller
 
@@ -20,10 +21,14 @@ class ImageController extends Controller
      */
     public function upload_image(Request $request)
     {
-    $image = $request->file('file');
-    $imagen = date('YmdHis'). "." . $imagen->getClientOriginalExtension();
-    $image->move(public_path('images'), $imagen);
-    return response()->json(['success' => $imageName]);
+        $image = $request->file('file');
+    
+        $imageName = time().'.'.$image->extension();
+        $image->move(public_path('images'),$imageName);
+    
+        return response()->json(['success'=>$imageName]);
+
+       
     }
     function fetch_image()
     {
