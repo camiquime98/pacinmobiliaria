@@ -1,10 +1,13 @@
 <?php
 
+
+
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\inmuebles;
-
+use Illuminate\Support\Facades\File;
 class InmueblesController extends Controller
 {
     /**
@@ -36,6 +39,11 @@ class InmueblesController extends Controller
      */
     public function store(Request $request)
     {
+        $ruta= public_path('inmuebles/inueblex');
+if(!File::isDirectory($ruta))
+{
+File::makeDirectory($ruta, 0777, true, true);
+}
         $request->validate([
             'departamento' => 'required',
             'municipio' => 'required',
@@ -61,7 +69,9 @@ class InmueblesController extends Controller
             // 'imagenes.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
+        
         inmuebles::create($request->all());
+        
      
         return redirect()->route('inmuebles.index')
                         ->with('success','Post created successfully.');
