@@ -223,7 +223,7 @@ label{
 /*-- //header-bot --*/
 /*-- banner-top --*/
 .ban-top{
-	background:rgb(0, 7, 68, 0.9);
+	background:rgba(3, 173, 150, 0.9);
 	position: absolute;
     top: 17px;
     z-index: 100;
@@ -231,7 +231,7 @@ label{
     
 }
 .ban-top-home{
-	background:rgb(0, 7, 68, 0.9);
+	background:rgba(52, 90, 92, 0.9);
 	position: absolute;
     z-index: 100;
     width: 100%;
@@ -239,7 +239,7 @@ label{
 }
 .dropdown-menu.columns-3 {
     min-width: 300px;
-	min-height: 200px;
+	min-height: 100px;
     padding: 10px 10px;
 }
 .multi-gd-img img{
@@ -378,7 +378,7 @@ label{
 	background: #FDA30E;
 }
 a.menu__link {
-    color: #a5b7c6 !important;
+    color: #ffffff !important;
     font-size: 15px;
     font-weight: normal;
     text-transform: unset;
@@ -1340,7 +1340,7 @@ h2.resp-accordion {
     z-index: 10;
 }
 .product-new-top {
-    background: #603cff none repeat scroll 0 0;
+    background: rgba(3, 173, 150, 0.9) none repeat scroll 0 0;
     color: #fff;
     display: inline-block;
     left: 10px;
@@ -1437,7 +1437,7 @@ h2.resp-accordion {
     top: 73.5%;
 }
 .link-product-add-cart:hover {
-    background: #FDA30E none repeat scroll 0 0;
+    background: rgba(3, 173, 150, 0.9) none repeat scroll 0 0;
     color: #fff;
 }
 /*-- //effect --*/
@@ -1614,7 +1614,7 @@ ul.multi-column-dropdown li a:hover{
 	color:#FDA30E;
 }
 .col-sm-3.multi-gd-img {
-    padding: 0;
+    
 }
 .col-sm-6.multi-gd-img1 {
 	padding-right:20px;
@@ -1670,8 +1670,10 @@ background-size:cover;
 -o-background-size: cover;
 -ms-background-size: cover;
 -moz-background-size: cover;
+background-attachment: fixed;
 min-height: 470px;
-padding-top:110px;
+padding-top:50px;
+padding-bottom:50px;
 }
 
 .coupons-gd span {

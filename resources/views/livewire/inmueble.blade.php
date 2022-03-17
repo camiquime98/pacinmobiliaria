@@ -3,7 +3,7 @@
         <div class="col-md-12" style="margin-top:90px;">
             <div class="row d-flex justify-content-end p-2">
                 <div class="col-md-3 d-flex justify-content-end">
-                  <a class="btn btn-md btn-primary" href="{{ route('inmuebles.create') }}">Agregar inmueble</a>   
+                  <a class="btn btn-md btn-primary" href="{{ route('inmueble.create') }}">Agregar inmueble</a>   
                 </div>
             </div>
          
@@ -44,8 +44,8 @@
             </div>
         </div>
     
-    
-          <table class="table table-responsive">
+          <div class="table-responsive">
+            <table class="table">
               <thead>
                 <tr>
                   <th scope="col">ID</th>
@@ -75,9 +75,9 @@
                   <td>{{ $inmueble->gestion }}</td>
                   <td>{{ $inmueble->valor }}</td>
                   <td class="td-actions text-right">
-                  <a href="{{ route('inmuebles.edit', $inmueble->id) }}"><button type="button" class="btn btn-warning">Editar</button></a>
-                  <a href="{{ route('inmuebles.show', $inmueble->id) }}"><button type="button" class="btn btn-success">Ver</button></a>
-                  <form action="{{ route('inmuebles.destroy', $inmueble->id) }}" method="POST" style="display: inline-block;" onsubmit="return confirm('Seguro?')">
+                  <a href="{{ route('inmueble.edit', $inmueble->id) }}"><button type="button" class="btn btn-warning">Editar</button></a>
+                  <a href="{{ route('inmueble.show', $inmueble->id) }}"><button type="button" class="btn btn-success">Ver</button></a>
+                  <form action="{{ route('inmueble.destroy', $inmueble->id) }}" method="POST" style="display: inline-block;" onsubmit="return confirm('Seguro?')">
                     @csrf
                     @method('DELETE')
                     <button class="btn btn-danger" type="submit" rel="tooltip" onsubmit="return confirm('Segur?')">
@@ -89,8 +89,10 @@
                 @endforeach
               </tbody>
             </table>
+          </div>
+          
             <div class="card-footer ml-auto">
-               {{-- {{ $inmuebles->links() }} --}}
+                {{ $inmuebles->links() }} 
             </div>
         </div>
       </div>

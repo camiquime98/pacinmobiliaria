@@ -8,10 +8,10 @@
             <div class="col-md-12">
               <div class="row d-flex justify-content-end">
                 <div class="col-md-2 col-sm-12 pb-3">
-                  <a href="{{ route('inmuebles.edit', $inmuebles->id) }}"><button type="button" class="btn col-12 text-white btn-warning ">Editar</button></a>
+                  <a href="{{ route('inmueble.edit', $inmuebles->id) }}"><button type="button" class="btn col-12 text-white btn-warning ">Editar</button></a>
                 </div>
                 <div class="col-md-2 col-sm-12">
-                  <a href="{{ route('inmuebles.index') }}"><button type="button" class="btn col-12 text-white btn-success">volver</button></a>
+                  <a href="{{ route('inmueble.index') }}"><button type="button" class="btn col-12 text-white btn-success">volver</button></a>
                 </div>
               </div>
             </div>

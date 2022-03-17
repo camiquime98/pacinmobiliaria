@@ -65,7 +65,7 @@
                             </li>
                             <li class=" menu__item"><a class="menu__link" href="electronics.html">Electronics</a></li>                            
                                 <li class="menu__item">
-                                    <a class="menu__link" href="{{ route('inmuebles.index')}}">inmuebles</a>
+                                    <a class="menu__link" href="{{ route('inmueble.index')}}">inmuebles</a>
                                 </li>  
                                 <li class="menu__item">
                                     <a class="menu__link" href="{{ route('imageinmueble.index')}}">Imagenes</a>
@@ -102,9 +102,9 @@
             <a class="dropdown-item" href="{{ route('logout') }}"
                onclick="event.preventDefault();
                              document.getElementById('logout-form').submit();">
-                {{ __('Logout') }}
-            </a>
-    
+                {{ __('Salir') }}
+            </a><hr>
+            <a href="" class="dropdown-item">Configuraciones</a>
             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                 @csrf
             </form>
