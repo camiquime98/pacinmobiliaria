@@ -15,7 +15,7 @@
 				  <img src="assets/images/a8.png" alt="" class="pro-image-back">
 					  <div class="men-cart-pro">
 						  <div class="inner-men-cart-pro">
-							  <a href="{{ route('inmuebles.show', $inmueble->id) }}" class="link-product-add-cart">{{ $inmueble->zona }}</a>
+							  <a href="{{ route('inmueble.show', $inmueble->id) }}" class="link-product-add-cart">{{ $inmueble->zona }}</a>
 						  </div>
 					  </div>
 					  <span class="product-new-top">1+1 Offer</span>
@@ -29,7 +29,7 @@
 					  <del>$520.000</del>
 
 				  </div>
-				  <a href="{{ route('inmuebles.show', $inmueble->id) }}" class="item_add single-item hvr-outline-out button2"> Ver mas </a>									
+				  <a href="{{ route('inmueble.show', $inmueble->id) }}" class="item_add single-item hvr-outline-out button2"> Ver mas </a>									
 			  </div>
 		  </div>
 		  

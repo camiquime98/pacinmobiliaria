@@ -35,7 +35,7 @@
   <div class="container-fluid fondo-create-inmueble">
     <div class="main-content">
 
-      <form action="{{ route('inmuebles.update', $inmuebles->id) }}" method="post" class="form-horizontal p-2" enctype="multipart/form-data">
+      <form action="{{ route('inmueble.update', $inmuebles->id) }}" method="post" class="form-horizontal p-2" enctype="multipart/form-data">
         @csrf
 
         @method('PUT')
@@ -213,7 +213,7 @@
               <button type="submit" class="btn col-sm-12 btn-primary">Guardar</button>
             </div>
             <div class="col-md-2 col-sm-12 p-2">
-              <a href="{{ route('inmuebles.index') }}" class="btn col-sm-12 btn-warning text-white"><i class="material-icons">Volver</i></a>
+              <a href="{{ route('inmueble.index') }}" class="btn col-sm-12 btn-warning text-white"><i class="material-icons">Volver</i></a>
             </div>
           </div>
         </div>

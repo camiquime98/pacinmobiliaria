@@ -18,7 +18,7 @@ class InmueblesController extends Controller
     public function index()
     {
         $inmuebles = inmuebles::all();
-        return view('inmuebles.index')->with('inmuebles',$inmuebles);
+        return view('inmueble.index')->with('inmuebles',$inmuebles);
     }
 
     /**
@@ -28,7 +28,7 @@ class InmueblesController extends Controller
      */
     public function create()
     {
-        return view('inmuebles.create');
+        return view('inmueble.create');
     }
 
     /**
@@ -39,7 +39,7 @@ class InmueblesController extends Controller
      */
     public function store(Request $request)
     {
-        $ruta= public_path('inmuebles/inueblex');
+        $ruta= public_path('inmueble/inueblex');
 if(!File::isDirectory($ruta))
 {
 File::makeDirectory($ruta, 0777, true, true);
@@ -73,7 +73,7 @@ File::makeDirectory($ruta, 0777, true, true);
         inmuebles::create($request->all());
         
      
-        return redirect()->route('inmuebles.index')
+        return redirect()->route('inmueble.index')
                         ->with('success','Post created successfully.');
     }
 
@@ -86,7 +86,7 @@ File::makeDirectory($ruta, 0777, true, true);
     public function show($id)
     {
         $inmuebles=inmuebles::findOrFail($id);
-        return view('inmuebles.show', compact('inmuebles'));
+        return view('inmueble.show', compact('inmuebles'));
 
         // $inmuebles = inmuebles::findOrFail($id);
         //  return view('inmuebles.show')->with('inmuebles',$inmuebles);
@@ -101,7 +101,7 @@ File::makeDirectory($ruta, 0777, true, true);
     public function edit($id)
     {
         $inmuebles=inmuebles::findOrFail($id);
-        return view('inmuebles.edit')->with('inmuebles',$inmuebles);
+        return view('inmueble.edit')->with('inmuebles',$inmuebles);
     }
 
     /**
@@ -143,7 +143,7 @@ File::makeDirectory($ruta, 0777, true, true);
         //     'valor',
         //     'descripcion',
         // ]);
-        return redirect()->route('inmuebles.index')->with('success','Post created successfully.');
+        return redirect()->route('inmueble.index')->with('success','Post created successfully.');
     }
     // => 'required'
     /**
@@ -156,7 +156,7 @@ File::makeDirectory($ruta, 0777, true, true);
     {
         $inmueble = inmuebles::Find($id);
         $inmueble->delete();
-        return redirect()->route('inmuebles.index');
+        return redirect()->route('inmueble.index');
    
     }
 }

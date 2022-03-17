@@ -10,7 +10,7 @@
                 <li role="presentation" class="btn btn-primary"style="max-height:50px; min">
                           
                          <div class="dropdown" >
-  <button class="btn btn-primary dropdown-toggle" type="button" style="background-color: #0d6efd; color:#fff; " id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+  <button class="btn dropdown-toggle" type="button" style="background-color: #0d6efd; color:#fff; border:none;" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
     ¿Qué buscar? 
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -33,9 +33,9 @@
                       <input type="number" value="0" id="terreno" name="terreno" class="hidden">
                       <input type="number" value="0" id="bodega" name="bodega" class="hidden">
                       <input type="number" value="0" id="apartaestudio" name="apartaestudio" class="hidden">
-                      <input type="number" value="0" id="casalote" name="casalote" class="hidden">
-                    <div class="search"> <i class="fa fa-search"></i> <input wire:model="buscar" 
-                        wire:keydown.enter="asignarPrimero()" type="text" class="form-control" id="buscar">  @error("buscar")                    
+                      <input type="number" value="0" id="casalote" name="casalote" class="hidden" ">
+                    <div class="search"> <i class="fa fa-search text-dark"></i> <input wire:model="buscar" 
+                        wire:keydown.enter="asignarPrimero()" type="text" class="form-control" id="buscar"style="height:50px; background: rgba(255, 255, 255, 0.6);" >  @error("buscar")                    
                                                            
                     @else
                         @if(count($usuarios)>0)
@@ -79,7 +79,7 @@
                         $("#busquedainmuebles").hide();
                         
                         </script>
-                        hola
+                        
                     @endif
                 @enderror
             </div>

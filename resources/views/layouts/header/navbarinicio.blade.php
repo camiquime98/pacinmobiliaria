@@ -65,7 +65,7 @@
                             </li>
                             <li class=" menu__item"><a class="menu__link" href="electronics.html">Electronics</a></li>                            
                                 <li class="menu__item">
-                                    <a class="menu__link" href="{{ route('inmuebles.index')}}">inmuebles</a>
+                                    <a class="menu__link" href="{{ route('inmueble.index')}}">inmuebles</a>
                                 </li>  
                                 <li class="menu__item">
                                     <a class="menu__link" href="{{ route('imageinmueble.index')}}">Imagenes</a>
@@ -101,7 +101,8 @@
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
     <a class="dropdown-item"href="{{ route('logout') }}"  onclick="event.preventDefault();
-    document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
+    document.getElementById('logout-form').submit();">{{ __('Salir') }}</a><hr>
+            <a href="{{ route('user.index') }}" class="dropdown-item">Configuraciones</a>
     
   </div>
 </div>
