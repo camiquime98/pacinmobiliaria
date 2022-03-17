@@ -75,7 +75,8 @@
                   <td>{{ $inmueble->gestion }}</td>
                   <td>{{ $inmueble->valor }}</td>
                   <td class="td-actions text-right">
-                  <a href="{{ route('inmueble.edit', $inmueble->id) }}"><button type="button" class="btn btn-warning">Editar</button></a>
+                    <a href="{{ route('imageinmueble.index', $inmueble->id) }}"><button type="button" class="btn btn-warning">Imagenes</button></a>
+                    <a href="{{ route('inmueble.edit', $inmueble->id) }}"><button type="button" class="btn btn-warning">Editar</button></a>
                   <a href="{{ route('inmueble.show', $inmueble->id) }}"><button type="button" class="btn btn-success">Ver</button></a>
                   <form action="{{ route('inmueble.destroy', $inmueble->id) }}" method="POST" style="display: inline-block;" onsubmit="return confirm('Seguro?')">
                     @csrf

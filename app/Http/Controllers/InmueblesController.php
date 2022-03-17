@@ -8,6 +8,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\inmuebles;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Str;
 class InmueblesController extends Controller
 {
     /**
@@ -39,12 +40,17 @@ class InmueblesController extends Controller
      */
     public function store(Request $request)
     {
-        $ruta= public_path('inmueble/inueblex');
-if(!File::isDirectory($ruta))
-{
-File::makeDirectory($ruta, 0777, true, true);
-}
+        $folder = Str::random(15);
+        $folderx ="imagenes-inmueble/";
+        $path = $folderx . $folder; 
+
+        $ruta= public_path($path);
+        if(!File::isDirectory($ruta))
+        {
+        File::makeDirectory($ruta, 0777, true, true);
+        }
         $request->validate([
+            
             'departamento' => 'required',
             'municipio' => 'required',
             'barrio' => 'required',
@@ -68,7 +74,7 @@ File::makeDirectory($ruta, 0777, true, true);
             'correopro' => 'required',
             // 'imagenes.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
-
+        $request->request->add(['folder' => $folder]); //add request
         
         inmuebles::create($request->all());
         

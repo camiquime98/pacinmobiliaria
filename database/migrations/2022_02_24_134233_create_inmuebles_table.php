@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('inmuebles', function (Blueprint $table) {
             $table->id();
 
-            $table->string('image')->nullable();
+            $table->string('folder')->nullable();
             // $table->string('pais')->nullable();
             $table->string('departamento')->nullable();
             $table->string('municipio')->nullable();

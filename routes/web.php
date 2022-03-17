@@ -18,6 +18,7 @@ use App\Http\livewire\Userstable;
 |
 */
 Auth::routes();
+Route::post('dropzone/store', [ImageController::class, 'upload_image'])->name('dropzone.store');
 
 Route::get('/', [App\Http\Controllers\inicioController::class, 'index'])->name('inicio');
 
@@ -63,17 +64,11 @@ Route::group(['middleware' => ['auth', 'MDadmin']], function()
     // FIN CRUD DEL INMUEBLE ///////////////////////////////////////////////////////////////////
 //________________________________________________________________________________________________
 
-
     
+
 
     Route::get('/imageinmueble', [App\Http\Controllers\ImageController::class, 'index'])->name('imageinmueble.index');
-
     Route::get('/imageinmueble/upload_image', [App\Http\Controllers\ImageController::class, 'upload_image'])->name('imageinmueble.upload_image');
-
-    
-    Route::post('dropzone/store', [ImageController::class, 'upload_image'])->name('dropzone.store');
-
-
     Route::get('/imageinmueble/fetch_image', [App\Http\Controllers\ImageController::class, 'fetch_image'])->name('imageinmueble.fetch_image');
     Route::get('/imageinmueble/delete_image', [App\Http\Controllers\ImageController::class, 'delete_image'])->name('imageinmueble.delete_image');
 

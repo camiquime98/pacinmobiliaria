@@ -24,7 +24,7 @@ class inmuebles extends Model
         'area',
         'valor',
         'descripcion',
-        // 'image',
+        'folder',
         'nombrepro',
         'apellidopro',
         'cedulapro',
