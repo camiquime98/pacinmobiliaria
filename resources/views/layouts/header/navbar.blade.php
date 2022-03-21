@@ -8,7 +8,7 @@
         <nav class="navbar navbar-expand-md navbar-light shadow-sm" style="background:#0a3daf; ">
             <div class="container">
                 <a class="menu__link menu__item--current text-white" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    INICIO
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -95,15 +95,11 @@
                         @guest
                             @if (Route::has('login'))
                                 <li class="menu__item">
-                                    <a class="menu__link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a class="menu__link" href="{{ route('login') }}">{{ __('Ingresar') }}</a>
                                 </li>
                             @endif
 
-                            @if (Route::has('register'))
-                                <li class="menu__item">
-                                    <a class="menu__link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
+                           
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" style="color: rgb(182, 217, 248); font-size:13px" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

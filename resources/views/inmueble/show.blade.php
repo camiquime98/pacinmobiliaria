@@ -1,5 +1,19 @@
 @extends('layouts.header.navbarinicio')
 @section('content')
+<style>
+      .btn-ver
+  {
+    background: none;
+    color: rgb(63, 170, 21);
+    border: 1px solid rgb(63, 170, 21);
+  }
+  .btn-editar
+  {
+    background: none;
+    color: rgb(22, 115, 151);
+    border: 1px solid rgb(7, 185, 255);
+  }
+</style>
 <div class="container">
     <div class="main-content pt-5">
       <div class="row p-3">
@@ -8,10 +22,10 @@
             <div class="col-md-12">
               <div class="row d-flex justify-content-end">
                 <div class="col-md-2 col-sm-12 pb-3">
-                  <a href="{{ route('inmueble.edit', $inmuebles->id) }}"><button type="button" class="btn col-12 text-white btn-warning ">Editar</button></a>
+                  <a href="{{ route('inmueble.edit', $inmuebles->id) }}"><button type="button" class="btn col-12 text-dark btn-editar">Editar</button></a>
                 </div>
                 <div class="col-md-2 col-sm-12">
-                  <a href="{{ route('inmueble.index') }}"><button type="button" class="btn col-12 text-white btn-success">volver</button></a>
+                  <a href="{{ route('inmueble.index') }}"><button type="button" class="btn col-12 text-dark btn-ver">volver</button></a>
                 </div>
               </div>
             </div>

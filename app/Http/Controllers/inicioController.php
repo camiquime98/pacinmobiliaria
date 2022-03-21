@@ -18,4 +18,9 @@ class inicioController extends Controller
         $inmuebles=inmuebles::findOrFail($id);
         return view('inicioshow', compact('inmuebles'));
     }
+
+    public function contactoindex()
+    {
+        return view('contactanos.contactanos');
+    }
 }

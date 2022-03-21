@@ -5,8 +5,24 @@
  */
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+@font-face {
+	font-family: Poppins-Regular;
+	src: url('/assets/fonts/poppins/Poppins-Regular.ttf'); 
+  }
+  
+  @font-face {
+	font-family: Poppins-Medium;
+	src: url('/assets/fonts/poppins/Poppins-Medium.ttf'); 
+  }
+  
+  @font-face {
+	font-family: Poppins-Bold;
+	src: url('/assets/fonts/poppins/Poppins-Bold.ttf'); 
+  }
+  
+
 html {
-  font-family: sans-serif;
+  font-family: Poppins-Regular;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }

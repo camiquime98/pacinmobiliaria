@@ -5,6 +5,27 @@
 @include('layouts.header.header')  
 {{-- @include('layouts.footer.footer') --}}
 
+<style>
+    .btn-admin
+    {
+       color: aliceblue;
+       border: 1px solid #06bdca;;
+    }
+   
+   .btn-admin:hover
+    {
+       background: white;
+       color: #06bdca;;
+       border: none;
+    }
+    .btn-admin:active
+    {
+       background: white!important;
+       color: rgb(255, 123, 0);
+       border: none;
+    }
+   </style>
+
 <body>
   
   <a href="https://api.whatsapp.com/send?phone=+573143013069&text=Buen%20d%C3%ADa,%20deseo%20obtener%20m%C3%A1s%20informaci%C3%B3n%20" class="float" target="_blank">
@@ -14,7 +35,7 @@
         <div class="ban-top-home">
             <div class="container">
                 <div class="top_nav_left">
-                    <nav class="navbar navbar-default navbar-expand-md navbar-light shadow-sm">
+                    <nav class="navbar navbar-default navbar-expand-md navbar-light">
                       <div class="container-fluid">
                         <!-- Brand and toggle get grouped for better mobile display -->
                         <div class="navbar-header">
@@ -30,7 +51,7 @@
                         <div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
                           <ul class="nav navbar-nav menu__list">
                             <li class="active menu__item menu__item--current"><a class="menu__link" href="{{ url('/home') }}">Home <span class="sr-only">(current)</span></a></li>
-                            <li class="dropdown menu__item">
+                            {{-- <li class="dropdown menu__item">
                                 <a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">women's wear <span class="caret"></span></a>
                                     <ul class="dropdown-menu multi-column columns-3">
                                         <div class="row">
@@ -62,8 +83,8 @@
                                             <div class="clearfix"></div>
                                         </div>
                                     </ul>
-                            </li>
-                            <li class=" menu__item"><a class="menu__link" href="electronics.html">Electronics</a></li>                            
+                            </li> --}}
+                                                       
                                 <li class="menu__item">
                                     <a class="menu__link" href="{{ route('inmueble.index')}}">inmuebles</a>
                                 </li>  
@@ -86,23 +107,27 @@
     </li>
 @endif
 
+
 @if (Route::has('register'))
     <li class="menu__item">
         <a class="menu__link" href="{{ route('register') }}">{{ __('Register') }}</a>
     </li>
 @endif
 @else
-
+<li class=" menu__item"><a class="menu__link" href="electronics.html">notificaciones</a></li>
     <li class="menu__item dropdown d-flex justify-content-center">
 
         <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button class="btn btn-admin dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     {{ Auth::user()->name }}
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    
     <a class="dropdown-item"href="{{ route('logout') }}"  onclick="event.preventDefault();
     document.getElementById('logout-form').submit();">{{ __('Salir') }}</a><hr>
-            <a href="{{ route('user.index') }}" class="dropdown-item">Configuraciones</a>
+            <a href="{{ route('user.index') }}" class="dropdown-item">Perfiles</a>
+    
+     
     
   </div>
 </div>

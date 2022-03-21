@@ -168,7 +168,7 @@
                                 <li class=" menu__item"><a class="menu__link" href="codes.html">Short Codes</a></li> --}}
                                 
                                     <li class="menu__item">
-                                        <a class="menu__link" href="">Contactanos</a>
+                                        <a class="menu__link" href="{{ route('contactanos.contactanos')}}">Contactanos</a>
                                     </li>
 
                                 <li class=" menu__item"><a class="menu__link" href="#" class="use1" data-toggle="modal" data-target="#myModal4">ingreso</a></li>
@@ -295,58 +295,12 @@
                 </div>
                 
             </div>
-            <div class="new_arrivals">
-                <div class="container">
-                    <h3><span>new </span>arrivals</h3>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p>
-                    <div class="new_grids">
-                        <div class="col-md-4 new-gd-left">
-                            <img src="assets/images/wed1.jpg" alt=" " />
-                            <div class="wed-brand simpleCart_shelfItem">
-                                <h4>Wedding Collections</h4>
-                                <h5>Flat 50% Discount</h5>
-                                <p><i>$250</i> <span class="item_price">$500</span><a class="item_add hvr-outline-out button2" href="#">add to cart </a></p>
-                            </div>
-                        </div>
-                        <div class="col-md-4 new-gd-middle">
-                            <div class="new-levis">
-                                <div class="mid-img">
-                                    <img src="assets/images/levis1.png" alt=" " />
-                                </div>
-                                <div class="mid-text">
-                                    <h4>up to 40% <span>off</span></h4>
-                                    <a class="hvr-outline-out button2" href="product.html">Shop now </a>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                            <div class="new-levis">
-                                <div class="mid-text">
-                                    <h4>up to 50% <span>off</span></h4>
-                                    <a class="hvr-outline-out button2" href="product.html">Shop now </a>
-                                </div>
-                                <div class="mid-img">
-                                    <img src="images/dig.jpg" alt=" " />
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="col-md-4 new-gd-left">
-                            <img src="assets/images/wed2.jpg" alt=" " />
-                            <div class="wed-brandtwo simpleCart_shelfItem">
-                                <h4>Spring / Summer</h4>
-                                <p>Shop Men</p>
-                            </div>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                </div>
-            </div>
+            
             <!-- //content -->
             
             <!-- content-bottom -->
             
-            <div class="content-bottom">
+            {{-- <div class="content-bottom">
                 <div class="col-md-7 content-lgrid">
                     <div class="col-sm-6 content-img-left text-center">
                         <div class="content-grid-effect slow-zoom vertical">
@@ -400,7 +354,7 @@
                         </div>
                 </div>
                 <div class="clearfix"></div>
-            </div>
+            </div> --}}
             <!-- //content-bottom -->
             <!-- product-nav -->
             

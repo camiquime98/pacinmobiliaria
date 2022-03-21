@@ -4,10 +4,25 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
+  @font-face {
+	font-family: Poppins-Regular;
+	src: url('/fonts/poppins/Poppins-Regular.ttf'); 
+  }
+  
+  @font-face {
+	font-family: Poppins-Medium;
+	src: url('/fonts/poppins/Poppins-Medium.ttf'); 
+  }
+  
+  @font-face {
+	font-family: Poppins-Bold;
+	src: url('/fonts/poppins/Poppins-Bold.ttf'); 
+  }
+
 html, body{
 	margin:0;
 	font-size: 100%;
-	font-family: 'Lato', sans-serif;
+	font-family: Poppins-Regular;
 	background: #fff;
 }
 body a {
@@ -223,7 +238,7 @@ label{
 /*-- //header-bot --*/
 /*-- banner-top --*/
 .ban-top{
-	background:rgba(3, 173, 150, 0.9);
+	background: rgb(218, 61, 61);
 	position: absolute;
     top: 17px;
     z-index: 100;
@@ -231,12 +246,21 @@ label{
     
 }
 .ban-top-home{
-	background:rgba(52, 90, 92, 0.9);
+	background: rgb(218, 61, 61);
+/* background: linear-gradient(90deg, rgba(251,0,0,0.5410539215686274) 0%, rgba(58,164,180,1) 100%); */
 	position: absolute;
     z-index: 100;
     width: 100%;
     
 }
+@media (min-width: 320px) and (max-width: 1024px)
+{
+	.pignose-layerslider .slide-visual .script-wrap 
+	{
+		margin-top: 50px;
+	}
+}
+
 .dropdown-menu.columns-3 {
     min-width: 300px;
 	min-height: 100px;
@@ -369,13 +393,13 @@ label{
 }
 
 .menu--shylock .menu__link::before {
-	background: #FDA30E;
+	background: #06bdca;
 	-webkit-transition-delay: 0.4s;
 	transition-delay: 0.4s;
 }
 
 .menu--shylock .menu__link::after {
-	background: #FDA30E;
+	background: #06bdca;
 }
 a.menu__link {
     color: #ffffff !important;
@@ -3542,7 +3566,7 @@ td.invert-image a img {
 		height: 400px !important;
 	}
 	.pignose-layerslider .slide-visual .script-wrap {
-		top:50px;
+		top:80px;
 	}
 	.content-img-right {
 		padding: 36px 23px 0px;

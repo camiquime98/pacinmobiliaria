@@ -1,5 +1,4 @@
 
-
 <html>
 
     <head>
@@ -24,93 +23,38 @@
     
     </head>
 
-    
-    
-    
     <body>
-    
-    
+
       <div class="container-fluid">
-    
-    
+ 
           <br />
-    
-    
         <h3 align="center"> Laravel 8 Dropzone Image Upload Example Tutorial </h3>
-    
-    
+ 
         <br />
-    
-    
-            
-    
-    
           <div class="panel panel-default">
-    
-    
+
             <div class="panel-heading">
-    
-    
-              <h3 class="panel-title">Select Image</h3>
-    
-    
+              <h3 class="panel-title">Select Image</h3>  
             </div>
-    
-    
             <div class="panel-body">
-    
-    
               <form id="dropzoneForm" class="dropzone" action="{{ route('dropzone.store') }}" accept-charset="UTF-8" enctype="multipart/form-data">
-    
-    
                 @csrf
-    
-    
               </form>
-    
-    
               <div align="center">
-    
-    
                 <button type="button" class="btn btn-info" id="submit-all">Upload</button>
-    
-    
               </div>
-    
-    
             </div>
-    
-    
           </div>
-    
-    
           <br />
     
-    
           <div class="panel panel-default">
-    
-    
-            <div class="panel-heading">
-    
-    
+        <div class="panel-heading">
               <h3 class="panel-title">Uploaded Image</h3>
-    
-    
             </div>
-    
-    
             <div class="panel-body" id="uploaded_image">
-    
-    
             </div>
-    
-    
           </div>
-    
-    
         </div>
-    
-    
     </body>
     
     

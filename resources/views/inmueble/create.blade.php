@@ -32,7 +32,7 @@
     
  
   <div class="container-fluid m-0 p-0 fondo-create-inmueble">
-    <div class="main-content">
+    <div class="main-content" style="margin-top: 80px;">
 
       <form action="{{ route('inmueble.store') }}" method="post" class="form-horizontal p-2" enctype="multipart/form-data">
         @csrf

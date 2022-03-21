@@ -32,6 +32,8 @@ class ImageController extends Controller
     }
     function fetch_image()
     {
+    
+    
     $images = \File::allFiles(public_path('images'));
     $output = '<div class="row">';
     foreach($images as $image)

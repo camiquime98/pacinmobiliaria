@@ -1,9 +1,51 @@
+<style>
+  .btn-delete
+  {
+    background: none;
+    color: rgb(255, 0, 0);
+    border: 1px solid rgb(255, 0, 0);
+  }
+  .btn-ver
+  {
+    background: none;
+    color: rgb(63, 170, 21);
+    border: 1px solid rgb(63, 170, 21);
+  }
+  .btn-editar
+  {
+    background: none;
+    color: rgb(22, 115, 151);
+    border: 1px solid rgb(7, 185, 255);
+  }
+  .btn-imagenes
+  {
+    background: none;
+    color: rgb(8, 110, 150);
+    border: 1px solid rgb(7, 185, 255);
+  }
+  .btn-agregar
+  {
+    background: #06bdca;
+color: white;
+transition: 1s all;
+  }
+  .btn-agregar:hover
+  {
+    background: transparent;
+    border: 1px solid #06bdca ; 
+color: #3a898f;
+    transition: 1s all;
+  }
+</style>
 <div>
     <div class="row d-flex justify-content-center p-3" style="margin:0px;">
         <div class="col-md-12" style="margin-top:90px;">
             <div class="row d-flex justify-content-end p-2">
-                <div class="col-md-3 d-flex justify-content-end">
-                  <a class="btn btn-md btn-primary" href="{{ route('inmueble.create') }}">Agregar inmueble</a>   
+              <div class="col-md-9">
+              <b><h1 style="color: #0d6efd;">Inmuebles registrados</h1></b>
+              </div>  
+              <div class="col-md-3 d-flex justify-content-end">
+                  <a class="btn btn-md btn-agregar" href="{{ route('inmueble.create') }}">Agregar inmueble</a>   
                 </div>
             </div>
          
@@ -75,13 +117,13 @@
                   <td>{{ $inmueble->gestion }}</td>
                   <td>{{ $inmueble->valor }}</td>
                   <td class="td-actions text-right">
-                    <a href="{{ route('imageinmueble.index', $inmueble->id) }}"><button type="button" class="btn btn-warning">Imagenes</button></a>
-                    <a href="{{ route('inmueble.edit', $inmueble->id) }}"><button type="button" class="btn btn-warning">Editar</button></a>
-                  <a href="{{ route('inmueble.show', $inmueble->id) }}"><button type="button" class="btn btn-success">Ver</button></a>
+                    <a href="{{ route('imageinmueble.index', $inmueble->id, $inmueble->folder )}}"><button type="button" class="btn btn-imagenes">Imagenes</button></a>
+                    <a href="{{ route('inmueble.edit', $inmueble->id) }}"><button type="button" class="btn btn-editar">Editar</button></a>
+                  <a href="{{ route('inmueble.show', $inmueble->id) }}"><button type="button" class="btn btn-ver">Ver mas</button></a>
                   <form action="{{ route('inmueble.destroy', $inmueble->id) }}" method="POST" style="display: inline-block;" onsubmit="return confirm('Seguro?')">
                     @csrf
                     @method('DELETE')
-                    <button class="btn btn-danger" type="submit" rel="tooltip" onsubmit="return confirm('Segur?')">
+                    <button class="btn btn-delete" type="submit" rel="tooltip" onsubmit="return confirm('Segur?')">
                     <i class="material-icons">Eliminar</i>
                     </button>
                 </form>
