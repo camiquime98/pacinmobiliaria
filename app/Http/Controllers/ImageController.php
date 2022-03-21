@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;
+use App\Models\inmuebles;
 
 class ImageController extends Controller
 
@@ -11,8 +12,9 @@ class ImageController extends Controller
 {
     //  @return \Illuminate\Http\Response
     public function index()
-    {
-       return view('imageinmueble.index');
+    {   
+        $inmuebles = inmuebles::all();
+       return view('imageinmueble.index')->with('inmuebles',$inmuebles);
     }
     /**
      * Display a listing of the resource.
