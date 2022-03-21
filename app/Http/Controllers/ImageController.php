@@ -12,9 +12,9 @@ class ImageController extends Controller
 
 {
     //  @return \Illuminate\Http\Response
-    public function index($id)
+    public function index()
     {
-        $inmuebles=inmuebles::findOrFail($id);
+        $inmuebles=inmuebles::findOrFail();
         return view('imageinmueble.index')->with('inmuebles',$inmuebles);
     }
     /**
