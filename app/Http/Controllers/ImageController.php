@@ -1,18 +1,21 @@
 <?php
 
+
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;
-
+use App\Models\inmuebles;
 class ImageController extends Controller
 
 
 {
     //  @return \Illuminate\Http\Response
-    public function index()
+    public function index($id)
     {
-       return view('imageinmueble.index');
+        $inmuebles=inmuebles::findOrFail($id);
+        return view('imageinmueble.index')->with('inmuebles',$inmuebles);
     }
     /**
      * Display a listing of the resource.

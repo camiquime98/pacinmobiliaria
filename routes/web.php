@@ -68,8 +68,7 @@ Route::group(['middleware' => ['auth', 'MDadmin']], function()
 
     
 
-
-    Route::get('/imageinmueble', [App\Http\Controllers\ImageController::class, 'index'])->name('imageinmueble.index');
+    Route::get('/imageinmueble/{id}/index', [App\Http\Controllers\ImageController::class, 'index'])->name('imageinmueble.index');
 
     Route::get('/imageinmueble/upload_image', [App\Http\Controllers\ImageController::class, 'upload_image'])->name('imageinmueble.upload_image');
 
