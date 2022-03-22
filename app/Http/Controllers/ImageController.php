@@ -1,11 +1,12 @@
 <?php
 
+
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;
 use App\Models\inmuebles;
-
 class ImageController extends Controller
 
 
