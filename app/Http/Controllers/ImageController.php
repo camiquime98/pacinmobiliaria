@@ -13,6 +13,10 @@ class ImageController extends Controller
     //  @return \Illuminate\Http\Response
     public function index()
     {   
+        // return view ('gfg', ['articleName' => 'Artículo 1']);
+        // <h2>{{ $articleName }}</h2>
+
+
         $inmuebles = inmuebles::all();
        return view('imageinmueble.index')->with('inmuebles',$inmuebles);
     }
@@ -24,17 +28,22 @@ class ImageController extends Controller
     public function upload_image(Request $request)
     {
         $image = $request->file('file');
-    
-        $imageName = time().'.'.$image->extension();
-        $image->move(public_path('images'),$imageName);
-    
-        return response()->json(['success'=>$imageName]);
 
+        $folder = $request->input('folder');
+
+        $path = "imagenes-inmueble";
+
+        
+        $pathimage = $path . $folder;
+
+        $imageName = time().'.'.$image->extension();
+        $image->move(public_path('imagenes-inmueble/' . $folder),$imageName);
+
+        return response()->json(['success'=>$imageName]);
        
     }
     function fetch_image()
     {
-    
     
     $images = \File::allFiles(public_path('images'));
     $output = '<div class="row">';

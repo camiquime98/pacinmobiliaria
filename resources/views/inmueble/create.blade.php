@@ -138,11 +138,11 @@
       </div>
 
 
-
-      {{-- <div class="col-md-12 col-sm-12 p-3" style="height: 200px;">
+{{-- 
+      <div class="col-md-12 col-sm-12 p-3" style="height: 200px;">
         <div class="card w-100 h-100 d-flex justify-content-center card_inmueble">
           <label for="">Agregar imagenes del inmueble</label>
-            <input type="file" name="imagenes[]" id="imagenes[]" class="inputinmueble" multiple accept="image/*">
+            <input type="file" name="image" id="image" class="inputinmueble" multiple accept="image/*">
         </div>
       </div> --}}
 

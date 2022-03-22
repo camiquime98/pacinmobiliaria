@@ -40,6 +40,22 @@ class InmueblesController extends Controller
      */
     public function store(Request $request)
     {
+        
+        // $image = $request->file('image');
+    
+
+        // $folder = Str::random(15);
+        
+        // $imageName = time().'.'.$image->extension();
+
+        // $image->move(public_path('imagenes-inmueble/' . $folder),$imageName);
+
+        // return response()->json(['success'=>$imageName]);
+        // // $folderx ="imagenes-inmueble/";
+        // $path = $image;
+
+
+        // $ruta= $path;
         $folder = Str::random(15);
         $folderx ="imagenes-inmueble/";
         $path = $folderx . $folder; 
