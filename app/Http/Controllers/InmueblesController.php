@@ -123,9 +123,13 @@ class InmueblesController extends Controller
     public function edit($id)
     {
         $inmuebles=inmuebles::findOrFail($id);
-        return view('inmueble.edit')->with('inmuebles',$inmuebles);
+        return view('imageinmueble.index')->with('inmuebles',$inmuebles);
     }
-
+    public function image($id)
+    {
+        $inmuebles=inmuebles::findOrFail($id);
+        return view('imageinmueble.edit')->with('inmuebles',$inmuebles);
+    }
     /**
      * Update the specified resource in storage.
      *

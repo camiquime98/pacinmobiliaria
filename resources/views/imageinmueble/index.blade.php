@@ -20,16 +20,14 @@
           <th scope="col">Zona</th>
           <th scope="col">Tipo inmueble</th>
           <th scope="col">Gestion</th>
-          <th scope="col">Valor</th> 
+          <th scope="col">Valor</th> --}}
           <th class="text-right">Acciones</th>
         </tr>
       </thead>
       <tbody>
-        @foreach($inmuebles as $inmueble)
+          @foreach($inmuebles as $inmueble)
         <tr>
-         
-          <td><img src="{{ asset('imagenes-inmueble/'. $inmueble->folder) }}" class="img-thumbnail" width="150" height="150"/></td>
-      
+          <td><img src="{{ $inmueble->id }}" class="img-thumbnail" width="150" height="150"/></td>
         </tr>
         @endforeach
       </tbody>
@@ -37,7 +35,7 @@
   </div>
 </body>
 </html> --}}
-<html>
+ <html>
 
     <head>
     
@@ -76,13 +74,18 @@
             </div>
             @foreach($inmuebles as $inmueble)
             <div class="panel-body">
+<<<<<<< HEAD
              
+=======
+>>>>>>> 3298d0fce38fe5f57d3eef4cd9725f5ed0fdfd3a
               <form id="dropzoneForm" class="dropzone" action="{{ route('dropzone.store') }}" accept-charset="UTF-8" enctype="multipart/form-data">
                 @csrf
-                
-                <input class="" type="text"  name="folder" id="folder" value="{{ $inmueble->folder }}">
+                <in
               </form>
+<<<<<<< HEAD
               
+=======
+>>>>>>> 3298d0fce38fe5f57d3eef4cd9725f5ed0fdfd3a
               <div align="center">
                 <button type="button" class="btn btn-info" id="submit-all">Upload</button>
               </div>
@@ -96,6 +99,7 @@
               <h3 class="panel-title">Uploaded Image</h3>
             </div>
             <div class="panel-body" id="uploaded_image">
+<<<<<<< HEAD
  
                
               @foreach($inmuebles as $inmueble)
@@ -106,6 +110,8 @@
                 @endforeach
                         
            
+=======
+>>>>>>> 3298d0fce38fe5f57d3eef4cd9725f5ed0fdfd3a
             </div>
           </div>
         </div>
