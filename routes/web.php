@@ -21,6 +21,8 @@ Auth::routes();
 Route::post('dropzone/store', [ImageController::class, 'upload_image'])->name('dropzone.store');
 
 Route::get('/', [App\Http\Controllers\inicioController::class, 'index'])->name('inicio');
+Route::get('/contactanos', [App\Http\Controllers\inicioController::class, 'contactoindex'])->name('contactanos.contactanos');
+
 
 Route::get('/inicioshow{id}', [App\Http\Controllers\inicioController::class, 'indexshow'])->name('inicioshow');
 

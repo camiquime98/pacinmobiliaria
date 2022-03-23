@@ -144,12 +144,16 @@ iframe {
 
 
     .wrap-contact2 {
-  width: 400px;
-  background: rgba(252, 252, 252, 0.589);
+  width: 500px;
+  background: rgb(255,255,255);
+background: linear-gradient(90deg, rgba(255,255,255,0.9220063025210083) 0%, rgba(255,255,255,0.6530987394957983) 100%);
   border-radius: 30px;
   overflow: hidden;
-  margin-top: 30px;
-  padding: 15px;
+  margin-top: 70px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 15px;
+  padding-right: 15px;
 }
 
 .contact2-form {
@@ -178,7 +182,7 @@ iframe {
   width: 100%;
   position: relative;
   border-bottom: 2px solid #adadad;
-  margin-bottom: 37px;
+  margin-bottom: 27px;
 }
 
 .input2 {
@@ -244,7 +248,7 @@ iframe {
 
 /*---------------------------------------------*/
 input.input2 {
-  height: 45px;
+  height: 35px;
 }
 
 input.input2 + .focus-input2::after {
@@ -255,7 +259,7 @@ input.input2 + .focus-input2::after {
 textarea.input2 {
   min-height: 115px;
   padding-top: 13px;
-  padding-bottom: 13px;
+  padding-bottom: 10px;
 }
 
 textarea.input2 + .focus-input2::after {
@@ -354,6 +358,7 @@ textarea.input2 + .focus-input2::after {
   .wrap-contact2 {
     padding: 72px 15px 90px 15px;
   }
+  
 }
 
 
@@ -435,11 +440,25 @@ textarea.input2 + .focus-input2::after {
     .wrap-contact2
     {
       background: rgba(221, 221, 221, 0.199);
+      margin-top: 35px;
+      padding-bottom: 30px;
     }
     .row-video
     {
         display: none;
     }
+    .wrap-input2 {
+  margin-bottom: 37px;
+  }
+  .contact2-form-title {
+  display: block;
+  font-family: Poppins-Bold;
+  font-size: 29px;
+  color: #1be4da;
+  line-height: 1.2;
+  text-align: center;
+  padding-bottom: 30px;
+}
 }
 
 </style>

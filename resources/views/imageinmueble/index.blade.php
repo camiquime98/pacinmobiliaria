@@ -74,18 +74,20 @@
             <div class="panel-heading">
               <h3 class="panel-title">Select Image</h3>  
             </div>
+            @foreach($inmuebles as $inmueble)
             <div class="panel-body">
-              @foreach($inmuebles as $inmueble)
+             
               <form id="dropzoneForm" class="dropzone" action="{{ route('dropzone.store') }}" accept-charset="UTF-8" enctype="multipart/form-data">
                 @csrf
                 
                 <input class="" type="text"  name="folder" id="folder" value="{{ $inmueble->folder }}">
               </form>
-              @endforeach
+              
               <div align="center">
                 <button type="button" class="btn btn-info" id="submit-all">Upload</button>
               </div>
             </div>
+            @endforeach
           </div>
           <br />
     
@@ -96,12 +98,12 @@
             <div class="panel-body" id="uploaded_image">
  
                
-{{--                 
+              @foreach($inmuebles as $inmueble)
                 <div class="col-md-2">
-                            <img src="{{ asset('imagenes-inmueble/'), $inmueble->folder }}" class="img-thumbnail" width="150" height="150"/>
+                            <img src="{{ asset('imagenes-inmueble/'), $inmueble->id }}" class="img-thumbnail" width="150" height="150"/>
                             <button type="button" class="btn btn-link remove_image" id="">Remove</button>
-                        </div> --}}
-                 
+                </div>
+                @endforeach
                         
            
             </div>
