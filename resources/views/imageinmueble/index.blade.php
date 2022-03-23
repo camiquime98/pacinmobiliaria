@@ -20,16 +20,14 @@
           <th scope="col">Zona</th>
           <th scope="col">Tipo inmueble</th>
           <th scope="col">Gestion</th>
-          <th scope="col">Valor</th> 
+          <th scope="col">Valor</th> --}}
           <th class="text-right">Acciones</th>
         </tr>
       </thead>
       <tbody>
-        @foreach($inmuebles as $inmueble)
+          @foreach($inmuebles as $inmueble)
         <tr>
-         
-          <td><img src="{{ asset('imagenes-inmueble/'. $inmueble->folder) }}" class="img-thumbnail" width="150" height="150"/></td>
-      
+          <td><img src="{{ $inmueble->id }}" class="img-thumbnail" width="150" height="150"/></td>
         </tr>
         @endforeach
       </tbody>
@@ -37,7 +35,7 @@
   </div>
 </body>
 </html> --}}
-<html>
+ <html>
 
     <head>
     
@@ -75,13 +73,10 @@
               <h3 class="panel-title">Select Image</h3>  
             </div>
             <div class="panel-body">
-              @foreach($inmuebles as $inmueble)
               <form id="dropzoneForm" class="dropzone" action="{{ route('dropzone.store') }}" accept-charset="UTF-8" enctype="multipart/form-data">
                 @csrf
-                
-                <input class="" type="text"  name="folder" id="folder" value="{{ $inmueble->folder }}">
+                <in
               </form>
-              @endforeach
               <div align="center">
                 <button type="button" class="btn btn-info" id="submit-all">Upload</button>
               </div>
@@ -94,16 +89,6 @@
               <h3 class="panel-title">Uploaded Image</h3>
             </div>
             <div class="panel-body" id="uploaded_image">
- 
-               
-{{--                 
-                <div class="col-md-2">
-                            <img src="{{ asset('imagenes-inmueble/'), $inmueble->folder }}" class="img-thumbnail" width="150" height="150"/>
-                            <button type="button" class="btn btn-link remove_image" id="">Remove</button>
-                        </div> --}}
-                 
-                        
-           
             </div>
           </div>
         </div>

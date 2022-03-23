@@ -12,15 +12,8 @@ class ImageController extends Controller
 
 {
     //  @return \Illuminate\Http\Response
-    public function index()
-    {   
-        // return view ('gfg', ['articleName' => 'Artículo 1']);
-        // <h2>{{ $articleName }}</h2>
+  
 
-
-        $inmuebles = inmuebles::all();
-       return view('imageinmueble.index')->with('inmuebles',$inmuebles);
-    }
     /**
      * Display a listing of the resource.
      *
