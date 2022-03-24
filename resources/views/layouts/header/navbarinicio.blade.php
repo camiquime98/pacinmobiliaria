@@ -88,9 +88,7 @@
                                 <li class="menu__item">
                                     <a class="menu__link" href="{{ route('inmueble.index')}}">inmuebles</a>
                                 </li>  
-                                <li class="menu__item">
-                                    <a class="menu__link" href="{{ route('imageinmueble.index')}}">Imagenes</a>
-                                </li>  
+                               
                           </ul>
                         </div>
                       </div>

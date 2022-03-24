@@ -21,20 +21,16 @@
           <th scope="col">Tipo inmueble</th>
           <th scope="col">Gestion</th>
           <th scope="col">Valor</th> --}}
-          <th class="text-right">Acciones</th>
+      
         </tr>
       </thead>
       <tbody>
-          @foreach($inmuebles as $inmueble)
-        <tr>
-          <td><img src="{{ $inmueble->id }}" class="img-thumbnail" width="150" height="150"/></td>
-        </tr>
-        @endforeach
+         
       </tbody>
     </table>
   </div>
 </body>
-</html> --}}
+</html> 
  <html>
 
     <head>
@@ -72,25 +68,18 @@
             <div class="panel-heading">
               <h3 class="panel-title">Select Image</h3>  
             </div>
-            @foreach($inmuebles as $inmueble)
+         
             <div class="panel-body">
-<<<<<<< HEAD
              
-=======
->>>>>>> 3298d0fce38fe5f57d3eef4cd9725f5ed0fdfd3a
               <form id="dropzoneForm" class="dropzone" action="{{ route('dropzone.store') }}" accept-charset="UTF-8" enctype="multipart/form-data">
                 @csrf
-                <in
+                <input type="text" class="hidden" name="folder" id="folder" value="{{ $inmuebles->folder }}">
               </form>
-<<<<<<< HEAD
-              
-=======
->>>>>>> 3298d0fce38fe5f57d3eef4cd9725f5ed0fdfd3a
               <div align="center">
                 <button type="button" class="btn btn-info" id="submit-all">Upload</button>
               </div>
             </div>
-            @endforeach
+          
           </div>
           <br />
     
@@ -99,19 +88,7 @@
               <h3 class="panel-title">Uploaded Image</h3>
             </div>
             <div class="panel-body" id="uploaded_image">
-<<<<<<< HEAD
- 
-               
-              @foreach($inmuebles as $inmueble)
-                <div class="col-md-2">
-                            <img src="{{ asset('imagenes-inmueble/'), $inmueble->id }}" class="img-thumbnail" width="150" height="150"/>
-                            <button type="button" class="btn btn-link remove_image" id="">Remove</button>
-                </div>
-                @endforeach
-                        
-           
-=======
->>>>>>> 3298d0fce38fe5f57d3eef4cd9725f5ed0fdfd3a
+  
             </div>
           </div>
         </div>
@@ -215,11 +192,11 @@
     
     
       {
-    
+      var folder =document.getElementById('folder').value;
     
         $.ajax({
     
-    
+       data:{folder : folder},
           url:"{{ route('imageinmueble.fetch_image') }}",
     
     
@@ -246,7 +223,7 @@
     
       $(document).on('click', '.remove_image', function(){
     
-    
+        var folder = document.getElementById('folder').value;
         var name = $(this).attr('id');
     
     
@@ -256,7 +233,7 @@
           url:"{{ route('imageinmueble.delete_image') }}",
     
     
-          data:{name : name},
+          data:{name : name, folder : folder},
     
     
           success:function(data){
