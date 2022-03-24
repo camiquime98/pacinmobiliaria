@@ -11,6 +11,13 @@ class ImageController extends Controller
 
 
 {
+
+
+    public function index()
+    {
+        $inmuebles = inmuebles::all();
+        return view('imageinmueble.index')->with('inmuebles',$inmuebles);
+    }
     //  @return \Illuminate\Http\Response
   
 
@@ -31,6 +38,7 @@ class ImageController extends Controller
         $pathimage = $path . $folder;
 
         $imageName = time().'.'.$image->extension();
+
         $image->move(public_path('imagenes-inmueble/' . $folder),$imageName);
 
         return response()->json(['success'=>$imageName]);
@@ -38,13 +46,15 @@ class ImageController extends Controller
     }
     function fetch_image()
     {
-    
-    $images = \File::allFiles(public_path('images'));
+
+    // $inmuebles=inmuebles::findOrFail($id);
+
+    $images = \File::allFiles(public_path('imagenes-inmueble'));
     $output = '<div class="row">';
     foreach($images as $image)
     {
     $output .= '<div class="col-md-2">
-                <img src="'.asset('images/' . $image->getFilename()).'" class="img-thumbnail" width="150" height="150"/>
+                <img src="'.asset('imagenes-inmueble/' . $image->getFilename()).'" class="img-thumbnail" width="150" height="150"/>
                 <button type="button" class="btn btn-link remove_image" id="'.$image->getFilename().'">Remove</button>
             </div>';
      }
@@ -55,7 +65,7 @@ class ImageController extends Controller
     {
      if($request->get('name'))
      {
-      \File::delete(public_path('images/' . $request->get('name')));
+      \File::delete(public_path('imagenes-inmueble/' . $request->get('name')));
      }
     }
 }

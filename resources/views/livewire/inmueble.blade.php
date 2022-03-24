@@ -100,6 +100,7 @@ color: #3a898f;
                   <th scope="col">Tipo inmueble</th>
                   <th scope="col">Gestion</th>
                   <th scope="col">Valor</th>
+                  <th scope="col">fotos</th>
                   <th class="text-right">Acciones</th>
                 </tr>
               </thead>
@@ -116,9 +117,11 @@ color: #3a898f;
                   <td>{{ $inmueble->tipoinmueble }}</td>
                   <td>{{ $inmueble->gestion }}</td>
                   <td>{{ $inmueble->valor }}</td>
+                  
+                  <td><img src="{{asset('imagenes-inmueble/' . $inmueble->folder )}}" alt="" srcset=""></td>
                   <td class="td-actions text-right">
                     
-                    <a href="{{ route('imageinmueble.index', $inmueble->id) }}"><button type="button" class="btn btn-editar">Editar</button></a>
+                    <a href="{{ route('imageinmueble.index', $inmueble->id) }}"><button type="button" class="btn btn-editar">fotos</button></a>
                     <a href="{{ route('inmueble.edit', $inmueble->id) }}"><button type="button" class="btn btn-editar">Editar</button></a>
                   <a href="{{ route('inmueble.show', $inmueble->id) }}"><button type="button" class="btn btn-ver">Ver mas</button></a>
                   <form action="{{ route('inmueble.destroy', $inmueble->id) }}" method="POST" style="display: inline-block;" onsubmit="return confirm('Seguro?')">
