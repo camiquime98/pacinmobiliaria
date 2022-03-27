@@ -1,9 +1,13 @@
-<script src="js/jquery-3.3.1.min.js">
+  
+	<script src="js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+
   <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
     function hideURLbar(){ window.scrollTo(0,1); } </script>
   <!-- //for-mobile-apps -->
-  
-  <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+
   <!-- //js -->
   <!-- cart -->
   <script src="{{ asset('js/app.js') }}" defer></script>

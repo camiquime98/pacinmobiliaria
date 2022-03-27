@@ -123,12 +123,13 @@ class InmueblesController extends Controller
     public function edit($id)
     {
         $inmuebles=inmuebles::findOrFail($id);
-        return view('imageinmueble.index')->with('inmuebles',$inmuebles);
+        return view('inmueble.edit')->with('inmuebles',$inmuebles);
     }
     public function image($id)
     {
         $inmuebles=inmuebles::findOrFail($id);
-        return view('imageinmueble.edit')->with('inmuebles',$inmuebles);
+   
+        return view('imageinmueble.index')->with('inmuebles',$inmuebles);
     }
     /**
      * Update the specified resource in storage.
@@ -177,6 +178,8 @@ class InmueblesController extends Controller
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
+     * 
+     *    * @param  \Illuminate\Http\Request  $request
      */
     public function destroy($id)
     {

@@ -23,7 +23,49 @@
               <hr>
             </div>
             <div class="card-body">
-              -------------AQUI VAN LAS IMAGENES -----------------
+              
+
+
+
+
+
+
+
+
+
+
+              <link rel="stylesheet" type="text/css" href="assets/slider/css/style.css" />
+              <script type="text/javascript" src="assets/slider/js/jquery.js"></script>
+
+
+              <div id="wowslider-container1">
+                <div class="ws_images"><ul>
+                  <div class="" id="uploaded_image">
+                    
+                    
+  <input type="text" class="hidden" name="folder" id="folder" value="{{ $inmuebles->folder }}">
+                  </div>
+                  
+                  {{-- <li><img src="assets/slider/images/images/01.jpg" alt="01" title="01" id="wows1_1"/></li>
+                  <li><img src="assets/slider/images/images/1631350981_314253_1631351040_noticia_normal_recorte1.jpg" alt="1631350981_314253_1631351040_noticia_normal_recorte1" title="1631350981_314253_1631351040_noticia_normal_recorte1" id="wows1_2"/></li>
+                  <li><img src="assets/slider/images/images/casas.jpg" alt="casas" title="casas" id="wows1_3"/></li>
+                  <li><img src="assets/slider/images/images/casasdesde500.mensualprestamosnorgeshus.jpg" alt="Casas-desde-500.-€-mensual-prestamos-norges-hus" title="Casas-desde-500.-€-mensual-prestamos-norges-hus" id="wows1_4"/></li>
+                  <li><a href="http://wowslider.net"><img src="assets/slider/images/images/casasecologicas_aperturahogarsostenibilidadcertificado1024x629.jpg" alt="html5 slideshow" title="casas-ecológicas_apertura-hogar-sostenibilidad-certificado--1024x629" id="wows1_5"/></a></li>
+                  <li><img src="assets/slider/images/images/omicrono_420219253_131917136_1706x960.jpg" alt="omicrono_420219253_131917136_1706x960" title="omicrono_420219253_131917136_1706x960" id="wows1_6"/></li> --}}
+                </ul></div>
+                <div class="ws_bullets"><div>
+                  <a href="#" title="01 (1)"><span><img src="assets/slider/images/tooltips/01_1.jpg" alt="01 (1)"/>1</span></a>
+                  <a href="#" title="01"><span><img src="assets/slider/images/tooltips/01.jpg" alt="01"/>2</span></a>
+                  <a href="#" title="1631350981_314253_1631351040_noticia_normal_recorte1"><span><img src="assets/slider/images/tooltips/1631350981_314253_1631351040_noticia_normal_recorte1.jpg" alt="1631350981_314253_1631351040_noticia_normal_recorte1"/>3</span></a>
+                  <a href="#" title="casas"><span><img src="assets/slider/images/tooltips/casas.jpg" alt="casas"/>4</span></a>
+                  <a href="#" title="Casas-desde-500.-€-mensual-prestamos-norges-hus"><span><img src="assets/slider/images/tooltips/casasdesde500.mensualprestamosnorgeshus.jpg" alt="Casas-desde-500.-€-mensual-prestamos-norges-hus"/>5</span></a>
+                  <a href="#" title="casas-ecológicas_apertura-hogar-sostenibilidad-certificado--1024x629"><span><img src="assets/slider/images/tooltips/casasecologicas_aperturahogarsostenibilidadcertificado1024x629.jpg" alt="casas-ecológicas_apertura-hogar-sostenibilidad-certificado--1024x629"/>6</span></a>
+                  <a href="#" title="omicrono_420219253_131917136_1706x960"><span><img src="assets/slider/images/tooltips/omicrono_420219253_131917136_1706x960.jpg" alt="omicrono_420219253_131917136_1706x960"/>7</span></a>
+                </div></div>
+                <div class="ws_shadow"></div>
+                </div>
+
+
             </div>
             <div class="card-footer">
               <b><h4 style="color: rgb(52, 172, 219);">Descripcion</h4></b>                
@@ -83,120 +125,41 @@
     </div>
   </div>
 </div>
-             {{-- <div class="card-boy">
-               <div class="author">
-                 <a href="#">
-                   <img src="{{ asset('/img/default-avatar.png') }}" alt="image" class="avatar">
-                   <h5 class="title mt-3">hiiii</h5>
-                 </a>
+
+<script type="text/javascript" src="assets/slider/js/wowslider.js"></script>
         
-                 <p class="description">
-                     {{ $inmueble->departamento }}<br>
-                     {{ $inmueble->barrio }}<br>
-                     {{ $inmueble->zona }}<br>
-                     {{ $inmueble->tipoinmueble }}<br>
-                     {{ $inmueble->gestion }}<br>
-                     {{ $inmueble->valor }}
-                 </p>
-                 
-               </div>
-             
-             </div> --}}
-             {{-- <div class="card-description">
-               Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam officia corporis molestiae aliquid provident placeat.
-            </div> --}}
-            
-             <!--body-->
-             
-           {{-- </div>
-         </div> --}}
-        {{-- <div class="col-md-6">
+ <script type="text/javascript" src="assets/slider/js/script.js"></script>       
 
-            
-           <div class="card">
-            <div class="card-header card-header-primary">
-              <div class="card-title">Usuarios  <p class="card-category">Vista detallada del inmueble {{ $inmuebles->tipoinmueble }}</p></div>
-             
-            </div>
-            <div class="card-boy">
-              <div class="author">
-                <a href="#">
-                  <img src="{{ asset('/img/default-avatar.png') }}" alt="image" class="avatar">
-                  <h5 class="title mt-3">hiiii</h5>
-                </a>
-                <p class="description">
-                    {{ $inmueble->departamento }}<br>
-                    {{ $inmueble->barrio }}<br>
-                    {{ $inmueble->zona }}<br>
-                    {{ $inmueble->tipoinmueble }}<br>
-                    {{ $inmueble->gestion }}<br>
-                    {{ $inmueble->valor }}
-                </p>
-              </div>
-            
-            </div>
-            <div class="card-description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam officia corporis molestiae aliquid provident placeat.
-           </div>
+
+        <script>
            
-            <!--body-->
-            
-          </div>
-        </div> --}}
+      
+           load_images();
+      function load_images()
+      {
 
-        {{-- <div class="col-md-6">
-          <div class="card card-user">
-            <div class="card-body">
-              <table class="table table-bordered table-striped">
-                <tbody>
-                  <tr>
-                    <th>Clase inmueble</th>
-                    <td>{{ $inmueble->tipoinmueble }}
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>Habitaciones</th>
-                    <td>{{ $inmueble->alcoba }}</td>
-                  </tr>
-                  <tr>
-                    <th>Baños</th>
-                    <td>{{ $inmueble->banos }}</td>
-                  </tr>
-                  <tr>
-                
-                    <th>Area</th>
-                    <td><span class="badge badge-primary">{{ $inmueble->area }}</span></td>
-                  </tr>
-                  <tr>
-                    <th>Created at</th>
-                    <td><a href="#" target="_blank">{{  $inmueble->valor  }}</a></td>
-                  </tr>
-                  {{-- <tr>
-                      <th>Roles</th>
-                      <td>
-                          @forelse ($user->roles as $role)
-                              <span class="badge rounded-pill bg-dark text-white">{{ $role->name }}</span>
-                          @empty
-                              <span class="badge badge-danger bg-danger">No roles</span>
-                          @endforelse
-                      </td>
-                  </tr> --}}
-                {{-- </tbody>
-              </table>
-            </div>
-          </div>
-        </div> --}}
-        {{-- <div class="w-50">
-          <div class="button-container">
-            <div class="row">
-              <div class="col-md-6 p-2">
-                  <a href="{{ route('inmuebles.edit', $inmueble->id) }}" class="btn col-md-12 btn-warning"><i class="material-icons">Editar</i></a>
-              </div>
-              <div class="col-md-6 p-2">
-                  <a href="{{ route('inmuebles.index') }}" class="btn col-md-12 btn-primary"><i class="material-icons">Volver</i></a>
-              </div>
-            </div>
-          </div>
-        </div> --}}
+      var folder =document.getElementById('folder').value;
+
+
+        $.ajax({
+       data:{folder : folder},
+          url:"{{ route('imageinmueble.fetch_image_show') }}",
+          success:function(data)
+          {
+            alert('MUCHO PERRO');
+            $('#uploaded_image').html(data);
+          }
+          
+        })
+
+      
+
+      }
+      
+        </script>
+
+
+@include('layouts.footer.footer') 
  
+
 @endsection

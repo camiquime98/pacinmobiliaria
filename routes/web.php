@@ -24,8 +24,12 @@ Route::post('dropzone/store', [ImageController::class, 'upload_image'])->name('d
 Route::get('/', [App\Http\Controllers\inicioController::class, 'index'])->name('inicio');
 Route::get('/contactanos', [App\Http\Controllers\inicioController::class, 'contactoindex'])->name('contactanos.contactanos');
 
+Route::get('/imageinmueble/fetch_image_show', [App\Http\Controllers\ImageController::class, 'fetch_image_show'])->name('imageinmueble.fetch_image_show');
 
-Route::get('/inicioshow/{id}', [App\Http\Controllers\inicioController::class, 'indexshow'])->name('inicioshow');
+
+
+
+Route::get('/inicioshow{id}', [App\Http\Controllers\inicioController::class, 'indexshow'])->name('inicioshow');
 
 
 // Route::get('/', function () {
@@ -55,8 +59,9 @@ Route::group(['middleware' => ['auth', 'MDadmin']], function()
 
     Route::get('/inmueble/create', [App\Http\Controllers\inmueblesController::class, 'create'])->name('inmueble.create');
 
-    Route::get('/inmueble/{id}/image', [App\Http\Controllers\inmueblesController::class, 'image'])->name('inmueble.image');
-
+    
+    Route::get('/inmueble/{id}/image', [App\Http\Controllers\inmueblesController::class, 'image'])->name('image.edit');
+  
     Route::get('/inmueble/{id}/edit', [App\Http\Controllers\inmueblesController::class, 'edit'])->name('inmueble.edit');
 
     Route::put('/inmueble/{id}', [App\Http\Controllers\inmueblesController::class, 'update'])->name('inmueble.update');

@@ -44,28 +44,54 @@ class ImageController extends Controller
         return response()->json(['success'=>$imageName]);
        
     }
-    function fetch_image()
+    function fetch_image(Request $request)
     {
-
-    // $inmuebles=inmuebles::findOrFail($id);
-
-    $images = \File::allFiles(public_path('imagenes-inmueble'));
-    $output = '<div class="row">';
+        $folder = $request->get('folder');
+    $images = \File::allFiles(public_path('imagenes-inmueble/' . $folder));
+    $output = '<div class="container"><div class="row">';
+    
+    $folder ='imagenes-inmueble/' . $folder . '/';
     foreach($images as $image)
     {
-    $output .= '<div class="col-md-2">
-                <img src="'.asset('imagenes-inmueble/' . $image->getFilename()).'" class="img-thumbnail" width="150" height="150"/>
-                <button type="button" class="btn btn-link remove_image" id="'.$image->getFilename().'">Remove</button>
+    $output .= '<div class="col-md-3">
+                <img src="'.asset($folder . $image->getFilename()).'" class="img-thumbnail" style="max-width: 350px!important; max-height: 200px!important; width: 100%; height: 100%;"/>
+                <button type="button" class="btn btn-link remove_image" id="'.$image->getFilename().'">Eliminar foto</button>
             </div>';
      }
-     $output .= '</div>';
+     $output .= '</div></div>';
      echo $output;
     }
     function delete_image(Request $request)
     {
+        $folder = $request->get('folder');
+        $folder ='imagenes-inmueble/' . $folder . '/';
      if($request->get('name'))
      {
-      \File::delete(public_path('imagenes-inmueble/' . $request->get('name')));
+        
+      \File::delete(public_path($folder . $request->get('name')));
      }
     }
+
+
+
+    function fetch_image_show(Request $request)
+    {
+    $folder = $request->get('folder');
+    $images = \File::allFiles(public_path('imagenes-inmueble/' . $folder));
+    $output = '<li>';
+    
+    $folder ='imagenes-inmueble/' . $folder . '/';
+    foreach($images as $image)
+    {
+    $output .= '
+                <img src="'.asset($folder . $image->getFilename()).'" class="" id="wows1_1"/>';
+     }
+     $output .= '</li>';
+     echo $output;
+    
+    }
+
+    // <img  class="img-thumbnail" style="max-width: 350px!important; max-height: 200px!important; width: 100%; height: 100%;"/>
+
+
 }
