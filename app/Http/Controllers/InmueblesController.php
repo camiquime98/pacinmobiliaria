@@ -178,6 +178,8 @@ class InmueblesController extends Controller
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
+     * 
+     *    * @param  \Illuminate\Http\Request  $request
      */
     public function destroy($id)
     {

@@ -24,15 +24,176 @@
        color: rgb(255, 123, 0);
        border: none;
     }
-   </style>
+    .social-media p a {
+  border: 1px solid #e6e6e6;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 4px;
+  text-decoration: none!important; }
+  
+  .nav-item2:hover a
+  {
+    background: #06bdca;
+    color: white!important;
+  }<
 
+  .social-media p a span {
+    color: #4d4d4d; }
+  .social-media p a:hover {
+    background: #22cce2;
+    border-color: #ff904f; }
+    .social-media p a:hover span {
+      color: #fff;
+      list-style: none;
+      border:    
+    }
+    .navbar-brand-responsive1
+      {
+        display: block;
+      }
+  @media (min-width: 991.98px)
+    {
+      .navbar-brand-responsive1
+      {
+        display: block;
+      }
+      .navbar-brand-responsive2
+      {
+        display: none;
+      }
+    }
+  @media (max-width: 991.98px) {
+    .social-media p a {
+      border-color: #fff;
+      width: 30px;
+      height: 30px; }
+      .social-media p a span {
+        color: rgb(94, 94, 94); } 
+      
+      .navbar-brand-responsive1
+      {
+        display: none;
+      }
+
+      .navbar-brand-responsive2
+      {
+        display: block;
+      }
+      
+      }
+
+        .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0; }
+
+.sr-only-focusable:active, .sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip: auto;
+  white-space: normal; }
+   </style>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <body>
   
   <a href="https://api.whatsapp.com/send?phone=+573143013069&text=Buen%20d%C3%ADa,%20deseo%20obtener%20m%C3%A1s%20informaci%C3%B3n%20" class="float" target="_blank">
   <i class="fa fa-whatsapp my-float"></i>
   </a>
     <div id="app">
-        <div class="ban-top-home">
+        <div class="conteiner">
+            <nav class="navbar navbar-expand-lg ftco_navbar ftco-navbar-light" id="ftco-navbar">
+                <div class="container">
+                  <div class="col-md-4 col-sm-4 d-flex justify-content-center">
+                    <a class="navbar-brand navbar-brand-responsive1" href="{{ route('home')}}">Real-State</a>
+                  </div>
+                  <div class="col-md-4 col-sm-4 d-flex justify-content-center">
+                    <div class="social-media order-lg-last">
+                      <p class="mb-0 d-flex">
+                          <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
+                          <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-twitter"><i class="sr-only">Twitter</i></span></a>
+                          <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
+                          <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-dribbble"><i class="sr-only">Dribbble</i></span></a>
+                      </p>
+              </div>
+                  </div>
+                  <div class="col-md-4 col-sm-4 " style="align-items: center">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="fa fa-bars"></span>
+                      <a class="navbar-brand navbar-brand-responsive2" href="{{ route('home')}}">Real-State</a>
+                    </button>
+                    <div class="collapse navbar-collapse" id="ftco-nav">
+                      <ul class="navbar-nav mr-md-3" style="width: 100%">
+                          <li class="nav-item nav-item2 active"><a href="{{ route('home')}}" class="nav-link nav-link2">Home</a></li>
+                          {{-- <li class="nav-item nav-item2"><a href="#" class="nav-link nav-link2">About</a></li>
+                          <li class="nav-item nav-item2"><a href="#" class="nav-link nav-link2">Work</a></li>
+                          <li class="nav-item nav-item2"><a href="#" class="nav-link nav-link2">Blog</a></li> --}}
+                          {{-- <li class="nav-item nav-item2"><a href="{{ route('inmueble.index')}}" class="nav-link nav-link2">inmuebles</a></li> --}}
+
+                          <li class="nav-item nav-item2"><a href="{{ route('inmueble.index')}}" class="nav-link nav-link2">inmuebles</a></li>
+           
+  
+                        
+                          
+                                  
+                                  @guest
+                                  @if (Route::has('login'))
+                                      <li class="nav-item nav-item2">
+                                          <a class="nav-link nav-link2" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                      </li>
+                                  @endif
+                                  
+                                  
+                                  @if (Route::has('register'))
+                                      <li class="nav-item nav-item2">
+                                          <a class="nav-link nav-link2" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                      </li>
+                                  @endif
+                                  @else
+                                      <li class="menu__item dropdown d-flex justify-content-center">
+                                  
+                                    <div class="dropdown">
+                                    <button class="btn btn-admin dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      {{ Auth::user()->name }}
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                      
+                                      <a class="dropdown-item"href="{{ route('logout') }}"  onclick="event.preventDefault();
+                                      document.getElementById('logout-form').submit();">{{ __('Salir') }}</a><hr>
+                                              <a href="{{ route('user.index') }}" class="dropdown-item">Perfiles</a>
+                                      
+                                       
+                                      
+                                    </div>
+                                  </div>
+                                  <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                      @csrf
+                                  </form>@endguest
+                                      </li>
+                  </div>
+                    
+                    
+                  
+
+                        
+                        
+                            
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+        </div>
+
+        {{-- <div class="ban-top-home">
             <div class="container">
                 <div class="top_nav_left">
                     <nav class="navbar navbar-default navbar-expand-md navbar-light">
@@ -83,7 +244,7 @@
                                             <div class="clearfix"></div>
                                         </div>
                                     </ul>
-                            </li> --}}
+                            </li> 
                                                        
                                 <li class="menu__item">
                                     <a class="menu__link" href="{{ route('inmueble.index')}}">inmuebles</a>
@@ -95,52 +256,66 @@
                     </nav>	
                 </div>
                 
+
+
+                
 <div class="top_nav_right">
                     <!-- Authentication Links -->
-<nav class="navbar">
-@guest
-@if (Route::has('login'))
-    <li class="menu-item">
-        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-    </li>
-@endif
+
+<div class="container-fluid">
+
+    <nav class="navbar navbar-default navbar-expand-md navbar-light">
+        <ul class="nav navbar-nav menu__list">
+
+        
+        @guest
+        @if (Route::has('login'))
+            <li class="menu-item">
+                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+            </li>
+        @endif
+        
+        
+        @if (Route::has('register'))
+            <li class="menu__item">
+                <a class="menu__link" href="{{ route('register') }}">{{ __('Register') }}</a>
+            </li>
+        @endif
+        @else
+        <li class=" menu__item"><a class="menu__link" href="electronics.html">notificaciones</a></li>
+            <li class="menu__item dropdown d-flex justify-content-center">
+        
+                <div class="dropdown">
+          <button class="btn btn-admin dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{ Auth::user()->name }}
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            
+            <a class="dropdown-item"href="{{ route('logout') }}"  onclick="event.preventDefault();
+            document.getElementById('logout-form').submit();">{{ __('Salir') }}</a><hr>
+                    <a href="{{ route('user.index') }}" class="dropdown-item">Perfiles</a>
+            
+             
+            
+          </div>
+        </div>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+            @csrf
+        </form>
+            </li>
+        </ul>
+        </nav>
 
 
-@if (Route::has('register'))
-    <li class="menu__item">
-        <a class="menu__link" href="{{ route('register') }}">{{ __('Register') }}</a>
-    </li>
-@endif
-@else
-<li class=" menu__item"><a class="menu__link" href="electronics.html">notificaciones</a></li>
-    <li class="menu__item dropdown d-flex justify-content-center">
-
-        <div class="dropdown">
-  <button class="btn btn-admin dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    {{ Auth::user()->name }}
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    
-    <a class="dropdown-item"href="{{ route('logout') }}"  onclick="event.preventDefault();
-    document.getElementById('logout-form').submit();">{{ __('Salir') }}</a><hr>
-            <a href="{{ route('user.index') }}" class="dropdown-item">Perfiles</a>
-    
-     
-    
-  </div>
 </div>
-<form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-    @csrf
-</form>
-    </li>
-    
-</nav>@endguest
+
+@endguest
 	
                 </div>
                 
                 <div class="clearfix"></div>
             </div>
-        </div>
+        </div> --}}
 
         <main class="" style="background: rgb(253, 253, 253);">
             @yield('content')

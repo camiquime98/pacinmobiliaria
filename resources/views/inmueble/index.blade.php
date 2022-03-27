@@ -3,7 +3,7 @@
 <style>
   .fondo-index-inmueble
   {
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.897)100%, rgba(255, 255, 255, 0.897)10%), url('/assets/images/inmuebles-admin.jpg');
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.945)100%, rgba(255, 255, 255, 0.952)10%), url('/assets/images/inmuebles-admin.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;

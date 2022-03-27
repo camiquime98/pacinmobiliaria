@@ -94,12 +94,13 @@ color: #3a898f;
                   <th scope="col">Propietario</th>
                   <th scope="col">Cedula</th>
                   <th scope="col">N° Celular</th>
-                  <th scope="col">Departamento/inmueble</th>
+                  <th scope="col">Dpto inmueble</th>
                   <th scope="col">Barrio</th>
                   <th scope="col">Zona</th>
                   <th scope="col">Tipo inmueble</th>
                   <th scope="col">Gestion</th>
                   <th scope="col">Valor</th>
+           
                   <th class="text-right">Acciones</th>
                 </tr>
               </thead>
