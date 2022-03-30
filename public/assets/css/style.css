@@ -170,7 +170,7 @@ label{
 }
 .search {
     float: left;
-    width: 57%;
+    width: 100%;
 }
 .section_room{
     float: left;
@@ -4993,7 +4993,8 @@ td.invert-image a img {
 	}
 	.search {
 		float: left;
-		width: 44%;
+		width: 100%;
+		margin-top: 10px;
 	}
 	.pignose-layerslider .slide-visual {
 		height: 200px;
