@@ -8,7 +8,7 @@
 <style>
     .btn-admin
     {
-       color: aliceblue;
+       color: rgb(17, 133, 235);
        border: 1px solid #06bdca;;
     }
    
@@ -16,7 +16,7 @@
     {
        background: white;
        color: #06bdca;;
-       border: none;
+       border: 1px solid #ff904f;
     }
     .btn-admin:active
     {
@@ -111,7 +111,7 @@
   </a>
     <div id="app">
         <div class="conteiner">
-            <nav class="navbar navbar-expand-lg ftco_navbar ftco-navbar-light" id="ftco-navbar">
+            <nav class="navbar navbar-expand-lg ftco_navbar ftco-navbar-light" id="ftco-navbar" style="padding: .1rem 1rem; border-bottom: 1px solid rgb(138, 138, 138);">
                 <div class="container">
                   <div class="col-md-4 col-sm-4 d-flex justify-content-center">
                     <a class="navbar-brand navbar-brand-responsive1" href="{{ route('home')}}">Real-State</a>
@@ -127,13 +127,14 @@
               </div>
                   </div>
                   <div class="col-md-4 col-sm-4 " style="align-items: center">
+                    
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="fa fa-bars"></span>
-                      <a class="navbar-brand navbar-brand-responsive2" href="{{ route('home')}}">Real-State</a>
                     </button>
                     <div class="collapse navbar-collapse" id="ftco-nav">
+                      <a class="navbar-brand navbar-brand-responsive2" href="{{ route('home')}}">Real-State</a>
                       <ul class="navbar-nav mr-md-3" style="width: 100%">
-                          <li class="nav-item nav-item2 active"><a href="{{ route('home')}}" class="nav-link nav-link2">Home</a></li>
+                          <li class="nav-item nav-item2 active"><a href="{{ route('home')}}" class="nav-link nav-link2">Inicio</a></li>
                           {{-- <li class="nav-item nav-item2"><a href="#" class="nav-link nav-link2">About</a></li>
                           <li class="nav-item nav-item2"><a href="#" class="nav-link nav-link2">Work</a></li>
                           <li class="nav-item nav-item2"><a href="#" class="nav-link nav-link2">Blog</a></li> --}}

@@ -404,7 +404,7 @@ label{
 }
 a.menu__link {
     color: #ffffff !important;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: normal;
     text-transform: unset;
 }
@@ -1796,6 +1796,7 @@ padding-bottom:50px;
 	background-position: center;
 	background-repeat: no-repeat;
     background-size: cover;
+	background-attachment: fixed;
     -webkit-background-size: cover;
     -o-background-size: cover;
     -ms-background-size: cover;
@@ -4033,7 +4034,7 @@ td.invert-image a img {
 		padding-left: 0px;
 	}
 	a.menu__link {
-		font-size: 13px;
+		font-size: 12px;
 	}
 	ul.multi-column-dropdown li a {
 		font-size: 13px;

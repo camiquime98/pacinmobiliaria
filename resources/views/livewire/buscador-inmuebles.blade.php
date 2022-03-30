@@ -4,7 +4,7 @@
         <div class="container">
          
             <div class="row height d-flex justify-content-center align-items-center" style="color: #fff">
-                   <h3 class="titulo-s" style="color:#fff; font-weight: 800;text-transform: none; font-size:35px;">Busca tu inmueble</h3>
+                   <h3 class="titulo-s" style="color:#fff; font-weight: 800;text-transform: none; font-size:25px;">Busca tu inmueble</h3>
                 <div class="col-md-10 d-flex justify-content-center">
                     <ul id="myTab" class="nav nav-tabs" role="tablist">
                 <li role="presentation" class="btn btn-primary"style="max-height:50px; min">
@@ -104,11 +104,11 @@
                        </script>
             <div class="sap_tabs">
                 <div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
-                    <ul class="resp-tabs-list">
+                    {{-- <ul class="resp-tabs-list">
                         <li class="resp-tab-item" aria-controls="tab_item-0" role="tab"><span>En venta</span></li> 
                         <li class="resp-tab-item" aria-controls="tab_item-1" role="tab"><span>En renta</span></li> 
                         
-                    </ul>	
+                    </ul>	 --}}
                                    
                     <div class="resp-tabs-container">
                         <div class="tab-1 " aria-labelledby="tab_item-0">

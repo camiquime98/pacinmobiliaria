@@ -23,7 +23,7 @@
 
 a {
 	font-family: Poppins-Regular;
-	font-size: 14px;
+	font-size: 12px;
 	line-height: 1.7;
 	color: #666666;
 	margin: 0px;
@@ -190,7 +190,7 @@ background: linear-gradient(90deg, rgba(255,255,255,0.9220063025210083) 0%, rgba
   width: 100%;
 
   font-family: Poppins-Regular;
-  font-size: 15px;
+  font-size: 12px;
   color: #555555;
   line-height: 1.2;
   background: transparent;
@@ -340,7 +340,7 @@ textarea.input2 + .focus-input2::after {
  
 
   font-family: Poppins-Medium;
-  font-size: 16px;
+  font-size: 14px;
   color: #fff;
   line-height: 1.2;
   
@@ -442,6 +442,7 @@ textarea.input2 + .focus-input2::after {
       background: rgba(221, 221, 221, 0.199);
       margin-top: 35px;
       padding-bottom: 30px;
+      margin: 40px;
     }
     .row-video
     {

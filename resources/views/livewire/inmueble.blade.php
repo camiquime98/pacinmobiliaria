@@ -4,30 +4,35 @@
     background: none;
     color: rgb(255, 0, 0);
     border: 1px solid rgb(255, 0, 0);
+    font-weight: 650;
   }
   .btn-ver
   {
     background: none;
     color: rgb(63, 170, 21);
     border: 1px solid rgb(63, 170, 21);
+    font-weight: 650;
   }
   .btn-editar
   {
     background: none;
     color: rgb(22, 115, 151);
     border: 1px solid rgb(7, 185, 255);
+    font-weight: 650;
   }
   .btn-imagenes
   {
     background: none;
     color: rgb(8, 110, 150);
     border: 1px solid rgb(7, 185, 255);
+    font-weight: 650;
   }
   .btn-agregar
   {
     background: #06bdca;
 color: white;
 transition: 1s all;
+font-weight: 650;
   }
   .btn-agregar:hover
   {
