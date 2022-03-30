@@ -16,6 +16,7 @@ class InmueblesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
         $inmuebles = inmuebles::all();
@@ -32,6 +33,12 @@ class InmueblesController extends Controller
         return view('inmueble.create');
     }
 
+    public function buscar_inmueble(Request $request)
+    {
+        
+        // $inmuebles = inmuebles::all();
+        // return view('inmueble.index')->with('inmuebles',$inmuebles);
+    }
     /**
      * Store a newly created resource in storage.
      *

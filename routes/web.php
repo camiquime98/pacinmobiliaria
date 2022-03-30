@@ -26,6 +26,8 @@ Route::get('/contactanos', [App\Http\Controllers\inicioController::class, 'conta
 
 Route::get('/imageinmueble/fetch_image_show', [App\Http\Controllers\ImageController::class, 'fetch_image_show'])->name('imageinmueble.fetch_image_show');
 
+Route::get('buscar_inmueble', [App\Http\Controllers\inmueblesController::class, 'buscar_inmueble'])->name('buscar_inmueble');
+
 
 
 
