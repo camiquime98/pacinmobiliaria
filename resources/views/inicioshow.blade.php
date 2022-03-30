@@ -1,6 +1,7 @@
 @include('layouts.header.header')
 @extends('layouts.header.navbar')
 @section('content')
+<input type="text" class="hidden" name="folder" id="folder" value="{{ $inmuebles->folder }}">
 <div class="container">
   <div class="main-content">
     <div class="row p-3">
@@ -43,7 +44,7 @@
                   <div class="" id="uploaded_image">
                     
                     
-  <input type="text" class="hidden" name="folder" id="folder" value="{{ $inmuebles->folder }}">
+  
                   </div>
                   
                   {{-- <li><img src="assets/slider/images/images/01.jpg" alt="01" title="01" id="wows1_1"/></li>
@@ -126,9 +127,7 @@
   </div>
 </div>
 
-<script type="text/javascript" src="assets/slider/js/wowslider.js"></script>
-        
- <script type="text/javascript" src="assets/slider/js/script.js"></script>       
+     
 
 
         <script>
@@ -148,6 +147,7 @@
           {
             alert('MUCHO PERRO');
             $('#uploaded_image').html(data);
+            jQuery("#wowslider-container1").wowSlider({effect:"louvers,glass_parallax",prev:"",next:"",duration:20*100,delay:20*100,width:1280,height:720,autoPlay:true,autoPlayVideo:false,playPause:true,stopOnHover:false,loop:false,bullets:1,caption:true,captionEffect:"parallax",controls:true,controlsThumb:false,responsive:1,fullScreen:false,gestures:2,onBeforeStep:0,images:0});
           }
           
         })
@@ -161,5 +161,7 @@
 
 @include('layouts.footer.footer') 
  
-
+<script type="text/javascript" src="assets/slider/js/wowslider.js"></script>
+        
+ <script type="text/javascript" src="assets/slider/js/script.js"></script>  
 @endsection
