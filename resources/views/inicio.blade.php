@@ -183,7 +183,7 @@
                                     <a href="checkout.html">
                                         
                                     </a>
-                                    <p><a href="#"  data-toggle="modal" data-target="#myModal4" class="simpleCart_empty">¡GENERA TU CONTRATO YA!</a></p>
+                                    <p><a href="{{ route('contactanos.contactanos')}}"  data-toggle="" data-target="#myModal4" class="simpleCart_empty">¡GENERA TU CONTRATO YA!</a></p>
                                     
                         </div>	
                     </div>
@@ -242,9 +242,18 @@
               
               {{-- {!! $inmuebles->links() !!} --}}
               </div>
+              <div class="container d-flex justify-content-center">
+                  <div class="row">
+                      <div class="col-md-12 text-center">
+                        <h4>El inmueble que quieres esta aqui</h4>
+                      </div>
+                  </div>
+              </div>
+
 
             <div class="container" style="margin-top: 40px;">
-                <div class="row">
+                <div class="row m-0 p-0">
+
 					@foreach($inmuebles as $inmueble) 
                   <div class="col-md-3 col-sm-12">
                     <div class="product-men">
@@ -263,7 +272,7 @@
                                   <span class="product-new-top">{{ $inmueble->gestion }}</span>
                                   
                           </div>
-                          <div class="item-info-product ">
+                          <div class="item-info-product" style="margin-top: 10px;">
 							<a href="{{ route('inicioshow', $inmueble->id) }}">   
 							<div class="row" style="margin: 0px; padding: 0px;"> 
 								  <div class="col-md-4">
@@ -279,10 +288,10 @@
 							</a><hr>
 								<center><h5>ZONA - {{ $inmueble->zona }}</h5></center>
                               <h4><p class="p-1" style="text-align: justify"></p></h4>
-                              <div class="info-product-price">
+                              <div class="info-product-price text-center">
                                 
                                   <span class="item_price">${{ $inmueble->valor }}</span>
-                                  <del>$520.000</del>
+                                
                                   
                               </div>
                               <center><a href="{{ route('inicioshow', $inmueble->id) }}" class="item_add single-item hvr-outline-out button2">{{ $inmueble->tipoinmueble }}</a></center>								
@@ -372,7 +381,7 @@
                                         });
                                         
                     </script>
-                    <div class="sap_tabs">
+                    {{-- <div class="sap_tabs">
                         <div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
                             <ul class="resp-tabs-list">
                                 <li class="resp-tab-item" aria-controls="tab_item-0" role="tab"><span>Latest Designs</span></li> 
@@ -944,7 +953,7 @@
                                 </div>	
                             </div>	
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
             <!-- //product-nav -->

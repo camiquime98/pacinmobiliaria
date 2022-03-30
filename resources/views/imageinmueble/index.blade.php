@@ -9,25 +9,25 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/dropzone.js"></script>
     </head>
     <body>
-      <div class="container-fluid">
+      <div class="container-fluid" style="background: linear-gradient(180deg, rgba(255, 255, 255, 0.904)50%,rgba(182, 179, 9, 0.925)100%);">
           <br />
-        <h3 align="center"> Laravel 8 Dropzone Image Upload Example Tutorial </h3>
+        <h3 align="center"> Carga las imagenes y verifica antes de guardar </h3>
         <br />
-          <div class="panel panel-default" style="margin-top: 50px;">
-            <div class="panel-heading">
+          <div class="panel panel-default" style="margin-top: 50px; background: rgba(255, 255, 255, 0.349);">
+            <div class="panel-heading" style="background: rgb(255, 255, 255);">
               <b><h1 style="color: #0d6efd;">Agregar fotos</h1></b>
             </div>
             <div class="panel-body">
              
-              <form id="dropzoneForm" class="dropzone" action="{{ route('dropzone.store') }}" accept-charset="UTF-8" enctype="multipart/form-data">
+              <form id="dropzoneForm" class="dropzone text-white" action="{{ route('dropzone.store') }}" accept-charset="UTF-8" enctype="multipart/form-data" style="background: #0ecfe9af; border:none; border-radius:20px;">
                 @csrf
                 <input type="text" class="hidden" name="folder" id="folder" value="{{ $inmuebles->folder }}">
               </form><br>
               <div align="center">
-                <button type="button" class="btn text-white" id="submit-all" style="background: rgb(9, 206, 206);">CARGAR</button>
+                <button type="button" class="w-50 btn text-white" id="submit-all" style="background: rgb(14, 226, 145);">CARGAR</button>
               </div><br>
               <div align="center">
-                <button type="button" class="" id="submit-all" style="background: rgb(255, 135, 135);"><a class="btn text-white" href="{{ route('inmueble.index') }}">CANCELAR</a></button>
+                <button type="button" class="w-50 btn text-white" id="submit-all" style="background: rgb(255, 135, 135);"><a class=" " href="{{ route('inmueble.index') }}">CANCELAR</a></button>
               </div>
             </div>
           

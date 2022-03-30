@@ -4,6 +4,9 @@
 
 <div class="container" id="inmuebles">
 	<div class="row">
+		<div class="col-md-12 pb-3 p-3">
+			hola
+		</div>
 		@foreach($inmuebles as $inmueble) 
 	  <div class="col-md-3 col-sm-12">
 		<div class="product-men">

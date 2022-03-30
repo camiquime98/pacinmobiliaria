@@ -78,17 +78,29 @@ class ImageController extends Controller
     {
     $folder = $request->get('folder');
     $images = \File::allFiles(public_path('imagenes-inmueble/' . $folder));
-    $output = '<li>';
-    
+
+    $contar = 1;
+    $output = '<div class="ws_images" id="uploaded_image"><ul>';
     $folder ='imagenes-inmueble/' . $folder . '/';
     foreach($images as $image)
     {
-    $output .= '
-                <img src="'.asset($folder . $image->getFilename()).'" class="" id="wows1_1"/>';
-     }
-     $output .= '</li>';
-     echo $output;
     
+    $output .= '<li>
+                <img src="'.asset($folder . $image->getFilename()).'" style="max-height: 450px!important; width: 100%; height: ;" class="img-thumbnail" id="wows1_'.$contar.'"/></li>';
+    
+                $contar++;
+    }
+    $output .= '</ul></div><div class="ws_bullets">';
+                foreach($images as $image)
+                    {
+                    
+                    $output .= '<a href="#" title="01 (1)"><span><img src="'.asset($folder . $image->getFilename()).'" style="width:100px; height: 80px;" class="img-thumbnail" alt="01 (1)"/>'.$contar.'</span></a>';
+                    
+                                $contar++;
+                    }
+    $output .= '</div><div class="ws_shadow"></div>'; 
+     echo $output;
+     
     }
 
     // <img  class="img-thumbnail" style="max-width: 350px!important; max-height: 200px!important; width: 100%; height: 100%;"/>

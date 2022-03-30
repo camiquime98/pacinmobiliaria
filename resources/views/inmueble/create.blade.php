@@ -1,6 +1,20 @@
 @extends('layouts.header.navbarinicio') 
 @section('content')
 <style>
+  .btn-ver
+  {
+    background: none;
+    color: rgb(63, 170, 21);
+    border: 1px solid rgb(63, 170, 21);
+    font-weight: 650;
+  }
+  .btn-editar
+  {
+    background: none;
+    color: rgb(22, 115, 151);
+    border: 1px solid rgb(7, 185, 255);
+    font-weight: 650;
+  }
   .inputinmueble
   {
     border:none;
@@ -17,9 +31,17 @@
   {
     color: rgb(4, 9, 87);
   }
+  .inputinmueble:focus
+  {
+    border-color: rgba(14, 159, 216, 0.521);
+
+    box-shadow: 0 1px 1px rgba(14, 159, 216, 0.521)inset, 0 0 8px rgba(14, 159, 216, 0.521);
+
+    outline: 0 none;
+  }
   .fondo-create-inmueble
   {
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.5)100%, rgba(255, 255, 255, 0.6)10%), url('/assets/images/create-inmueble.jpg');
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.938)100%, rgba(255, 255, 255, 0.959)10%), url('/assets/images/create-inmueble.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -32,7 +54,7 @@
     
  
   <div class="container-fluid m-0 p-0 fondo-create-inmueble">
-    <div class="main-content" style="margin-top: 80px;">
+    <div class="main-content" style="margin-top: 3px;">
 
       <form action="{{ route('inmueble.store') }}" method="post" class="form-horizontal p-2" enctype="multipart/form-data">
         @csrf
@@ -47,7 +69,7 @@
         <div class="col-md-6 p-2">
         <div class="card p-3 card_inmueble">
           <h4 style="color:rgb(247, 131, 29)">Datos residencia</h4>
-          <hr>
+          
           <br>
           <div class="row">
             <div class="col-md-6 col-sm-12 p-3">
@@ -80,7 +102,7 @@
         <div class="col-md-6 p-2">
           <div class="card card_inmueble p-3">
           <h4 style="color:rgb(247, 131, 29)">Datos del inmueble</h4>
-          <hr>
+          
           <br>
           <div class="row">
             <div class="col-md-6 col-sm-12 p-3">
@@ -147,7 +169,7 @@
       </div> --}}
 
 
-        <div class="col-md-12 col-sm-12 p-5">
+        <div class="col-md-12 col-sm-12 p-3">
           <div class="card card_inmueble p-3">
 
           
@@ -207,10 +229,10 @@
         <div class="col-md-10 col-sm-12">
           <div class="row d-flex justify-content-end">
             <div class="col-md-2 col-sm-12 p-2">
-              <button type="submit" class="btn col-sm-12 btn-primary">Guardar</button>
+              <button type="submit" class="btn col-sm-12 btn-ver">Guardar</button>
             </div>
             <div class="col-md-2 col-sm-12 p-2">
-              <a href="{{ route('inmueble.index') }}" class="btn col-sm-12 btn-warning text-white"><i class="material-icons">Volver</i></a>
+              <a href="{{ route('inmueble.index') }}" class="btn col-sm-12 btn-editar "><i class="material-icons">Volver</i></a>
             </div>
           </div>
         </div>
