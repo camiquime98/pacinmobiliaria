@@ -1,5 +1,6 @@
 @extends('layouts.header.navbarinicio')
 @section('content')
+
 <style>
       .btn-ver
   {
@@ -38,8 +39,14 @@
                       <h5 style="color: coral; text-transform: uppercase;">{{ $inmuebles->municipio }} - {{ $inmuebles->departamento }}</h5>
                         <p class="card-category">Vista detallada del inmueble</p>
                     </div>
+                    
                     <div class="card-body">
-                      ---------------------AQUI VA EL SLIDER DE LAS FOTOS----------
+                      <link rel="stylesheet" type="text/css" href="../assets/slider/css/style.css"/>
+              <script type="text/javascript" src="../assets/slider/js/jquery.js"></script>
+                      <input type="text" class="hidden" name="folder" id="folder" value="{{ $inmuebles->folder }}">
+                  <div id="wowslider-container1" style="">
+                      
+                  </div>
                     </div>
                   </div>
                   <div class="col-md-6">
@@ -258,5 +265,37 @@
             </div>
           </div>
         </div> --}}
+        <script>
+           
+          load_images();
+function load_images()
+{
+
+var folder =document.getElementById('folder').value;
+
+
+ $.ajax({
+data:{folder : folder},
+   url:"{{ route('imageinmueble.fetch_image_show') }}",
+   success:function(data)
+   {
+   
+     $('#wowslider-container1').html(data);
+   }
+   
+ })
+
+
+
+}
+       
+     
+       </script>
+
+@include('layouts.footer.footer') 
  
+<script type="text/javascript" src="../assets/slider/js/wowslider.js"></script>
+        
+ <script type="text/javascript" src="../assets/slider/js/script.js"></script>  
+
 @endsection
