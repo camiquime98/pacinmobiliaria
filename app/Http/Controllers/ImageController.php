@@ -60,7 +60,7 @@ class ImageController extends Controller
      }
      $output .= '</div></div>';
      echo $output;
-    }
+    }git
     function delete_image(Request $request)
     {
         $folder = $request->get('folder');
