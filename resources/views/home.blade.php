@@ -52,7 +52,7 @@
     }
     .loading-animate {
         position: absolute;
-        width: 60px;
+        width: 50px;
         height: 50px;
         z-index: 100;
         border-radius: 50%;
@@ -87,7 +87,7 @@
         opacity: .6;
     }
     .btn-search.loading {
-        width: 60px;
+        width: 50px;
     }
     .btn-search.loading i {
         transform: rotate(-90deg);
@@ -150,7 +150,7 @@
                     
                     <div class="col-md-2 m-0 p-0 text-center">
                         <button class="btn-search" id="boton" type="button" onclick="buscar();">
-                            <i class='bx bx-send'></i>
+                            <i class="fa fa-search" style="padding-left:"></i>
                             <span class="text">
                               Buscar    
                             </span>
