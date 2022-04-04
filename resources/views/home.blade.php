@@ -71,31 +71,10 @@
                                 <input type="number" value="0" id="apartaestudio" name="apartaestudio" class="hidden">
                                 <input type="number" value="0" id="casalote" name="casalote" class="hidden">
 
-                                @error("buscar")
+                              
                                         
-                                                                   
-                                @else
-                                    @if(count($usuarios)>0)
-                                    <script>
-                                    
-                                    $("#inmuebles").hide();
-                                    $("#busquedainmuebles").show();
-            
-                                        
-                                        </script>
-                                        @if(!$picked)
-                                        
-                                        <div class="shadow rounded px-3 pt-3 pb-0">
-                                            @foreach($usuarios as $usuario)
-                                                <div style="cursor: pointer;">
-                                                    <a wire:click="asignarUsuario('{{ $usuario->name }}')">
-                                                        {{ $usuario->name }}
-                                                    </a>
-                                                </div>
-                                                <hr>
-                                            @endforeach
-                                        </div>
-                                        @endif
+                            
+                                  
                 </div>
             </div>
         </div>
@@ -106,7 +85,7 @@
             <div class="form-group">
              
               
-                    @else
+                  
                     <script>
                         
                         $("#inmuebles").show();
@@ -114,8 +93,7 @@
                         
                         </script>
                         
-                    @endif
-                @enderror
+                  
             </div>
         </div>
        
@@ -148,33 +126,7 @@
                         <div class="tab-1 " aria-labelledby="tab_item-0">
                         
                             <div class="row">	
-                                @foreach($usuarios as $usuario)
-                                <div class="col-md-3 product-men">
-                                    <div class="men-pro-item simpleCart_shelfItem">
-                                        <div class="men-thumb-item">
-                                            <img src="images/mw1.png" alt="" class="pro-image-front">
-                                            <img src="images/mw1.png" alt="" class="pro-image-back">
-                                                <div class="men-cart-pro">
-                                                    <div class="inner-men-cart-pro">
-                                                        <a href="single.html" class="link-product-add-cart">Quick View</a>
-                                                    </div>
-                                                </div>
-                                                <span class="product-new-top">New</span>
-                                                
-                                        </div>
-                                        <div class="item-info-product ">
-                                            <h4><a href="single.html">{{ $usuario->name }}</a></h4>
-                                            <div class="info-product-price">
-                                                <span class="item_price">$45.99</span>
-                                            
-                                            </div>
-                                                                                
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                
-            @endforeach
+                               
                             <div class="clearfix"></div>
                         </div>
                         <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
@@ -208,7 +160,7 @@
     boton.onclick = function(e) {
         alert('mmmmmmmmmmmmmmmm');
       $.ajax({
-              url:"{{ route('livewire.buscar_inmueble') }}",
+              url:"{{ route('buscar_inmueble') }}",
               data:{casa : casa, apartamento : apartamento, casacampestre : casacampestre, terreno : terreno, bodega : bodega, apartaestudio : apartaestudio, casalote : casalote, buscar : buscar,},
               success:function(data){
     $('#Busqueda').html(data);
