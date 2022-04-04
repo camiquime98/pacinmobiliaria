@@ -5,7 +5,9 @@ use Illuminate\Http\Request;
 use App\Models\inmuebles;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
+use DB;
 class InmueblesController extends Controller
+
 {
     /**
      * Display a listing of the resource.
@@ -31,11 +33,42 @@ class InmueblesController extends Controller
 
     public function buscar_inmueble(Request $request)
     {
-    $output = 'pp';
-    if ($request->get('casa') == 1) {
-        $output = 'perro';
-    }
-     
+        $busqueda = $request->get('busqueda');
+        $output ='';
+    
+    $inmuebles=DB::table('inmuebles')->where('municipio','LIKE','%'.$busqueda."%")->get();
+    foreach ($inmuebles as $key => $inmueble) {
+        $output.='<div class="col-md-3 col-sm-12">
+        <div class="product-men">
+                
+          <div class="men-pro-item simpleCart_shelfItem">
+
+            <div class="men-thumb-item">
+                  <img src="assets/images/a8.png" alt="" class="pro-image-front">
+                  <img src="assets/images/a8.png" alt="" class="pro-image-back">
+                      <div class="men-cart-pro">
+                          <div class="inner-men-cart-pro">
+                              <a href="" class="link-product-add-cart">'.$inmueble->zona .'</a>
+                          </div>
+                      </div>
+                      <span class="product-new-top">1+1 Offer</span>
+
+              </div>
+              <div class="item-info-product ">
+                  <h4><a href="single.html">'.$inmueble->municipio .'</a></h4>
+                  <div class="info-product-price">
+
+                      <span class="item_price">$'.$inmueble->valor .'</span>
+                      <del>$520.000</del>
+
+                  </div>
+                  <a href="" class="item_add single-item hvr-outline-out button2"> Ver mas </a>									
+              </div>
+          </div>
+          
+      </div>
+      </div>';
+        }
      echo $output;
         // $inmuebles = inmuebles::all();
         // return view('inmueble.index')->with('inmuebles',$inmuebles);

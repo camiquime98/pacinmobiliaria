@@ -1,5 +1,114 @@
 @extends('layouts.header.navbarinicio')
 @section('content')
+<style>
+  
+    .btn-search {
+        background: #7f49d7;
+        border: 0px solid #7b49d7;
+        border-radius: 5px;
+        font-size: 1rem;
+        font-weight: bold;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        outline: none;
+        transition: all .25s ease;
+        width: 200px;
+        position: relative;
+        height: 50px;
+        overflow: hidden;
+    }
+    .btn-search:not(.loading):hover {
+        box-shadow: 0px 10px 25px 0px rgba(73, 215, 92,.4);
+    }
+    .btn:not(.loading):hover i {
+        transform: translate(7px);
+    }
+    .btn-search i {
+        font-size: 1.45rem;
+        position: absolute;
+        left: 0px;
+        pointer-events: none;
+        z-index: 10;
+        background: inherit;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        transition: all .25s ease;
+    }
+    .btn .text {
+        width: 130px;
+        display: block;
+        position: relative;
+        pointer-events: none;
+        transition: all .25s ease;
+        position: absolute;
+        left: 60px;
+    }
+    .loading-animate {
+        position: absolute;
+        width: 60px;
+        height: 50px;
+        z-index: 100;
+        border-radius: 50%;
+        top: 0px;
+        left: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none;
+        opacity: 0;
+        transition: all .25s ease;
+    }
+    .loading-animate:after {
+        content: '';
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-left: 3px solid #fff;
+        animation: loading infinite .8s ease .05s;
+        position: absolute;
+    }
+    .loading-animate:before {
+        content: '';
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-left: 3px solid #fff;
+        animation: loading infinite .8s linear;
+        position: absolute;
+        opacity: .6;
+    }
+    .btn-search.loading {
+        width: 60px;
+    }
+    .btn-search.loading i {
+        transform: rotate(-90deg);
+        padding-bottom: 4px;
+        padding-left: 3px;
+    }
+    .btn-search.loading .text {
+        transform: translate(-140px);
+    }
+    .btn-search.loading .loading-animate {
+        opacity: 1;
+    }
+    @keyframes loading {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <div>
     <div class="page-head">
@@ -17,13 +126,13 @@
                                       ¿Qué buscar?
                                     </button>
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                      <a class="dropdown-item" id="dropdown1-tab"onclick="casa()">Casa</a>
-                                      <a class="dropdown-item" id="dropdown2-tab"onclick="apartamento()">Apartamento</a>
-                                      <a class="dropdown-item" id="dropdown3-tab"onclick="casacampestre()">Casa campestre</a>
-                                      <a class="dropdown-item" id="dropdown4-tab"onclick="terreno()">Terreno</a>
-                                      <a class="dropdown-item" id="dropdown5-tab"onclick="bodega()">Bodega</a>
-                                      <a class="dropdown-item" id="dropdown6-tab"onclick="apartaestudio()">Apartaestudio</a>
-                                      <a class="dropdown-item" id="dropdown7-tab"onclick="casalote()">casa lote</a>
+                                      <a class="dropdown-item" id="dropdown1-tab"onclick="casa();">Casa</a>
+                                      <a class="dropdown-item" id="dropdown2-tab"onclick="apartamento();">Apartamento</a>
+                                      <a class="dropdown-item" id="dropdown3-tab"onclick="casacampestre();">Casa campestre</a>
+                                      <a class="dropdown-item" id="dropdown4-tab"onclick="terreno();">Terreno</a>
+                                      <a class="dropdown-item" id="dropdown5-tab"onclick="bodega();">Bodega</a>
+                                      <a class="dropdown-item" id="dropdown6-tab"onclick="apartaestudio();">Apartaestudio</a>
+                                      <a class="dropdown-item" id="dropdown7-tab"onclick="casalote();">casa lote</a>
                                     </div>
                                   </div>
                                                                     
@@ -34,30 +143,35 @@
                         <div class="search">
                             <div class="input-group">
                             <i class="fa fa-search text-dark"></i> 
-                            <input type="text" class="form-control" id="buscar" style="width:100%; height:50px; background: rgba(255, 255, 255, 0.6);" placeholder="buscar">
+                            <input type="text" class="form-control" id="buscar" style="width:100%; height:50px; background: rgba(255, 255, 255, 0.6);" placeholder="buscar" >
                             </div>
                         </div>
                     </div>
                     
                     <div class="col-md-2 m-0 p-0 text-center">
-                            <button class="btn btn-default" id="boton" type="button">Buscar</button>
+                        <button class="btn-search" id="boton" type="button" onclick="buscar();">
+                            <i class='bx bx-send'></i>
+                            <span class="text">
+                              Buscar    
+                            </span>
+                            <span class="loading-animate"></span>
+                          </button>
+                       
+                       
                     </div>
                 </div>
-                                <input type="text" value="0" id="casa" name="casa" class="text-dark">
-                                <input type="text" value="0" id="apartamento" name="apartamento" class="hidden">
-                                <input type="text" value="0" id="casacampestre" name="casacampestre" class="hidden">
-                                <input type="text" value="0" id="terreno" name="terreno" class="hidden">
-                                <input type="text" value="0" id="bodega" name="bodega" class="hidden">
-                                <input type="text" value="0" id="apartaestudio" name="apartaestudio" class="hidden">
-                                <input type="text" value="0" id="casalote" name="casalote" class="hidden">
+                                <input type="number" value="1" id="casa" name="casa" class="hidden">
+                                <input type="number" value="0" id="apartamento" name="apartamento" class="hidden">
+                                <input type="number" value="0" id="casacampestre" name="casacampestre" class="hidden">
+                                <input type="number" value="0" id="terreno" name="terreno" class="hidden">
+                                <input type="number" value="0" id="bodega" name="bodega" class="hidden">
+                                <input type="number" value="0" id="apartaestudio" name="apartaestudio" class="hidden">
+                                <input type="number" value="0" id="casalote" name="casalote" class="hidden">
 
                               
-<<<<<<< HEAD
                                         
                             
                                   
-=======
->>>>>>> b5d9049c3726f0f23493fe661d5a309affbbe0c1
                 </div>
             </div>
         </div>
@@ -68,7 +182,6 @@
             <div class="form-group">
              
               
-<<<<<<< HEAD
                   
                     <script>
                         
@@ -78,9 +191,6 @@
                         </script>
                         
                   
-=======
-                 
->>>>>>> b5d9049c3726f0f23493fe661d5a309affbbe0c1
             </div>
         </div>
        
@@ -145,37 +255,7 @@
                         <div class="tab-1 " aria-labelledby="tab_item-0">
                         
                             <div class="row">	
-<<<<<<< HEAD
                                
-=======
-                                
-                                <div class="col-md-3 product-men">
-                                    <div class="men-pro-item simpleCart_shelfItem">
-                                        <div class="men-thumb-item">
-                                            <img src="images/mw1.png" alt="" class="pro-image-front">
-                                            <img src="images/mw1.png" alt="" class="pro-image-back">
-                                                <div class="men-cart-pro">
-                                                    <div class="inner-men-cart-pro">
-                                                        <a href="single.html" class="link-product-add-cart">Quick View</a>
-                                                    </div>
-                                                </div>
-                                                <span class="product-new-top">New</span>
-                                                
-                                        </div>
-                                        <div class="item-info-product ">
-                                            <h4><a href="single.html"></a></h4>
-                                            <div class="info-product-price">
-                                                <span class="item_price">$45.99</span>
-                                            
-                                            </div>
-                                                                                
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                
-
->>>>>>> b5d9049c3726f0f23493fe661d5a309affbbe0c1
                             <div class="clearfix"></div>
                         </div>
                         <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
@@ -194,13 +274,12 @@
 
 
 <script>
-    function casa() {
-    variable = document.getElementById("casa").value;
+    document.getElementById("dropdown1-tab").onclick = function () { variable = document.getElementById("casa").value;
     if (variable==0){
         var intro = document.getElementById('dropdown1-tab');
 intro.style.background = '#0d6efd';
 intro.style.color = '#fff';
-casa.value = "1";
+document.getElementById("casa").value=1;
                 }
     else
     {
@@ -209,8 +288,9 @@ casa.value = "1";
         intro.style.color = '#3FBD2D';
         document.getElementById("casa").value=0;
         
-    }
-  }
+    } };
+
+
   function apartamento() {
     variable = document.getElementById("apartamento").value;
     if (variable==0){
@@ -308,34 +388,59 @@ casa.value = "1";
     }
   }
 
-    var boton = document.getElementById("boton");
-    var buscar = document.getElementById("buscar");
+    
+
+    // cuando se pulsa en el enlace
+     function buscar() {
+        let div = document.querySelector('#boton');
+div.classList.add('loading');
+       
+        
+
+
+        var busqueda = document.getElementById('buscar').value;
     var casa = document.getElementById('casa').value;
     var apartamento = document.getElementById('apartamento').value;
     var casacampestre = document.getElementById('casacampestre').value;
     var terreno = document.getElementById('terreno').value;
     var bodega = document.getElementById('bodega').value;
     var apartaestudio = document.getElementById('apartaestudio').value;
-    var casalote = document.getElementById('casalote').value;
-    // cuando se pulsa en el enlace
-    boton.onclick = function(e) {
+    var casalote = document.getElementById('casalote').value;   
         
       $.ajax({
               url:"{{ route('buscar_inmueble') }}",
-<<<<<<< HEAD
-              data:{casa : casa, apartamento : apartamento, casacampestre : casacampestre, terreno : terreno, bodega : bodega, apartaestudio : apartaestudio, casalote : casalote, buscar : buscar,},
+              data:{busqueda : busqueda, casa : casa, apartamento : apartamento, casacampestre : casacampestre, terreno : terreno, bodega : bodega, apartaestudio : apartaestudio, casalote : casalote},
               success:function(data){
-=======
-              data:{casa : casa, apartamento : apartamento, casacampestre : casacampestre, terreno : terreno, bodega : bodega, apartaestudio : apartaestudio, casalote : casalote},
-              success:function(data)
-              {
-                alert('Esto es lo que encontramos');
->>>>>>> b5d9049c3726f0f23493fe661d5a309affbbe0c1
+               
     $('#Busqueda').html(data);
     $('#inmuebles').hide;
+    setTimeout(() => {
+    
+        div.classList.remove('loading');
+  }, 1000);
+
+ 
+
+
+// ## eliminar clase
+
               }
             })
     }
     </script>
+    <script language="javascript" type="text/javascript">  
+        $(document).ready(function() 
+            {    
+           
+              $('#buscar').keypress(function(e){   
+               if(e.which == 13){      
+               buscar(); 
+               }   
+              });    
+              
+           });  
+         
 
+    </script>
+@include('layouts.script.script')
 @endsection
