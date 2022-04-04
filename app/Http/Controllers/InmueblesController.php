@@ -1,8 +1,4 @@
 <?php
-
-
-
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -35,7 +31,12 @@ class InmueblesController extends Controller
 
     public function buscar_inmueble(Request $request)
     {
-        
+    $output = 'pp';
+    if ($request->get('casa') == 1) {
+        $output = 'perro';
+    }
+     
+     echo $output;
         // $inmuebles = inmuebles::all();
         // return view('inmueble.index')->with('inmuebles',$inmuebles);
     }

@@ -60,7 +60,7 @@ class ImageController extends Controller
      }
      $output .= '</div></div>';
      echo $output;
-    }git
+    }
     function delete_image(Request $request)
     {
         $folder = $request->get('folder');
@@ -86,7 +86,7 @@ class ImageController extends Controller
     {
     
     $output .= '<li>
-                <img src="'.asset($folder . $image->getFilename()).'" style="max-height: 450px!important; width: 100%; height: ;" class="img-thumbnail" id="wows1_'.$contar.'"/></li>';
+                <img src="'.asset($folder . $image->getFilename()).'" style="max-height: 450px!important; width: 100%;" class="img-thumbnail" id="wows1_'.$contar.'"/></li>';
     
                 $contar++;
     }
