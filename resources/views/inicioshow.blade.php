@@ -31,7 +31,4 @@
                 <div class="ws_images"><ul>
                   <div class="" id="uploaded_image">
                     
-                    
-  
-                  </div>
-    {
+            

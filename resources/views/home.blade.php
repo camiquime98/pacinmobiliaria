@@ -226,7 +226,7 @@
                                       <img src="assets/images/a8.png" alt="" class="pro-image-back">
                                           <div class="men-cart-pro">
                                               <div class="inner-men-cart-pro">
-                                                  <a href="{{ route('inmueble.show', $inmueble->id) }}" class="link-product-add-cart">{{ $inmueble->zona }}</a>
+                                                  <a href="{{ route ('inmueble.show',$inmueble->id) }}" class="link-product-add-cart">{{ $inmueble->zona }}</a>
                                               </div>
                                           </div>
                                           <span class="product-new-top">1+1 Offer</span>
@@ -398,7 +398,7 @@ div.classList.add('loading');
         
 
 
-        var busqueda = document.getElementById('buscar').value;
+    var busqueda = document.getElementById('buscar').value;
     var casa = document.getElementById('casa').value;
     var apartamento = document.getElementById('apartamento').value;
     var casacampestre = document.getElementById('casacampestre').value;
