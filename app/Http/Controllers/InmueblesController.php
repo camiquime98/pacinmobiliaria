@@ -51,34 +51,39 @@ class InmueblesController extends Controller
         $bodegas = 'x';
         $apartaestudios = 'x';
         $casalotes = 'x';
-        
+        $any =2;
         if ($casa==1) {
            $casas='Casa';
+           $any =1;
         }
         if ($apartamento==1) {
             $apartamentos='Apartamento';
+            $any =1;
          }
          if ($casacampestre==1) {
             $casacampestres="Casacampestre";
+            $any =1;
          }
          if ($terreno==1) {
             $terrenos="Terreno";
+            $any =1;
          }
          if ($bodega==1) {
             $bodegas="Bodega";
+            $any =1;
          }
          if ($apartaestudio==1) {
             $apartaestudios="Apartamento";
          }
          if ( $casalote==1) {
             $casalotes="Casalote";
+            $any =1;
          }
         $output ="";
     if(isset($busqueda)){
         $output ="No se han encontrado resultados para esa ubicación";
-    $inmuebles=DB::table('inmuebles')
-    
-
+    if ($any==1) {
+        $inmuebles=DB::table('inmuebles')
 ->orwhere('tipoinmueble',  $casas)
         ->orwhere( 'tipoinmueble',  $apartamentos)
         ->orwhere('tipoinmueble',  $casacampestres)
@@ -87,8 +92,34 @@ class InmueblesController extends Controller
         ->orwhere( 'tipoinmueble',  $apartaestudios)
         ->orwhere('tipoinmueble', $casalotes)
         ->where('municipio', 'LIKE','%'.$busqueda.'%')
-    ->get();
-    $contador=DB::table('inmuebles')->where('municipio','LIKE','%'.$busqueda."%")->count();
+    ->get();  
+
+
+    $contador=DB::table('inmuebles')
+    ->orwhere('tipoinmueble',  $casas)
+            ->orwhere( 'tipoinmueble',  $apartamentos)
+            ->orwhere('tipoinmueble',  $casacampestres)
+            ->orwhere( 'tipoinmueble',  $terrenos)
+            ->orwhere( 'tipoinmueble',  $bodegas)
+            ->orwhere( 'tipoinmueble',  $apartaestudios)
+            ->orwhere('tipoinmueble', $casalotes)
+            ->where('municipio', 'LIKE','%'.$busqueda.'%')
+        ->count();  }
+        else{
+
+            $inmuebles=DB::table('inmuebles')
+        ->where('municipio', 'LIKE','%'.$busqueda.'%')
+    ->get();  
+
+
+    $contador=DB::table('inmuebles')
+   
+            ->where('municipio', 'LIKE','%'.$busqueda.'%')
+        ->count(); 
+
+        }
+        
+    
     if($contador<1){
         $output ="No se han encontrado resultados para esa ubicación"; 
     }
