@@ -233,7 +233,7 @@
                     
                                   </div>
                                   <div class="item-info-product ">
-                                      <h4><a href="single.html">Next Blue Blazer</a></h4>
+                                      <h4><a href="" class="">{{$inmueble->municipio}}</a></h4>
                                       <div class="info-product-price">
                     
                                           <span class="item_price">${{ $inmueble->valor }}</span>

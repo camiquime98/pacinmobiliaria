@@ -30,45 +30,112 @@ class InmueblesController extends Controller
     {
         return view('inmueble.create');
     }
-
     public function buscar_inmueble(Request $request)
     {
+
+
+
         $busqueda = $request->get('busqueda');
-        $output ='';
-    
-    $inmuebles=DB::table('inmuebles')->where('municipio','LIKE','%'.$busqueda."%")->get();
-    foreach ($inmuebles as $key => $inmueble) {
-        $output.='<div class="col-md-3 col-sm-12">
-        <div class="product-men">
-                
-          <div class="men-pro-item simpleCart_shelfItem">
+        $casa = $request->get('casa');
+        $apartamento = $request->get('apartamento');
+        $casacampestre = $request->get('casacampestre');
+        $terreno = $request->get('terreno');
+        $bodega = $request->get('bodega');
+        $apartaestudio = $request->get('apartaestudio');
+        $casalote = $request->get('casalote'); 
 
-            <div class="men-thumb-item">
-                  <img src="assets/images/a8.png" alt="" class="pro-image-front">
-                  <img src="assets/images/a8.png" alt="" class="pro-image-back">
-                      <div class="men-cart-pro">
-                          <div class="inner-men-cart-pro">
-                              <a href="{{ route ("inmueble.show",$inmueble->id) }}" class="link-product-add-cart">'.$inmueble->zona .'</a>
-                          </div>
-                      </div>
-                      <span class="product-new-top">1+1 Offer</span>
-
-              </div>
-              <div class="item-info-product ">
-                  <h4><a href="single.html">'.$inmueble->municipio .'</a></h4>
-                  <div class="info-product-price">
-
-                      <span class="item_price">$'.$inmueble->valor .'</span>
-                      <del>$520.000</del>
-
-                  </div>
-                  <a href="" class="item_add single-item hvr-outline-out button2"> Ver mas </a>									
-              </div>
-          </div>
-          
-      </div>
-      </div>';
+        $casas = 'x';
+        $apartamentos = 'x';
+        $casacampestres = 'x';
+        $terrenos = 'x';
+        $bodegas = 'x';
+        $apartaestudios = 'x';
+        $casalotes = 'x';
+        
+        if ($casa==1) {
+           $casas='Casa';
         }
+        if ($apartamento==1) {
+            $apartamentos='Apartamento';
+         }
+         if ($casacampestre==1) {
+            $casacampestres="Casacampestre";
+         }
+         if ($terreno==1) {
+            $terrenos="Terreno";
+         }
+         if ($bodega==1) {
+            $bodegas="Bodega";
+         }
+         if ($apartaestudio==1) {
+            $apartaestudios="Apartamento";
+         }
+         if ( $casalote==1) {
+            $casalotes="Casalote";
+         }
+        $output ="";
+    if(isset($busqueda)){
+        $output ="No se han encontrado resultados para esa ubicación";
+    $inmuebles=DB::table('inmuebles')
+    
+
+->orwhere('tipoinmueble',  $casas)
+        ->orwhere( 'tipoinmueble',  $apartamentos)
+        ->orwhere('tipoinmueble',  $casacampestres)
+        ->orwhere( 'tipoinmueble',  $terrenos)
+        ->orwhere( 'tipoinmueble',  $bodegas)
+        ->orwhere( 'tipoinmueble',  $apartaestudios)
+        ->orwhere('tipoinmueble', $casalotes)
+        ->where('municipio', 'LIKE','%'.$busqueda.'%')
+    ->get();
+    $contador=DB::table('inmuebles')->where('municipio','LIKE','%'.$busqueda."%")->count();
+    if($contador<1){
+        $output ="No se han encontrado resultados para esa ubicación"; 
+    }
+   
+    else
+    {
+     
+        $output ="";
+        foreach ($inmuebles as $key => $inmueble) {
+            $output.='<div class="col-md-3 col-sm-12">
+            <div class="product-men">
+                    
+              <div class="men-pro-item simpleCart_shelfItem">
+    
+                <div class="men-thumb-item">
+                      <img src="assets/images/a8.png" alt="" class="pro-image-front">
+                      <img src="assets/images/a8.png" alt="" class="pro-image-back">
+                          <div class="men-cart-pro">
+                              <div class="inner-men-cart-pro">
+                                  <a href="" class="link-product-add-cart">'.$inmueble->zona .'</a>
+                              </div>
+                          </div>
+                          <span class="product-new-top">1+1 Offer</span>
+    
+                  </div>
+                  <div class="item-info-product ">
+                      <h4><a href="single.html">'.$inmueble->municipio .'</a></h4>
+                      <div class="info-product-price">
+    
+                          <span class="item_price">$'.$inmueble->valor .'</span>
+                          <del>$520.000</del>
+    
+                      </div>
+                      <a href="" class="item_add single-item hvr-outline-out button2"> Ver mas </a>									
+                  </div>
+              </div>
+              
+          </div>
+          </div>';
+            }
+    }
+    }
+
+    else
+    {
+        $output ="No se han encontrado resultados para esa ubicación";
+    }
      echo $output;
         // $inmuebles = inmuebles::all();
         // return view('inmueble.index')->with('inmuebles',$inmuebles);
