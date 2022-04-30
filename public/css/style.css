@@ -5,7 +5,7 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
 @font-face {
-	font-family: Poppins-Regular;
+	font-family: Franklin Gothic;
 	src: url('/assets/fonts/poppins/Poppins-Regular.ttf'); 
   }
   
@@ -22,7 +22,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 html, body{
 	margin:0;
 	font-size: 100%;
-	font-family: Poppins-Regular;
+	font-family: Franklin Gothic;
 	background: #fff;
 }
 body a {

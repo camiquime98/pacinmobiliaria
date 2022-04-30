@@ -7,6 +7,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;
 use App\Models\inmuebles;
+use Illuminate\Support\Facades\DB;
 class ImageController extends Controller
 
 
@@ -46,20 +47,56 @@ class ImageController extends Controller
     }
     function fetch_image(Request $request)
     {
-        $folder = $request->get('folder');
+    $folder = $request->get('folder');
+    $imagen1 = DB::table('inmuebles')->where('folder',$folder)->value('imagenuna');
+    $imagen2 = DB::table('inmuebles')->where('folder',$folder)->value('imagendos');
     $images = \File::allFiles(public_path('imagenes-inmueble/' . $folder));
     $output = '<div class="container"><div class="row">';
     
+    
     $folder ='imagenes-inmueble/' . $folder . '/';
+    // $imagen1 = DB::table('inmuebles')->select('imagenuna')->where('folder', '=', $folder)->first();
+    $estilo = '';
+    $btn = '';
+    $btn2 = '';
     foreach($images as $image)
     {
-    $output .= '<div class="col-md-3">
-                <img src="'.asset($folder . $image->getFilename()).'" class="img-thumbnail" style="max-width: 350px!important; max-height: 200px!important; width: 100%; height: 100%;"/>
-                <button type="button" class="btn btn-link remove_image" id="'.$image->getFilename().'">Eliminar foto</button>
+    
+    $fijarimagen = "'".$image->getFilename()."'";
+    if ($imagen1 == $image->getFilename()) {
+        $estilo = 'filter: blur(1px); border: 3px solid #fda30e;';
+        $btn = 'display:none;';
+    }
+    if ($imagen2 == $image->getFilename()) {
+        $estilo = 'filter: blur(1px); border: 3px solid #fda30e;';
+        $btn2 = 'display:none;';
+    }
+    $output .= '<div class="col-md-3 mb-3">
+                <div class="row d-flex justify-content-center">
+                <div class="col-md-12 text-center">
+                <img src="'.asset($folder . $image->getFilename()).'" class="img-thumbnail" style="margin:8px; margin-bottom: 3px; max-width: 380px!important; max-height: 200px!important; width: 100%; height: 100%;'.$estilo.'"/>
+                </div>
+                <div class="col-md-5 col-sm-12 mt-1">
+                <button type="button" class="btn btn-danger remove_image" id="'.$image->getFilename().'">Eliminar foto</button>
+                </div>
+                <div class="col-md-3 col-sm-12 mt-1">
+                <button onclick="fijar_imagen('.$fijarimagen.');" type="button" class="btn btn-primary set_image" id="'.$image->getFilename().'" style="'.$btn.'">Fijar 1</button>
+                </div>
+                <div class="col-md-3 col-sm-12 mt-1">
+                <button onclick="fijar_imagen2('.$fijarimagen.');" type="button" class="btn btn-primary set_image" id="'.$image->getFilename().'" style="'.$btn2.'">Fijar 2</button>
+                </div>
+                </div>
+
             </div>';
-     }
+     $estilo = '';
+     $btn = '';
+     $btn2 = '';
+        }
+
+   
      $output .= '</div></div>';
      echo $output;
+     
     }
     function delete_image(Request $request)
     {
@@ -70,6 +107,23 @@ class ImageController extends Controller
         
       \File::delete(public_path($folder . $request->get('name')));
      }
+    }
+
+
+    function set_image(Request $request)
+    {
+        $folder = $request->get('folder');
+        $nombreimagen = $request->get('nombreimagen');
+        inmuebles::where('folder', $folder)
+          ->update(['imagenuna' => $nombreimagen]);
+    }
+
+    function set_image2(Request $request)
+    {
+        $folder = $request->get('folder');
+        $nombreimagen = $request->get('nombreimagen');
+        inmuebles::where('folder', $folder)
+          ->update(['imagendos' => $nombreimagen]);
     }
 
 

@@ -15,10 +15,7 @@ color: rgb(22, 115, 151);
 border: 1px solid rgb(7, 185, 255);
 }
 </style>
-<div class="container-fluid" style="background: linear-gradient(180deg, rgba(236, 230, 230, 0.459)60%, rgb(255, 255, 255)100%), url('/images/fondoinicioshow.png');
-background-attachment: fixed;
-background-repeat: no-repeat;
-background-size: cover;">
+<div class="container-fluid m-0 p-0" style="">
 <div class="main-content">
   <div class="row p-3 d-flex justify-content-center">
     <div class="col-md-10 col-sm-12 p-3">
@@ -30,20 +27,21 @@ background-size: cover;">
           </div>
         </div>
       </div>
-        <div class="card" style="background: rgba(255, 255, 255, 0.822);">
+        <div class="card" style="background: rgba(255, 255, 255, 0.822); border: none;!important">
           
-          <div class="card-header bg-white">
+          <div class="card-header" style="background: transparent; border:none!important;">
             <div class="row d-felx justify-content-center">
               <div class="col-md-12">
                 <div class="row">
                   <div class="col-md-6">
-                    <div class="card-title"><h1 style="color: coral; text-transform: uppercase;">{{ $inmuebles->gestion }} </h1>
-                      <h5 style="color: coral; text-transform: uppercase;">{{ $inmuebles->municipio }} - {{ $inmuebles->departamento }}</h5>
+                    <div class="card-title"><h1 style="font-size:20px; color: #FDA30E; text-transform: uppercase;">{{ $inmuebles->gestion }} </h1>
+                      <h5 style="font-size:20px; color: #FDA30E; text-transform: uppercase;">{{ $inmuebles->municipio }} - {{ $inmuebles->departamento }}</h5>
                         <p class="card-category">Vista detallada del inmueble</p>
                     </div>
                   </div>
                   <div class="col-md-6 text-end"> 
-                          <b><h1 style="color: coral; font-size:30px;">${{ $inmuebles->valor }}</h1></b>
+                          <b><h1 style="color: #FDA30E; font-size:25px;">${{ $inmuebles->valor }}</h1></b>
+                          <b><h1 style="color: #18435c; font-size:15px;">pesos colombianos</h1></b>
                   </div>
                 </div>
                 
@@ -54,33 +52,33 @@ background-size: cover;">
           
           <div class="card-body">
             <div class="row">
-              <div class="col-md-8">
+              <div class="col-md-8 p-0 m-0">
                 <div class="row">
                   <div class="col-md-12">
                     <link rel="stylesheet" type="text/css" href="../assets/slider/css/style.css"/>
                 <script type="text/javascript" src="../assets/slider/js/jquery.js"></script>
           
                 <input type="text" class="hidden" name="folder" id="folder" value="{{ $inmuebles->folder }}">
-                <div id="wowslider-container1" style="">
+                <div id="wowslider-container1" style="width: 100%;">
                     
                 </div>
                   </div>
-                  <div class="card-footer col-md-12 col-sm-12" style="background: transparent;">
-                    <b><h4 style="color: rgb(52, 172, 219);">Descripcion</h4></b>                
+                  <div class="card-footer col-md-12 col-sm-12" style="background: transparent; border: none;">
+                    <b><h4 style="color: rgb(45, 74, 94);">Descripcion</h4></b>                
             <p style="text-align: justify">{{ $inmuebles->descripcion }}</p>
                   </div>
                 </div>
                 
               </div>
-              <div class="col-md-4">
+              <div class="col-md-4 p-0 m-0">
                 <div class="row">
                   <div class="col-12 pb-2">
                     <div class="card">
-                      <div class="card-header p-3">
-                        <b><h4 style="color: rgb(52, 172, 219);">Ubicación</h4></b>
+                      <div class="card-header p-3" style="background: #FDA30E;">
+                        <b><h4 style="color: rgb(255, 255, 255);">Ubicación</h4></b>
                       </div>
                       <div class="body">
-                        <div class="row t-3 p-3">
+                        <div class="row t-3 p-3" style="color: #18435c;">
                           <div class="col-6">Departamento</div>
                           <div class="col-6 text-end"><p>{{ $inmuebles->departamento }}</p></div>
                           <div class="col-6">Ciudad</div>
@@ -99,11 +97,11 @@ background-size: cover;">
                   </div>
                   <div class="col-12 pb-2">
                     <div class="card ">
-                      <div class="card-header p-3">
-                        <b><h4 style="color: rgb(52, 172, 219);">Detalle del inmueble</h4></b>
+                      <div class="card-header p-3" style="background: #FDA30E;">
+                        <b><h4 style="color: rgb(255, 255, 255);">Detalle del inmueble</h4></b>
                       </div>
                       <div class="card-body">
-                        <div class="row t-3">
+                        <div class="row t-3" style="color: #18435c">
                           <div class="col-6"><p>Tipo de inmueble</p></div>
                           <div class="col-6 text-end"><p>{{ $inmuebles->tipoinmueble }}</p></div>
                           <div class="col-6"><p>Categoria</p></div>
@@ -153,8 +151,58 @@ background-size: cover;">
          </div>
     </div>
   </div>
+
+
+  <div class="container-fluid" style="background-image: url('assets/images/fondo-seguros.png'); background-repeat: no-repeat;
+                background-size: 100% 100%; background-attachment: fixed;">
+                
+                    <div class="container">
+                    <div class="row d-flex justify-content-center" style="margin-top: 10px; margin-bottom:20px;">
+                        <div class="col-md-12 text-center" style="margin-top: 20px ;margin-bottom: 20px; color: rgb(45, 74, 94);">
+                            <h3 style="color: rgb(20, 64, 94); font-weight: 600;">Siempre pensamos en la seguridad de nuestros clientes.</h3>
+                            <br>
+                            <h4 style="color: #FDA30E">Elige nuestro convenido a travez de un intermediario.</h4>
+                        </div>
+                        <div class="col-md-12 d-flex justify-content-center">
+                          <div class="row" style="display: flex;justify-content: center;">
+                            <div class="col-md-2">
+                              <img src="assets/images/loby-seguros.png" alt="" srcset="" style="width: 150px; height: 80px;">
+                            </div>
+                            <div class="col-md-2">
+                              <img src="assets/images/mapfre-seguros.png" alt="" srcset=""  style="width: 150px; height: 80px;">
+                            </div>
+                            <div class="col-md-2">
+                              <img src="assets/images/seguros-mundial.png" alt="" srcset=""  style="width: 150px; height: 80px;">
+                            </div>
+                            <div class="col-md-2">
+                              <img src="assets/images/seguros-estado.png" alt="" srcset=""  style="width: 150px; height: 60px;">
+                            </div>
+                            <div class="col-md-2">
+                              <img src="assets/images/seguros-previsora.png" alt="" srcset=""  style="width: 150px; height: 60px;">
+                            </div>
+                            </div>
+                        </div>
+                        
+
+          
+                        <div class="col-md-12 mt-4 d-flex justify-content-center">
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-md-6">
+                                            <a href="http://" calss="btn" style="color:rgb(255, 255, 255)!important; background: #FDA30E; padding:10px 25px;border-radius: 8px;">COTIZAR</a>
+                                        
+                                </div>
+                                <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                    <p>Carol Marina Vargas</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                </div>
 </div>
-</div>
+
+
 
 
 @include('layouts.footer.footercontacto')

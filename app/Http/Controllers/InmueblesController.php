@@ -139,21 +139,21 @@ class InmueblesController extends Controller
                       <img src="assets/images/a8.png" alt="" class="pro-image-back">
                           <div class="men-cart-pro">
                               <div class="inner-men-cart-pro">
-                                  <a href="" class="link-product-add-cart">'.$inmueble->zona .'</a>
+                                  <a href="show/'.$inmuebles->id .'" class="link-product-add-cart">'.$inmueble->zona .'</a>
                               </div>
                           </div>
                           <span class="product-new-top">1+1 Offer</span>
     
                   </div>
                   <div class="item-info-product ">
-                      <h4><a href="single.html">'.$inmueble->municipio .'</a></h4>
+                      <h4><a href="show/'.$inmuebles->id .'">'.$inmueble->municipio .'</a></h4>
                       <div class="info-product-price">
     
                           <span class="item_price">$'.$inmueble->valor .'</span>
                           <del>$520.000</del>
     
                       </div>
-                      <a href="" class="item_add single-item hvr-outline-out button2"> Ver mas </a>									
+                      <a href="show/'.$inmuebles->id .'" class="item_add single-item hvr-outline-out button2"> Ver mas </a>									
                   </div>
               </div>
               

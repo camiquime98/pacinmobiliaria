@@ -242,26 +242,22 @@
               
               {{-- {!! $inmuebles->links() !!} --}}
               </div>
-              <div class="container d-flex justify-content-center">
-                  <div class="row">
-                      <div class="col-md-12 text-center">
-                        <h4>El inmueble que quieres esta aqui</h4>
-                      </div>
-                  </div>
-              </div>
-
-
             <div class="container" style="margin-top: 40px;">
-                <div class="row m-0 p-0">
+                <div class="row" style="margin-bottom: 3%; margin-top:3%;">
+                    <div class="col-md-12 text-center">
+                      <h3 style="color: rgb(45, 74, 94);font-weight:800;">El inmueble que quieres esta aqui</h3>
+                    </div>
+                </div>
+                <div class="row ">
 
 					@foreach($inmuebles as $inmueble) 
-                  <div class="col-md-3 col-sm-12">
+                  <div class="col-md-3 col-sm-12" style="margin-bottom: 3%;">
                     <div class="product-men">
-                      <div class="men-pro-item simpleCart_shelfItem">
+                      <div class="men-pro-item simpleCart_shelfItem" style="border-radius: 10px;">
                          
                         <div class="men-thumb-item">
-                              <img src="assets/images/a8.png" alt="" class="pro-image-front">
-                              <img src="assets/images/a8.png" alt="" class="pro-image-back">
+                            <img src="imagenes-inmueble/{{ $inmueble->folder }}/{{ $inmueble->imagenuna }}" alt="" class="pro-image-front" style="border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                            <img src="imagenes-inmueble/{{ $inmueble->folder }}/{{ $inmueble->imagendos }}" alt="" class="pro-image-back" style="border-top:10px;">
                                   <div class="men-cart-pro">
                                       <div class="inner-men-cart-pro">
                                           <a href="{{ route('inicioshow', $inmueble->id) }}" class="link-product-add-cart">{{ $inmueble->municipio }}
@@ -274,14 +270,14 @@
                           </div>
                           <div class="item-info-product" style="margin-top: 10px;">
 							<a href="{{ route('inicioshow', $inmueble->id) }}">   
-							<div class="row" style="margin: 0px; padding: 0px;"> 
-								  <div class="col-md-4">
+							<div class="row" style=""> 
+								  <div class="col-md-4 m-0 p-0">
 									  <h5 style="font-weight: 300; font-size: 0.7em;">Habitaciones</h5>
 									  <p style="font-weight: 300; font-size: 0.7em;">{{ $inmueble->alcobas }}</p></div>
-								  <div class="col-md-4">
+								  <div class="col-md-4 m-0 p-0">
 									  <h5 style="font-weight: 300; font-size: 0.7em;">Baños</h5>
 									  <p style="font-weight: 300; font-size: 0.7em;">{{ $inmueble->banos }}</p></div>
-								  <div class="col-md-4">
+								  <div class="col-md-4 m-0 p-0">
 									  <h5 style="font-weight: 300; font-size: 0.7em;">Area</h5>
 									<p style="font-weight: 300; font-size: 0.7em;">{{ $inmueble->area }}</p></div>
 							  </div>
@@ -958,7 +954,7 @@
             </div>
             <!-- //product-nav -->
             
-            <div class="coupons">
+            <div class="coupons" style="margin-bottom: 5px;">
                 <div class="container">
                     <div class="coupons-grids text-center">
                         <div class="row">
@@ -968,19 +964,17 @@
                             <div class="col-md-3 coupons-gd">
                                 <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
                                 <h4>Avaluos</h4>
-                                <p style="text-align: justify">Tenemos al personal especializado para realizar la actividad valuatoria de tu inmueble.</p>
+                                <p style="text-align: justify" class="p-3">Con el personal profesional para realizar la actividad valuatoria de tu inmueble.</p>
                             </div>
                             <div class="col-md-3 coupons-gd">
                                 <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
                                 <h4>Alquiler</h4>
-                                <p>Neque porro quisquam est, qui dolorem ipsum quia dolor
-                            sit amet, consectetur.</p>
+                                <p style="text-align: justify">Uno de los servicio mas importante para aquirir tu inmueble a travez de nuestros canales locales.</p>
                             </div>
                             <div class="col-md-3 coupons-gd">
                                 <span class="glyphicon glyphicon-credit-card" aria-hidden="true"></span>
                                 <h4>Venta</h4>
-                                <p>Neque porro quisquam est, qui dolorem ipsum quia dolor
-                            sit amet, consectetur.</p>
+                                <p style="text-align: justify">Las ventas de los inmuebles son legales, brindado seguridad y garantia al comprador.</p>
                             </div>
                         </div><hr>
                         
@@ -992,20 +986,17 @@
                             <div class="col-md-3 coupons-gd">
                                 <span class="glyphicon glyphicon-credit-card" aria-hidden="true"></span>
                                 <h4>Asesorias juridicas</h4>
-                                <p>Neque porro quisquam est, qui dolorem ipsum quia dolor
-                            sit amet, consectetur.</p>
+                                <p style="text-align: justify">Tenemos profesionales en asesorias juridicas en todos los procesos; Penal, familia, civil.</p>
                             </div>
                             <div class="col-md-3 coupons-gd">
                                 <span class="glyphicon glyphicon-credit-card" aria-hidden="true"></span>
                                 <h4>Desarrollo de software para pymes</h4>
-                                <p>Neque porro quisquam est, qui dolorem ipsum quia dolor
-                            sit amet, consectetur.</p>
+                                <p style="text-align: justify">Espectacular servicio para empresas pymes que buscan multiplicar su desarrollo y produccion en marketing a travez de la web.</p>
                             </div>
                             <div class="col-md-3 coupons-gd">
                                 <span class="glyphicon glyphicon-credit-card" aria-hidden="true"></span>
                                 <h4>Asesoria de gestion empresarial</h4>
-                                <p>Neque porro quisquam est, qui dolorem ipsum quia dolor
-                            sit amet, consectetur.</p>
+                                <p style="text-align: justify">Asesores profesionales para ayudar a las empresas en temas de productividad, gestion de operaciones, ecoeficiencia etc.</p>
                             </div>
                         </div>
                        
@@ -1013,6 +1004,72 @@
                     </div>
                 </div>
             </div>
+
+
+            {{-- <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="assets/images/proyecto.png" alt="" srcset="" style="width: 100%;">
+                    </div>
+                    <div class="col-md-6">
+                       Nuestros proyectos a futuros. 
+                    </div>
+                </div>
+            </div> --}}
+
+            <div class="">
+                <div class="container-fluid" style="background-image: url('assets/images/fondo-seguros.png'); background-repeat: no-repeat;
+                background-size: 100% 100%; background-attachment: fixed;">
+                
+                    <div class="container">
+                    <div class="row d-flex justify-content-center" style="margin-top: 10px; margin-bottom:20px;">
+                        <div class="col-md-12 text-center" style="margin-top: 20px ;margin-bottom: 20px; color: rgb(45, 74, 94);">
+                            <h3 style="color: rgb(20, 64, 94); font-weight: 600;">Siempre pensamos en la seguridad de nuestros clientes.</h3>
+                            <br>
+                            <h4 style="color: #FDA30E">Elige nuestro convenido a travez de un intermediario.</h4>
+                        </div>
+                        <div class="col-md-12 d-flex justify-content-center">
+                            <div class="row">
+
+                            
+                            <div class="col-md-12 text-center" style="">
+                                <img src="assets/images/loby-seguros.png" alt="" srcset="" style="width: 150px; height: 80px;">
+                                <img src="assets/images/mapfre-seguros.png" alt="" srcset=""  style="width: 150px; height: 80px;">
+                                <img src="assets/images/seguros-mundial.png" alt="" srcset=""  style="width: 150px; height: 80px;">
+                                <img src="assets/images/seguros-estado.png" alt="" srcset=""  style="width: 150px; height: 60px;">
+                                <img src="assets/images/seguros-previsora.png" alt="" srcset=""  style="width: 150px; height: 60px;">
+                            </div>
+                        </div>
+                            
+                        </div>
+                        
+                        
+                        <div class="container">
+
+                        </div>
+                        <hr>
+                        <div class="col-md-12">
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-12 text-center">
+                                            <a href="http://" calss="btn" style="color:rgb(255, 255, 255)!important; background: #FDA30E; padding:10px 25px;border-radius: 8px;">COTIZAR</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                    <p>Carol Marina Vargas</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                </div>
+            </div>
+
+
+
             @include('layouts.footer.footer')
             <!-- login -->
                         <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

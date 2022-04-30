@@ -110,12 +110,14 @@
                     <select name="tipoinmueble" id="inputCategoria_id" class="inputinmueble custom-select">
                       <option value="">Seleccióne el tipo inmueble</option>
                       <option value="Casa">Casa</option>
+                      <option value="Casacampestre">Casa campestre</option>
                       <option value="Apartamento">Apartamento</option>
-                      <option value="Hanitacion">Habitacion</option>
-                      <option value="Lote">Lote</option>
+                      {{-- <option value="Habitacion">Habitacion</option> --}}
+                      <option value="Terreno">Lote</option>
+                      <option value="Bodega">Bodega</option>
                       <option value="Finca">Finca</option>
                       <option value="Local">Local</option>
-                      <option value="Finca">Finca</option>
+                      <option value="Casalote">Casa lote</option>
                       {{-- @foreach($categorias as $categoria)
                         <option value="{{ $categoria->id }}">{{ $categoria->nombrecate }}</option>
                       @endforeach --}}

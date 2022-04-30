@@ -99,6 +99,34 @@
           }
         })
       });
+
+
+  
+      function fijar_imagen(nombreimagen) {
+    var folder = document.getElementById('folder').value;
+    $.ajax({
+          url:"{{ route('imageinmueble.set_image') }}",
+          data:{nombreimagen : nombreimagen, folder : folder},
+          success:function(data){
+            load_images();
+          }
+        })  
+  }
+
+
+
+  function fijar_imagen2(nombreimagen) {
+    var folder = document.getElementById('folder').value;
+    $.ajax({
+          url:"{{ route('imageinmueble.set_image2') }}",
+          data:{nombreimagen : nombreimagen, folder : folder},
+          success:function(data){
+            
+            load_images();
+          }
+        })  
+  }
+
     </script>
 @endsection
 

@@ -22,7 +22,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 html, body{
 	margin:0;
 	font-size: 100%;
-	font-family: Poppins-Regular;
+	font-family: Franklin Gothic;
 	background: #fff;
 }
 body a {
@@ -238,7 +238,7 @@ label{
 /*-- //header-bot --*/
 /*-- banner-top --*/
 .ban-top{
-	background: rgb(50, 156, 163);
+	background: rgb(45, 74, 94);
 	position: absolute;
     top: 17px;
     z-index: 100;
@@ -308,7 +308,7 @@ label{
 	display: flex;
 	-webkit-flex-wrap: wrap;
 	flex-wrap: wrap;
-	margin: 0;
+	margin: 5px;
 	padding: 0;
 	list-style: none;
 }
@@ -394,13 +394,13 @@ label{
 }
 
 .menu--shylock .menu__link::before {
-	background: #06bdca;
+	background: #FDA30E;
 	-webkit-transition-delay: 0.4s;
 	transition-delay: 0.4s;
 }
 
 .menu--shylock .menu__link::after {
-	background: #06bdca;
+	background: #FDA30E;
 }
 a.menu__link {
     color: #ffffff !important;
@@ -1365,7 +1365,7 @@ h2.resp-accordion {
     z-index: 10;
 }
 .product-new-top {
-    background: rgba(3, 173, 150, 0.9) none repeat scroll 0 0;
+    background:  #FDA30E none repeat scroll 0 0;
     color: #fff;
     display: inline-block;
     left: 10px;
@@ -1400,7 +1400,7 @@ h2.resp-accordion {
     transition: all 0.5s ease-out 0s;
 }
 .link-product-add-cart {
-    background:#000 none repeat scroll 0 0;
+    background:rgb(45, 74, 94) none repeat scroll 0 0;
     color: #fff;
     display: inline-block;
     height: 40px;
@@ -1462,7 +1462,7 @@ h2.resp-accordion {
     top: 73.5%;
 }
 .link-product-add-cart:hover {
-    background: rgba(3, 173, 150, 0.9) none repeat scroll 0 0;
+    background: #ffc229 none repeat scroll 0 0;
     color: #fff;
 }
 /*-- //effect --*/
@@ -1689,18 +1689,21 @@ ul.multi-column-dropdown li a:hover{
 }
 /*-- coupons --*/
 .coupons{
-background:url(../images/coupons.jpg) no-repeat center;
+background: linear-gradient(90deg, rgba(255, 255, 255, 0.781), rgba(236, 236, 236, 0.603)), url(../images/servicios.png);
 background-size:cover;
 -webkit-background-size: cover;
 -o-background-size: cover;
 -ms-background-size: cover;
 -moz-background-size: cover;
-background-attachment: fixed;
 min-height: 470px;
 padding-top:50px;
 padding-bottom:50px;
 }
 
+.coupons-gd
+{
+	padding: 30px;
+}
 .coupons-gd span {
     background: #FDA30E;
     padding: 25px 24px;
@@ -1709,21 +1712,23 @@ padding-bottom:50px;
     font-size: 24px;
 }
 .coupons-gd h4 {
-    color: #FFFFFF;
+    color: rgb(45, 74, 94);
     font-size: 17px;
     text-transform: uppercase;
-    margin: 40px 0 20px;
+    margin: 10px 0 10px;
+	font-weight: 500;
 }
 .coupons-gd h3 {
-    color: #FDA30E;
+    color: rgb(45, 74, 94);
     font-size: 23px;
     text-transform: uppercase;
     line-height: 1.8em;
 	margin: 83px 0 0;
+	font-weight:600;
 }
 .coupons-gd p {
     text-align: center;
-    color: #BBB;
+    color: rgb(78, 78, 78);
     font-size: 15px;
     line-height: 2em;
 }
@@ -1765,7 +1770,7 @@ padding-bottom:50px;
 
 .search input {
     height: 60px;
-    text-indent: 25px;
+    text-indent: 40px;
     border: 2px solid #d6d4d4
 }
 
@@ -1776,7 +1781,7 @@ padding-bottom:50px;
 
 .search .fa-search {
     position: absolute;
-    top: 20px;
+    top: 12px;
     left: 16px
 }
 
@@ -3237,7 +3242,7 @@ td.invert-image a img {
 	}
 	.search {
 		float: left;
-		width: 35%;
+		width: 100%;
 	}
 	.sear-sub {
 		float: right;
@@ -4639,7 +4644,7 @@ td.invert-image a img {
 	}
 	.search {
 		float: left;
-		width: 47%;
+		width: 100%;
 	}
 	.header-right {
 		float: left;

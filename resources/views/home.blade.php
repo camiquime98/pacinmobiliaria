@@ -5,7 +5,7 @@
     .btn-search {
         background: #7f49d7;
         border: 0px solid #7b49d7;
-        border-radius: 5px;
+        border-radius: 20px;
         font-size: 1rem;
         font-weight: bold;
         color: #fff;
@@ -17,7 +17,7 @@
         transition: all .25s ease;
         width: 200px;
         position: relative;
-        height: 50px;
+        height: 40px;
         overflow: hidden;
     }
     .btn-search:not(.loading):hover {
@@ -117,13 +117,13 @@
                    <h3 class="titulo-s" style="color:#fff; font-weight: 800;text-transform: none; font-size:25px;">Busca tu inmueble</h3>
             <div class="col-md-9 d-flex justify-content-center" style="width: 100%;">
                 <div class="row d-flex justify-content-center" style="width: 100%;">
-                    <div class="col-md-3 d-flex justify-content-center m-0 p-0" style="width:100%;">
+                    <div class="col-md-3 d-flex justify-content-center m-0 pb-3" style="width:100%;">
                         <ul id="myTab" class="nav nav-tabs" role="tablist" style="border-bottom: none;">
-                            <li role="presentation" class="btn btn-primary"style="max-height:50px; min">
+                            <li role="presentation" class="btn btn-primary"style="max-height:40px; border-radius:40px;">
             
                                 <div class="dropdown">
-                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: transparent; border: none;">
-                                      ¿Qué buscar?
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-top:-5px; background-color: transparent; border: none; ">
+                                      ¿Seleccione tu filtro?
                                     </button>
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                       <a class="dropdown-item" id="dropdown1-tab"onclick="casa();">Casa</a>
@@ -139,16 +139,16 @@
                                     </li>
                                   </ul> 
                     </div>
-                    <div class="col-md-7 col-sm-12 m-0 p-0">
+                    <div class="col-md-7 col-sm-12 m-0 p-0 ">
                         <div class="search">
                             <div class="input-group">
                             <i class="fa fa-search text-dark"></i> 
-                            <input type="text" class="form-control" id="buscar" style="width:100%; height:50px; background: rgba(255, 255, 255, 0.6);" placeholder="buscar" >
+                            <input type="text" class="form-control" id="buscar" style="width:100%; height:40px; background: rgba(255, 255, 255, 0.6);border-radius:20px;" placeholder="buscar" >
                             </div>
                         </div>
                     </div>
                     
-                    <div class="col-md-2 m-0 p-0 text-center">
+                    <div class="col-md-2 m-0 p-0 d-flex justify-content-center">
                         <button class="btn-search" id="boton" type="button" onclick="buscar();">
                             <i class="fa fa-search" style="padding-left:"></i>
                             <span class="text">
@@ -222,8 +222,10 @@
                               <div class="men-pro-item simpleCart_shelfItem">
                     
                                 <div class="men-thumb-item">
-                                      <img src="assets/images/a8.png" alt="" class="pro-image-front">
-                                      <img src="assets/images/a8.png" alt="" class="pro-image-back">
+                                     <a href="{{ route ('inmueble.show',$inmueble->id) }}"><img src="imagenes-inmueble/{{ $inmueble->folder }}/{{ $inmueble->imagenuna }}" alt="" class="pro-image-front" style="border-top-left-radius: inherit;
+                                        border-top-right-radius: inherit;"></a>
+                                      <a href="{{ route ('inmueble.show',$inmueble->id) }}"> <img src="imagenes-inmueble/{{ $inmueble->folder }}/{{ $inmueble->imagendos }}" alt=""class="pro-image-back" style="border-top-left-radius: inherit;
+                                        border-top-right-radius: inherit;"></a>
                                           <div class="men-cart-pro">
                                               <div class="inner-men-cart-pro">
                                                   <a href="{{ route ('inmueble.show',$inmueble->id) }}" class="link-product-add-cart">{{ $inmueble->zona }}</a>
@@ -274,22 +276,22 @@
 
 
 <script>
-    document.getElementById("dropdown1-tab").onclick = function () { variable = document.getElementById("casa").value;
+    function casa() {
+    variable = document.getElementById("casa").value;
     if (variable==0){
         var intro = document.getElementById('dropdown1-tab');
-intro.style.background = '#0d6efd';
-intro.style.color = '#fff';
-document.getElementById("casa").value=1;
+        intro.style.background = '#0d6efd';
+        intro.style.color = '#fff';
+    document.getElementById("casa").value=1;
                 }
     else
     {
         var intro = document.getElementById('dropdown1-tab');
         intro.style.background = '#fff';
-        intro.style.color = '#3FBD2D';
-        document.getElementById("casa").value=0;
-        
-    } };
-
+        intro.style.color = '#000';
+    document.getElementById("casa").value=0;
+    }
+  }
 
   function apartamento() {
     variable = document.getElementById("apartamento").value;
@@ -394,10 +396,6 @@ document.getElementById("casa").value=1;
      function buscar() {
         let div = document.querySelector('#boton');
 div.classList.add('loading');
-       
-        
-
-
     var busqueda = document.getElementById('buscar').value;
     var casa = document.getElementById('casa').value;
     var apartamento = document.getElementById('apartamento').value;

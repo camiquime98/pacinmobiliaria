@@ -5,11 +5,12 @@
   </a>
     
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light shadow-sm" style="background:#2eb7f7; ">
+        <nav class="navbar navbar-expand-md navbar-light shadow-sm" style="background:rgb(45, 74, 94); ">
             <div class="container">
-                <a class="menu__link menu__item--current text-white" href="{{ url('/') }}">
-                    INICIO
-                </a>
+                <ul class="nav navbar-nav menu__list">
+                    <li class="active menu__item menu__item--current"><a class="menu__link" href="{{ url('/') }}">INICIO <span class="sr-only">(current)</span></a></li>
+                </ul>
+                
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -90,11 +91,11 @@
                     </div>
                   </div>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto ">
+                    <ul class="navbar-nav ms-auto nav navbar-nav menu__list">
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
-                                <li class="menu__item">
+                                <li class="menu__item menu__item--current">
                                     <a class="menu__link" href="{{ route('login') }}">{{ __('Ingresar') }}</a>
                                 </li>
                             @endif

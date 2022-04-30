@@ -18,6 +18,8 @@ return new class extends Migration
 
             $table->string('folder')->nullable();
             // $table->string('pais')->nullable();
+            $table->string('imagenuna')->nullable();
+            $table->string('imagendos')->nullable();
             $table->string('departamento')->nullable();
             $table->string('municipio')->nullable();
             $table->string('barrio')->nullable();

@@ -34,8 +34,8 @@
   
   .nav-item2:hover a
   {
-    background: #06bdca;
-    color: white!important;
+    background: transparent;
+    color: #06bdca!important;
   }<
 
   .social-media p a span {

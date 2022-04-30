@@ -15,7 +15,7 @@
     border: 1px solid rgb(7, 185, 255);
   }
 </style>
-<div class="container-fluid" style="background: linear-gradient(180deg, rgba(236, 230, 230, 0.459)60%, rgb(255, 255, 255)100%), url('/images/fondoshow.png');
+<div class="container-fluid" style="background: linear-gradient(180deg, rgba(236, 230, 230, 0.829)60%, rgb(255, 255, 255)100%), url('/images/fondoshow.png');
 background-attachment: fixed;
 background-repeat: no-repeat;
 background-size: cover;">
@@ -36,25 +36,27 @@ background-size: cover;">
                 <div class="row d-felx justify-content-center">
                   <div class="col-md-12">
                     <div class="row">
-                      <div class="col-md-6">
-                        <div class="card-title"><h1 style="color: coral; text-transform: uppercase;">{{ $inmuebles->gestion }} </h1>
-                          <h5 style="color: coral; text-transform: uppercase;">{{ $inmuebles->municipio }} - {{ $inmuebles->departamento }}</h5>
+                      <div class="col-md-4">
+                        <div class="card-title"><h1 style="color: #FDA30E; text-transform: uppercase;">{{ $inmuebles->gestion }} </h1>
+                          <h5 style="color: #FDA30E; text-transform: uppercase;">{{ $inmuebles->municipio }} - {{ $inmuebles->departamento }}</h5>
                             <p class="card-category">Vista detallada del inmueble</p>
                         </div>
                       </div>
-                      <div class="col-md-6">
-                        <div class="text-end">
+                      <div class="col-md-4">
+                        <div class="text-center">
                           <div class="row">
-                            <div class="col-md-4 col-sm-12 pb-3">
+                            <div class="col-md-6 col-sm-12 pb-3">
                               <a href="{{ route('inmueble.edit', $inmuebles->id) }}"><button type="button" class="btn col-12 text-dark btn-editar">Editar</button></a>
                             </div>
-                            <div class="col-md-4 col-sm-12">
+                            <div class="col-md-6 col-sm-12">
                               <a href="{{ route('inmueble.index') }}"><button type="button" class="btn col-12 text-dark btn-ver">volver</button></a>
                             </div>
-                            <div class="col-md-4">
-                              <b><h1 style="color: coral;font-size:30px;">${{ $inmuebles->valor }}</h1></b>
-                            </div>
                           </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="text-end">
+                              <b><h1 style="color: #FDA30E; font-size:20px;">${{ $inmuebles->valor }}</h1></b>
                         </div>
                       </div>
                     </div>
