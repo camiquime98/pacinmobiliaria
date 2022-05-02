@@ -14,19 +14,16 @@ background: none;
 color: rgb(22, 115, 151);
 border: 1px solid rgb(7, 185, 255);
 }
+
+
+
+
 </style>
-<div class="container-fluid m-0 p-0" style="">
+
+<div class="container-fluid" style="">
 <div class="main-content">
-  <div class="row p-3 d-flex justify-content-center">
-    <div class="col-md-10 col-sm-12 p-3">
-      <div class="row p-2">
-        <div class="col-md-12">
-          <div class="row d-flex justify-content-end">
-            
-            
-          </div>
-        </div>
-      </div>
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-10 col-sm-12 ">
         <div class="card" style="background: rgba(255, 255, 255, 0.822); border: none;!important">
           
           <div class="card-header" style="background: transparent; border:none!important;">
@@ -50,27 +47,55 @@ border: 1px solid rgb(7, 185, 255);
             </div>
           </div>
           
-          <div class="card-body">
+          <div class="card-body" style="padding: 0px;">
             <div class="row">
               <div class="col-md-8 p-0 m-0">
                 <div class="row">
                   <div class="col-md-12">
-                    <link rel="stylesheet" type="text/css" href="../assets/slider/css/style.css"/>
-                <script type="text/javascript" src="../assets/slider/js/jquery.js"></script>
-          
                 <input type="text" class="hidden" name="folder" id="folder" value="{{ $inmuebles->folder }}">
-                <div id="wowslider-container1" style="width: 100%;">
+                <input type="text" class="hidden" name="folder" id="folder2" value="{{ $inmuebles->folder }}">
+                <div id="wowslider-container1" style="">
                     
                 </div>
                   </div>
                   <div class="card-footer col-md-12 col-sm-12" style="background: transparent; border: none;">
-                    <b><h4 style="color: rgb(45, 74, 94);">Descripcion</h4></b>                
-            <p style="text-align: justify">{{ $inmuebles->descripcion }}</p>
+                    {{-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                      abrir galeria
+                    </button> --}}
+                    <div class="row">
+                      
+                      <div class="col-sm-8">
+                        <b><h4 style="color: rgb(45, 74, 94);">Descripcion</h4></b>                
+                        <p style="text-align: justify">{{ $inmuebles->descripcion }}</p>
+                      </div>
+                      <div class="col-sm-4 text-end">
+                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Abrir galeria de fotos</button>
+                      </div>
+                    </div>
+                    
+                    
+            
+
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal" role="dialog">
+                      <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">GALERIA DEL INMUEBLE</h4>
+                            </div>
+                            <div class="modal-body" id="imagenes">
+
+                            </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 
               </div>
-              <div class="col-md-4 p-0 m-0">
+              <div class="col-md-4 p-2 m-0">
                 <div class="row">
                   <div class="col-12 pb-2">
                     <div class="card">
@@ -88,7 +113,9 @@ border: 1px solid rgb(7, 185, 255);
                           <div class="col-6">Zona</div>
                           <div class="col-6 text-end"><p>{{ $inmuebles->zona }}</p></div>
                           <div class="col-6">Direccion</div>
-                          <div class="col-6 text-end"><p>{{ $inmuebles->direccion }}</p></div>
+                          <div class="col-6 text-end"><p>{{ $inmuebles->direccion }}</p>
+                          
+                          </div>
                           {{-- <div class="col-6">Estrato</div>
                           <div class="col-6 text-end"></div><hr style="width: 90%;"> --}}
                         </div>
@@ -117,33 +144,6 @@ border: 1px solid rgb(7, 185, 255);
                       </div>
                     </div>
                   </div>
-                  {{-- <div class="col-12">
-                    <div class="card ">
-                      <div class="card-header p-3">
-                        <b><h4 style="color: rgb(52, 172, 219);">Propietario</h4></b>
-                      </div>
-                      <div class="card-body">
-                        <div class="row t-3">
-                          <div class="col-6"><p>Nombre</p></div>
-                          <div class="col-6 text-end"><p>{{ $inmuebles->nombrepro }}</p></div>
-                          <div class="col-6"><p>Apellido</p></div>
-                          <div class="col-6 text-end"><p>{{ $inmuebles->apellidopro }}</p></div>
-                          <div class="col-6"><p>Cedula</p></div>
-                          <div class="col-6 text-end"><p>{{ $inmuebles->cedulapro }}</p></div>
-                          <div class="col-6"><p>Direccion</p></div>
-                          <div class="col-6 text-end"><p>{{ $inmuebles->direccionpro }}</p></div>
-                          <div class="col-6"><p>Departamento</p></div>
-                          <div class="col-6 text-end"><p>{{ $inmuebles->departamentopro }}</p></div>
-                          <div class="col-6"><p>Municipio - lugar de residencia</p></div>
-                          <div class="col-6 text-end"><p>{{ $inmuebles->municipiopro }}</p></div>
-                          <div class="col-6"><p>Celular/telefono</p></div>
-                          <div class="col-6 text-end"><p>{{ $inmuebles->celularpro }}</p></div>
-                          <div class="col-6"><p>E-mail</p></div>
-                          <div class="col-6 text-end"><p>{{ $inmuebles->correopro }}</p></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div> --}}
                 </div>
               </div>
             </div>
@@ -326,37 +326,53 @@ border: 1px solid rgb(7, 185, 255);
         </div>
       </div>
     </div> --}}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
     <script>
-       
-      load_images();
+
+load_images();
 function load_images()
 {
-
 var folder =document.getElementById('folder').value;
-
-
-$.ajax({
+ $.ajax({
 data:{folder : folder},
-url:"{{ route('imageinmueble.fetch_image_show') }}",
-success:function(data)
-{
-
- $('#wowslider-container1').html(data);
+   url:"{{ route('imageinmueble.fetch_image_show') }}",
+   success:function(data)
+   {
+     $('#wowslider-container1').html(data);
+   }
+ })
 }
 
+load_image();
+function load_image()
+{
+var folder =document.getElementById('folder').value;
+ $.ajax({
+data:{folder : folder},
+   url:"{{ route('imageinmueble.fetch_image_modal') }}",
+   success:function(data)
+   {
+     $('#imagenes').html(data);
+
+   }
+ })
+}
+
+
+
+ 
+
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
 })
 
-
-
-}
-   
- 
    </script>
 
 
 
-<script type="text/javascript" src="../assets/slider/js/wowslider.js"></script>
-    
-<script type="text/javascript" src="../assets/slider/js/script.js"></script>  
+
 
 @endsection

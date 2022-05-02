@@ -238,7 +238,7 @@ label{
 /*-- //header-bot --*/
 /*-- banner-top --*/
 .ban-top{
-	background: rgb(45, 74, 94);
+	background: rgb(32, 58, 75);
 	position: absolute;
     top: 17px;
     z-index: 100;
@@ -420,7 +420,7 @@ a.menu__link2 {
     width: 21%;
 }
 .box_1 {
-    background: #FDA30E;
+    background: #fca822;
     padding: 10px 22px;
     text-align: center;
 }
@@ -1307,9 +1307,9 @@ h2.resp-accordion {
 /*-- effect --*/
 .men-pro-item {
     position: relative;
-	-webkit-box-shadow: -0px -0px 10px -5px rgba(129, 129, 129, 0.75);
-	-moz-box-shadow: -0px -0px 10px -5px rgba(114, 114, 114, 0.75);
-	box-shadow: -0px -0px 10px -5px rgba(97, 97, 97, 0.75);
+	-webkit-box-shadow: -0px -0px 20px -5px rgba(129, 129, 129, 0.75);
+	-moz-box-shadow: -0px -0px 20px -5px rgba(114, 114, 114, 0.75);
+	box-shadow: -0px -0px 20px -5px rgba(97, 97, 97, 0.75);
     padding-bottom: 20px;
 }
 .men-thumb-item {
@@ -4960,8 +4960,49 @@ td.invert-image a img {
 .timetable_sub th {
     font-size: 13px;
 }
+
+
+
+}
+
+@media (min-width: 992px) and (max-width: 1080px){
+	.ban-top
+	{
+		height: 50px;
+	}
+	.menu__link
+	{
+		padding: 13px!important;
+	}
+	.box_1
+	{
+		padding: 16px 0px;
+	}
+}
+@media (max-width: 1024px) and (min-width: 320px)
+{
+	.pignose-layerslider
+	{
+		height: 80vh!important;
+	}
+	.script-wrap
+	{
+		display: none;
+	}
+}
+@media (min-width: 1025px)
+{
+	.pignose-layerslider
+	{
+		height: 70vh!important;
+	}
+	.script-wrap
+	{
+		display: block;
+	}
 }
 @media (max-width: 320px){
+	
 	.header ul li {
 		padding: 4px 0;
 	}
@@ -4985,6 +5026,7 @@ td.invert-image a img {
 	.pignose-layerslider .slide-visual .script-wrap, .script-group img {
 		width: 126px;
 		height: 126px;
+		display: none;
 	}
 	.pignose-layerslider .slide-visual .script-wrap .slide-controller a {
 		margin: 0 6px;
@@ -5001,9 +5043,7 @@ td.invert-image a img {
 		width: 100%;
 		margin-top: 10px;
 	}
-	.pignose-layerslider .slide-visual {
-		height: 200px;
-	}
+	
 	.new_arrivals h3 {
 		margin-bottom: 11px;
 	}
@@ -5181,7 +5221,7 @@ td.invert-image a img {
 	}
 	ul.slide-group img {
 		width: 100% !important;
-		height: 300px !important;
+		height: 80vh !important;
 	}
 	.modal-dialog {
 		width: 263px;

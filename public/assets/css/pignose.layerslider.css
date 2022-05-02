@@ -47,7 +47,7 @@
 }
 
 .pignose-layerslider .slide-visual .script-wrap {
-	background: rgb(255, 136, 0);
+	background: #FDA30E;
 	width: 276px;
 	height: 288px;
 	padding: 20px;
@@ -67,7 +67,6 @@
 	position: absolute;
 	left: 0;
 	top: 0;
-	background-color: #ffffff;
 	opacity: .6;
 	filter: alpha(opacity=60);
 	-ms-filter: alpha(opacity=60);

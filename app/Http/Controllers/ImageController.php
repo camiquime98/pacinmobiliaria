@@ -134,7 +134,7 @@ class ImageController extends Controller
     $images = \File::allFiles(public_path('imagenes-inmueble/' . $folder));
 
     $contar = 1;
-    $output = '<div class="ws_images" id="uploaded_image"><ul>';
+    $output = '<div id="wowslider-container1" style="width: 100%;"><div class="ws_images" id="uploaded_image"><ul>';
     $folder ='imagenes-inmueble/' . $folder . '/';
     foreach($images as $image)
     {
@@ -152,11 +152,34 @@ class ImageController extends Controller
                     
                                 $contar++;
                     }
-    $output .= '</div><div class="ws_shadow"></div>'; 
+    $output .= '</div><div class="ws_shadow"></div></div>
+    <script type="text/javascript" src="../assets/slider/js/wowslider.js"></script>
+    <script type="text/javascript" src="../assets/slider/js/script.js"></script>'; 
      echo $output;
      
     }
 
+
+
+    function fetch_image_modal(Request $request)
+    {
+    $folder = $request->get('folder');
+    $images = \File::allFiles(public_path('imagenes-inmueble/' . $folder));
+
+    $contar = 1;
+    $output = '';
+    $folder ='imagenes-inmueble/' . $folder . '/';
+    foreach($images as $image)
+    {
+    
+    $output .= '
+                <img src="'.asset($folder . $image->getFilename()).'" style="max-height: 600px!important; width: 100%;" height: 300px!important;" class="img-thumbnail" id="'.$contar.'"/>';
+                $contar++;
+    }
+    $output .= '';
+     echo $output;
+     
+    }
     // <img  class="img-thumbnail" style="max-width: 350px!important; max-height: 200px!important; width: 100%; height: 100%;"/>
 
 

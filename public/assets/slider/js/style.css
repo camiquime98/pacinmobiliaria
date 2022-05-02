@@ -219,19 +219,19 @@
 	top:50%;
 	margin-top:-2.9em;
 	z-index:60;
-	width: 3.8em;	
-	height: 3.8em;
+	width: 5.8em;	
+	height: 5.8em;
 	background-image: url(./arrows.png);
 	background-size: 200%;
 	opacity: 0.7;
 }
 #wowslider-container1 a.ws_next{
 	background-position: 0 0; 
-	right:20px;
+	right:0px;
 }
 #wowslider-container1 a.ws_prev {
 	background-position: 100% 0;
-	left:20px;
+	left:0px;
 }
 #wowslider-container1 a.ws_next:hover,
 #wowslider-container1 a.ws_prev:hover{
@@ -276,7 +276,7 @@
 }/* bottom right */
 #wowslider-container1  .ws_bullets {
     bottom: 0px;
-	left: 43%;
+	left: 50%;
 }
 #wowslider-container1  .ws_bullets div{
 	left:-50%;

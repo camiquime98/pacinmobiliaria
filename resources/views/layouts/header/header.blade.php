@@ -54,9 +54,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
-
-
+  <link rel="stylesheet" type="text/css" href="../assets/slider/css/style.css"/>
+  <script type="text/javascript" src="../assets/slider/js/jquery.js"></script>
     @livewireStyles 
 
   </head>

@@ -219,13 +219,11 @@
                           <div class="col-md-3 col-sm-12">
                             <div class="product-men">
                                     
-                              <div class="men-pro-item simpleCart_shelfItem">
+                              <div class="men-pro-item simpleCart_shelfItem" style="border-radius: 10px;">
                     
                                 <div class="men-thumb-item">
-                                     <a href="{{ route ('inmueble.show',$inmueble->id) }}"><img src="imagenes-inmueble/{{ $inmueble->folder }}/{{ $inmueble->imagenuna }}" alt="" class="pro-image-front" style="border-top-left-radius: inherit;
-                                        border-top-right-radius: inherit;"></a>
-                                      <a href="{{ route ('inmueble.show',$inmueble->id) }}"> <img src="imagenes-inmueble/{{ $inmueble->folder }}/{{ $inmueble->imagendos }}" alt=""class="pro-image-back" style="border-top-left-radius: inherit;
-                                        border-top-right-radius: inherit;"></a>
+                                     <a href="{{ route ('inmueble.show',$inmueble->id) }}"><img src="imagenes-inmueble/{{ $inmueble->folder }}/{{ $inmueble->imagenuna }}" alt="" class="pro-image-front"  style="border-top-left-radius: 10px; border-top-right-radius: 10px;"></a>
+                                      <a href="{{ route ('inmueble.show',$inmueble->id) }}"> <img src="imagenes-inmueble/{{ $inmueble->folder }}/{{ $inmueble->imagendos }}" alt=""class="pro-image-back"  style="border-top-left-radius: 10px; border-top-right-radius: 10px;"></a>
                                           <div class="men-cart-pro">
                                               <div class="inner-men-cart-pro">
                                                   <a href="{{ route ('inmueble.show',$inmueble->id) }}" class="link-product-add-cart">{{ $inmueble->zona }}</a>
