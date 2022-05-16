@@ -23,7 +23,7 @@ class inmuebles extends Model
         'banos',
         'area',
         'valor',
-        'descripcion',
+        'descripcion' => 'min:300', 
         'folder',
         'nombrepro',
         'apellidopro',
@@ -40,10 +40,11 @@ class inmuebles extends Model
     {
         return empty($search) ? static::query()
             : static::query()->where('id', 'like', '%'.$search.'%')
-                ->orWhere('nombrepro', 'like', '%'.$search.'%')
-                ->orWhere('cedulapro', 'like', '%'.$search.'%')
-                ->orWhere('departamento', 'like', '%'.$search.'%')
-                ->orWhere('celularpro', 'like', '%'.$search.'%');
+                ->orWhere('name', 'like', '%'.$search.'%')
+                ->orWhere('email', 'like', '%'.$search.'%');
+                // ->orWhere('cedulapro', 'like', '%'.$search.'%')
+                // ->orWhere('departamento', 'like', '%'.$search.'%')
+                // ->orWhere('celularpro', 'like', '%'.$search.'%');
                 // orWhere('barrio', 'like', '%'.$search.'%');
                 // orWhere('zona', 'like', '%'.$search.'%');
     }

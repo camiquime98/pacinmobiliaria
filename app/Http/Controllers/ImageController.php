@@ -76,13 +76,13 @@ class ImageController extends Controller
                 <div class="col-md-12 text-center">
                 <img src="'.asset($folder . $image->getFilename()).'" class="img-thumbnail" style="margin:8px; margin-bottom: 3px; max-width: 380px!important; max-height: 200px!important; width: 100%; height: 100%;'.$estilo.'"/>
                 </div>
-                <div class="col-md-5 col-sm-12 mt-1">
+                <div class="col-md-5 col-sm-12 mt-4">
                 <button type="button" class="btn btn-danger remove_image" id="'.$image->getFilename().'">Eliminar foto</button>
                 </div>
-                <div class="col-md-3 col-sm-12 mt-1">
+                <div class="col-md-3 col-sm-12 mt-4">
                 <button onclick="fijar_imagen('.$fijarimagen.');" type="button" class="btn btn-primary set_image" id="'.$image->getFilename().'" style="'.$btn.'">Fijar 1</button>
                 </div>
-                <div class="col-md-3 col-sm-12 mt-1">
+                <div class="col-md-3 col-sm-12 mt-4">
                 <button onclick="fijar_imagen2('.$fijarimagen.');" type="button" class="btn btn-primary set_image" id="'.$image->getFilename().'" style="'.$btn2.'">Fijar 2</button>
                 </div>
                 </div>

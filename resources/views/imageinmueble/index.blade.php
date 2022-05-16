@@ -15,11 +15,11 @@
         <br />
           <div class="panel panel-default" style="margin-top: 50px; background: rgba(255, 255, 255, 0.349);">
             <div class="panel-heading" style="background: rgb(255, 255, 255);">
-              <b><h1 style="color: #0d6efd;">Agregar fotos</h1></b>
+              <b><h2 style="color: #0d6efd;">Agregar fotos</h2></b>
             </div>
             <div class="panel-body">
              
-              <form id="dropzoneForm" class="dropzone text-dark" action="{{ route('dropzone.store') }}" accept-charset="UTF-8" enctype="multipart/form-data" style="background: #e8fcffaf; border:none; border-radius:20px;">
+              <form id="dropzoneForm" class="dropzone text-dark" action="{{ route('dropzone.store') }}" accept-charset="UTF-8" enctype="multipart/form-data" style="background: #ffbf35; border:none; border-radius:20px;">
                 @csrf
                 <div class="dz-message" data-dz-message><span>Haz clic aqui y carga las fotos que deseas</span></div>
                 <input type="text" class="hidden" name="folder" id="folder" value="{{ $inmuebles->folder }}">
@@ -83,11 +83,8 @@
           }
         })
       }
-    
-    
-     
-    
-    
+
+      
       $(document).on('click', '.remove_image', function(){
         var folder = document.getElementById('folder').value;
         var name = $(this).attr('id');

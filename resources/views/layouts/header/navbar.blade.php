@@ -5,7 +5,7 @@
   </a>
     
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light shadow-sm" style="background:rgb(45, 74, 94); ">
+        <nav class="navbar navbar-expand-md navbar-light shadow-sm" style="background:rgb(83, 114, 134); ">
             <div class="container">
                 <ul class="nav navbar-nav menu__list">
                     <li class="active menu__item menu__item--current"><a class="menu__link" href="{{ url('/') }}">INICIO <span class="sr-only">(current)</span></a></li>

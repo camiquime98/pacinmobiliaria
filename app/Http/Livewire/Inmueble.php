@@ -9,9 +9,8 @@ use Livewire\WithPagination;
 
 class Inmueble extends Component
 {
-    
-    use WithPagination;
 
+    use WithPagination;
     public $perPage = 10;
     public $search = '';
     public $orderBy = 'id';
@@ -22,8 +21,23 @@ class Inmueble extends Component
         return view('livewire.inmueble',[
             'inmuebles' => inmuebles::search($this->search)
             ->orderBy($this->orderBy, $this->orderAsc ? 'asc' : 'desc')
-            ->simplePaginate($this->perPage),
+            ->simplePaginate($this->perPage), 
         ]);
-        
     }
+    // use WithPagination;
+
+    // public $perPage = 10;
+    // public $search = '';
+    // public $orderBy = 'id';
+    // public $orderAsc = true;
+
+
+    // public function render()
+    // {
+    //     return view('livewire.inmueble',[
+    //         'inmuebles' => inmuebles::search($this->search)
+    //         ->orderBy($this->orderBy, $this->orderAsc ? 'asc' : 'desc')
+    //         ->simplePaginate($this->perPage),
+    //     ]);
+    // }
 }

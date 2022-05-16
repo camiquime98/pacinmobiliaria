@@ -5,7 +5,7 @@
   </a>
     
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light" style="background:rgb(45, 74, 94); height:40px;">
+        <nav class="navbar navbar-expand-md navbar-light" style="background:rgb(45, 74, 94); height:40px; border-radius:0px;">
             <div class="container">
                 <a class="menu__link menu__item--current text-white" href="{{ url('/') }}">
                     INMOBILIARIA CAP

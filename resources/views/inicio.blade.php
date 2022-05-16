@@ -35,7 +35,11 @@
 
 
 
+<style>
 
+
+
+</style>
 
 
     <body class="antialiased">
@@ -86,8 +90,14 @@
             </div> --}}
             <!-- //header-bot -->
             <!-- banner -->
-            <div class="ban-top">
+            <div class="ban-top" id="bant-top">
                 <div class="container">
+                    <div class="col-md-2 header-left">
+                        <h3 class="lc"><a href="index.html">L-C</a></h3>
+                        <h3 class="lc2"><a href="index.html">LINDA CASA</a></h3>
+                        {{-- <h1><a href="index.html"><img src="assets/images/logo.png"></a></h1> --}}
+                    </div>
+                    
                     <div class="top_nav_left">
                         <nav class="navbar navbar-default">
                           <div class="container-fluid">
@@ -178,7 +188,7 @@
                           </div>
                         </nav>	
                     </div>
-                    <div class="top_nav_right">
+                    <div class="col-md-2 top_nav_right">
                         <div class="cart box_1">
                                     <a href="checkout.html">
                                         
@@ -197,15 +207,48 @@
                 <div id="visual">
                         <div class="slide-visual">
                             <!-- Slide Image Area (1000 x 424) -->
+                            
                             <ul class="slide-group">
-                                <li><img class="img-responsive" src="assets/images/ba1.jpg" alt="Dummy Image" /></li>
-                                <li><img class="img-responsive" src="assets/images/ba2.jpg" alt="Dummy Image" /></li>
-                                <li><img class="img-responsive" src="assets/images/ba3.jpg" alt="Dummy Image" /></li>
+                                <li>
+                                <div style="max-width: 100%; max-height: 70vh; width: 100%; height: 100%;position: absolute; background:rgba(0, 0, 0, 0.356);">
+                                </div>
+                                
+                                <img class="img-responsive" src="assets/images/ba1.jpg" alt="Dummy Image" />
+                            
+                                </li>
+
+                                <li>
+                                    <div style="max-width: 100%; max-height: 70vh; width: 100%; height: 100%;position: absolute; background:rgba(0, 0, 0, 0.356);">
+                                    </div>
+                                    <div class="container" style="position: absolute; top:100px;">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <h1>LINDA CASA</h1>
+                                            </div><br><br>
+                                            <div class="col-md-12">
+                                                <h3>Empresa de inversion y </h3>
+                                                <h4>proyectos inmobiliarios</h4>
+                                            </div>
+                                            <div class="col-md-12">
+                                                
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <img class="img-responsive" src="assets/images/ba2.jpg" alt="Dummy Image" />
+                                </li>
+                                
+                                <li>
+                                    <div style="max-width: 100%; max-height: 70vh; width: 100%; height: 100%;position: absolute; background:rgba(0, 0, 0, 0.356);">
+                                    </div>
+                                    
+                                    <img class="img-responsive" src="assets/images/ba3.jpg" alt="Dummy Image" />
+                                </li>
                             </ul>
             
                             <!-- Slide Description Image Area (316 x 328) -->
                             <div class="script-wrap">
-                                <ul class="script-group">
+                                <ul class="script-group" style="">
                                     <li><div class="inner-script"><img class="img-responsive" src="assets/images/baa1.jpg" alt="Dummy Image" /></div></li>
                                     <li><div class="inner-script"><img class="img-responsive" src="assets/images/baa2.jpg" alt="Dummy Image" /></div></li>
                                     <li><div class="inner-script"><img class="img-responsive" src="assets/images/baa3.png" alt="Dummy Image" /></div></li>
@@ -361,10 +404,133 @@
             </div> --}}
             <!-- //content-bottom -->
             <!-- product-nav -->
-            
-            <div class="product-easy">
+   
+            <div class="">
+                <div class="container-fluid" style="background-image: url('assets/images/fondo-seguros.png'); background-repeat: no-repeat;
+                background-size: 100% 100%; background-attachment: fixed;">
+                    <div class="container">
+                    <div class="row d-flex justify-content-center" style="margin-top: 10px; margin-bottom:20px;">
+                        <div class="col-md-12 text-center" style="margin-top: 20px ;margin-bottom: 20px; color: rgb(45, 74, 94);">
+                            <h3 style="color: rgb(20, 64, 94); font-weight: 600;">La seguridad es nuestra prioridad.</h3>
+                            <br>
+                            <h4 style="color: #FDA30E">Elige la aseguradora de tu preferencia.</h4>
+                        </div>
+                        
+                        <br>
+                        <div class="col-md-12" style="margin-top: 2%;">
+                            <div class="row seguros-body">
+                                {{-- <div class="col-md-6">
+                                    <a href="http://" calss="btn" style="color:rgb(255, 255, 255)!important; background: #FDA30E; padding:10px 25px;border-radius: 8px;">COTIZAR</a>
+                                </div> --}}
+                                <div class="col-md-6 col-sm-12">
+                                    <h5 class="card-title">Manejamos diferentes ramos</h5><br>
+                                    <div class="card-title" style="padding: 10px">
+                                        <h5 style="text-align: justify">Elige el ramo que deseas para tu seguro, brindamos toda la información que requieras con nuestra asesora profesional. Somos una empresa que piensa en la seguridad de nuestro clientes.</h5>
+                                    </div>
+                                    <div class="row d-flex justify-content-center">
+                                        <div class="col-md-6" style="margin-top: 5px">
+                                            <div class="card card-seguros" style="border-radius:10px; border:1px solid #3DAFB5; padding: 10px;">
+                                                <div class="card-body">
+                                                  <p class="card-text text-seguros-p">* Seguros vehiculos.</p>
+                                                  <p class="card-text text-seguros-p">* Seguros vida.</p>
+                                                  <p class="card-text text-seguros-p">* Seguros hogar.</p>
+                                                  <p class="card-text text-seguros-p">* Todo riesgo.</p>
+                                                  {{-- <p class="card-text"><li>Seguros vehiculos</li></p>
+                                                  <p class="card-text"><li>Seguros vehiculos</li></p> --}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6" style="margin-top: 5px">
+                                            <div class="card card-seguros" style="border-radius:10px; border:1px solid #3DAFB5; padding: 10px;">
+                                                <div class="card-body">
+                                                  <p class="card-text text-seguros-p">* Responsabiliada civil.</p>
+                                                  <p class="card-text text-seguros-p">* Estatales.</p>
+                                                  <p class="card-text text-seguros-p">* Seguros hogar.</p>
+                                                  <p class="card-text text-seguros-p">* Seguros todo riesgo.</p>
+                                                  {{-- <p class="card-text"><li>Seguros vehiculos</li></p>
+                                                  <p class="card-text"><li>Seguros vehiculos</li></p> --}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-md-6 col-xs-12 d-flex justify-content-center align-items-center">
+                                    <div class="row seguros-body" style="margin-bottom: 3%;">
+                                        <div class="col-md-6 col-sm-12 m-0 p-0">
+                                            <div class="product-men" style="padding: 0px;">
+                                                <div class=" simpleCart_shelfItem" style="border-radius: 50px;">
+                                                  <div class="men-thumb-item" style="padding: 27px;">
+                                                      <img src="images/fotoseguros.png" alt="" class="pro-image-front" style="border-top-left-radius: 10%; border-bottom-left-radius: 10%; border-top-right-radius: 10%; border-bottom-right-radius: 10%;">
+                                                      <img src="images/logoseguros.png" alt="" class="pro-image-back" style="border-top-left-radius: 10px;
+                                                      border-bottom-left-radius: 10px; border-top-right-radius: 10px;
+                                                      border-bottom-right-radius: 10px;">                               
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-xs-12 m-0 p-0">
+                                            <div class="product-men product-men2" style="padding: 20px; border-radius:10px;">
+                                                <div class=" simpleCart_shelfItem" style="border-radius: 10px;">
+                                                    <div class="item-info-product" style="">
+                                                      <div class="row" style=""> 
+                                                            <div class="col-md-12 m-0 p-0 text-center">
+                                                                <h5 style="font-weight: 300; font-size: 1em;">CAROL VARGAS</h5>
+                                                                <p style="font-weight: 300; font-size: 0.7em;"></p></div>
+                                                                <hr>
+                                                            <div class="col-md-12 m-0 p-0">
+                                                                <h5 style="font-weight: 300; font-size: 0.9em;">Gerencia de Seguros</h5>
+                                                                <p style="font-weight: 300; font-size: 0.7em;"></p></div><br>
+                                                            <div class="col-md-12 m-0 p-0">
+                                                                <h5 style="font-weight: 300; font-size: 0.9em;">Contacto:</h5>
+                                                              <p style="font-weight: 300; font-size: 0.8em;">3134138048</p>
+                                                              <p style="font-weight: 300; font-size: 0.8em;"><a href="mailto:carolvargas429@hotmail.com?subject="enlace HTML" class="email-seguros">carolvargas429@hotmail.com</a></p>
+                                                          </div>
+                                                          <br>
+                                                          <div class="col-md-12 text-center p-1">
+                                                              
+                                                                  <a href="https://api.whatsapp.com/send?phone=+573134138048&text=Hola,%20quisiera%20saber%20mas%20informacion%20de%20seguros" style="padding: 2px;"><img src="images/whatsapp.png" alt="" class="p-2" style="width: 20px; height:20px;"></a>
+                                                                 <a href="http://" style="padding: 2px;"><img src="images/gmail.png" alt="" class="" style="width: 20px; height:20px;"></a>
+                                                          </div>
+                                                        </div>
+                                                        <hr>
+                                                        <center><a href="http://" calss="btn" style="color:rgb(255, 255, 255)!important; background: #FDA30E; padding:10px 25px;border-radius: 8px;">COTIZAR</a></center>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                      </div>          
+                                </div>
+                                
+                                <div class="col-md-12 d-flex justify-content-center" style="margin-top: 10px;">
+                                    <div class="row">
+                                    <div class="col-md-12 text-center" style="">
+                                        <img src="assets/images/loby-seguros.png" alt="" srcset="" style="width: 150px; height: 80px;">
+                                        <img src="assets/images/mapfre-seguros.png" alt="" srcset=""  style="width: 150px; height: 80px;">
+                                        <img src="assets/images/seguros-mundial.png" alt="" srcset=""  style="width: 150px; height: 80px;">
+                                        <img src="assets/images/seguros-estado.png" alt="" srcset=""  style="width: 150px; height: 60px;">
+                                        <img src="assets/images/seguros-previsora.png" alt="" srcset=""  style="width: 150px; height: 60px;">
+                                    </div>
+                                </div>
+                                    
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                </div>
+            </div>
+            <br>
+
+
+
+
+            {{-- <div class="product-easy">
                 <div class="container">
-                    
                     <script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
                     <script type="text/javascript">
                                         $(document).ready(function () {
@@ -380,7 +546,7 @@
                         <div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
                             <ul class="resp-tabs-list">
                                 <li class="resp-tab-item" aria-controls="tab_item-0" role="tab"><span>Equipo</span></li> 
-                                <li class="resp-tab-item" aria-controls="tab_item-1" role="tab"><span>Special Offers</span></li> 
+                                <li class="resp-tab-item" aria-controls="tab_item-1" role="tab"><span>Nuestra empresa</span></li> 
                                 <li class="resp-tab-item" aria-controls="tab_item-2" role="tab"><span>Collections</span></li> 
                             </ul>				  	 
                             <div class="resp-tabs-container">
@@ -723,49 +889,51 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <!-- //product-nav -->
             
+
             <div class="coupons" style="margin-bottom: 5px;">
+                <div class="cinta-servicios"></div>
                 <div class="container">
                     <div class="coupons-grids text-center">
                         <div class="row">
-                            <div class="col-md-3 coupons-gd">
+                            <div class="col-md-2 coupons-gd-title">
                                 <h3>Servicios principales</h3>
                             </div>
-                            <div class="col-md-3 coupons-gd">
+                            <div class="col-md-3 coupons-gd coupons-gd-2">
                                 <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
                                 <h4>Avaluos</h4>
                                 <p style="text-align: justify" class="p-3">Con el personal profesional para realizar la actividad valuatoria de tu inmueble.</p>
                             </div>
-                            <div class="col-md-3 coupons-gd">
+                            <div class="col-md-3 coupons-gd coupons-gd-2">
                                 <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
                                 <h4>Alquiler</h4>
                                 <p style="text-align: justify">Uno de los servicio mas importante para aquirir tu inmueble a travez de nuestros canales locales.</p>
                             </div>
-                            <div class="col-md-3 coupons-gd">
+                            <div class="col-md-3 coupons-gd coupons-gd-2">
                                 <span class="glyphicon glyphicon-credit-card" aria-hidden="true"></span>
                                 <h4>Venta</h4>
                                 <p style="text-align: justify">Las ventas de los inmuebles son legales, brindado seguridad y garantia al comprador.</p>
                             </div>
-                        </div><hr>
+                        </div>
                         
 
                         <div class="row">
-                            <div class="col-md-3 coupons-gd">
+                            <div class="col-md-2 coupons-gd-title">
                                 <h3>Servicios adicionales</h3>
                             </div>
-                            <div class="col-md-3 coupons-gd">
+                            <div class="col-md-3 coupons-gd coupons-gd-2">
                                 <span class="glyphicon glyphicon-credit-card" aria-hidden="true"></span>
-                                <h4>Asesorias juridicas</h4>
-                                <p style="text-align: justify">Tenemos profesionales en asesorias juridicas en todos los procesos; Penal, familia, civil.</p>
+                                <h4>Asesorias juridicas profesionales</h4>
+                                <p style="text-align: justify">Tenemos el perfil profesional en asesorias juridicas en todos los procesos; Penal, familia, civil y muchos más.</p>
                             </div>
-                            <div class="col-md-3 coupons-gd">
+                            <div class="col-md-3 coupons-gd coupons-gd-2">
                                 <span class="glyphicon glyphicon-credit-card" aria-hidden="true"></span>
                                 <h4>Desarrollo de software para pymes</h4>
-                                <p style="text-align: justify">Espectacular servicio para empresas pymes que buscan multiplicar su desarrollo y produccion en marketing a travez de la web.</p>
+                                <p style="text-align: justify">Espectacular servicio para empresas pymes que buscan multiplicar su produccion en marketing a travez de la web.</p>
                             </div>
-                            <div class="col-md-3 coupons-gd">
+                            <div class="col-md-3 coupons-gd coupons-gd-2">
                                 <span class="glyphicon glyphicon-credit-card" aria-hidden="true"></span>
                                 <h4>Asesoria de gestion empresarial</h4>
                                 <p style="text-align: justify">Asesores profesionales para ayudar a las empresas en temas de productividad, gestion de operaciones, ecoeficiencia etc.</p>
@@ -788,57 +956,6 @@
                     </div>
                 </div>
             </div> --}}
-
-            <div class="">
-                <div class="container-fluid" style="background-image: url('assets/images/fondo-seguros.png'); background-repeat: no-repeat;
-                background-size: 100% 100%; background-attachment: fixed;">
-                
-                    <div class="container">
-                    <div class="row d-flex justify-content-center" style="margin-top: 10px; margin-bottom:20px;">
-                        <div class="col-md-12 text-center" style="margin-top: 20px ;margin-bottom: 20px; color: rgb(45, 74, 94);">
-                            <h3 style="color: rgb(20, 64, 94); font-weight: 600;">Siempre pensamos en la seguridad de nuestros clientes.</h3>
-                            <br>
-                            <h4 style="color: #FDA30E">Elige nuestro convenido a travez de un intermediario.</h4>
-                        </div>
-                        <div class="col-md-12 d-flex justify-content-center">
-                            <div class="row">
-
-                            
-                            <div class="col-md-12 text-center" style="">
-                                <img src="assets/images/loby-seguros.png" alt="" srcset="" style="width: 150px; height: 80px;">
-                                <img src="assets/images/mapfre-seguros.png" alt="" srcset=""  style="width: 150px; height: 80px;">
-                                <img src="assets/images/seguros-mundial.png" alt="" srcset=""  style="width: 150px; height: 80px;">
-                                <img src="assets/images/seguros-estado.png" alt="" srcset=""  style="width: 150px; height: 60px;">
-                                <img src="assets/images/seguros-previsora.png" alt="" srcset=""  style="width: 150px; height: 60px;">
-                            </div>
-                        </div>
-                            
-                        </div>
-                        
-                        
-                        <div class="container">
-
-                        </div>
-                        <hr>
-                        <div class="col-md-12">
-                            <div class="row d-flex justify-content-center">
-                                <div class="col-md-6">
-                                    <div class="row">
-                                        <div class="col-md-12 text-center">
-                                            <a href="http://" calss="btn" style="color:rgb(255, 255, 255)!important; background: #FDA30E; padding:10px 25px;border-radius: 8px;">COTIZAR</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 d-flex justify-content-center align-items-center">
-                                    <p>Carol Marina Vargas</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-                </div>
-            </div>
 
 
 
@@ -1003,9 +1120,23 @@
                     <!-- js -->
 
 
-                    
+                    <script type="text/javascript">
+                           
+                            let navbar = document.getElementById("bant-top");
 
-            
+                            let navPos = navbar.getBoundingClientRect().top;
+
+                            window.addEventListener("scroll", e => {
+                            let scrollPos = window.scrollY;
+                            if (scrollPos > navPos) {
+                                navbar.classList.add('sticky');
+                                header.classList.add('navbarOffsetMargin');
+                            } else {
+                                navbar.classList.remove('sticky');
+                                header.classList.remove('navbarOffsetMargin');
+                            }
+                            });
+                      </script>      
     </body>
 </html>
 

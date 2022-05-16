@@ -154,11 +154,10 @@
         </div>
         </div>
 
-      </div>
-      
-      
+      </div>   
       <div class="col-md-6 col-sm-12 p-3">
-        <input type="text" class=" inputinmueble" name="descripcion" placeholder="Descripcion" value="{{ old('descripcion') }}" autofocus>
+        <textarea class="form-control" name="descripcion" id="" cols="30" rows="5" value="{{ old('descripcion') }}" placeholder="Descripcion del inmueble"></textarea>
+        {{-- <input type="text" class=" inputinmueble" name="descripcion" placeholder="Descripcion" value="{{ old('descripcion') }}" autofocus> --}}
       </div>
 
 

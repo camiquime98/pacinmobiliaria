@@ -111,7 +111,7 @@
   </a>
     <div id="app">
         <div class="conteiner">
-            <nav class="navbar navbar-expand-lg ftco_navbar ftco-navbar-light" id="ftco-navbar" style="padding: .1rem 1rem; border-bottom: 1px solid rgb(138, 138, 138);">
+            <nav class="navbar navbar-expand-lg ftco_navbar ftco-navbar-light" id="ftco-navbar" style="">
                 <div class="container">
                   <div class="col-md-4 col-sm-4 d-flex justify-content-center">
                     <a class="navbar-brand navbar-brand-responsive1" href="{{ route('home')}}">Real-State</a>

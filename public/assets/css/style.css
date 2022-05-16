@@ -58,6 +58,59 @@ ul{
 label{
 	margin:0;
 }
+@media (min-width: 320px) and (max-width: 375px)
+{
+	.seguros-body
+{
+	margin-right: -10px!important;
+    margin-left: -10px!important;
+}
+
+}
+@media (min-width: 385px) and (max-width: 425px)
+{
+	.seguros-body
+{
+	margin-right: -25px!important;
+    margin-left: -25px!important;
+}
+
+}
+@media (min-width: 425px) and (max-width: 667px)
+{
+	.seguros-body
+{
+	margin-right: -25px!important;
+    margin-left: -25px!important;
+}
+
+}
+
+ .card-seguros
+{
+	color: rgb(255, 255, 255);
+ }
+
+.card-seguros
+{
+	background:#3DAFB5;
+	-webkit-box-shadow: -0px -0px 15px -3px rgba(175, 173, 173, 0.75);
+	-moz-box-shadow: -0px -0px 15px -3px rgba(170, 170, 170, 0.75);
+	box-shadow: -0px -0px 15px -3px rgba(180, 180, 180, 0.75);
+}
+.card-seguros:hover
+{
+	background: white;
+	color: #004284!important;
+}
+.text-seguros-p:hover
+{
+	color: #FDA30E;
+}
+.nav>li>a:hover
+{
+	background-color: transparent!important;
+}
 /*-- header --*/
 .header {
     border-bottom: 1px solid #eee;
@@ -94,7 +147,17 @@ label{
     text-align: right;
 }
 .header-left{
-    text-align: left;	
+    text-align: left;
+	padding: 7px
+
+}
+@media (max-width: 767px)
+{
+	.header-left
+{
+display: none;
+}
+
 }
 /*-- //header --*/
 
@@ -102,8 +165,10 @@ label{
 .header-left img {
     width: 73%;
 }
+
 .header-middle {
     margin-top: 11px;
+	
 }
 .header-bot {
     padding: 25px 0;
@@ -238,13 +303,92 @@ label{
 /*-- //header-bot --*/
 /*-- banner-top --*/
 .ban-top{
-	background: rgb(32, 58, 75);
-	position: absolute;
-    top: 17px;
+	position: fixed;
+	background: transparent;
+	padding: 10px 0px;
+	display: flex;
+    justify-content: space-around;
+	left: 0;
     z-index: 100;
     width: 100%;
+	transition: 0.7s;
+	height: 60px;
     
 }
+
+#bant-top {
+	text-align: center;
+	width: 100%;
+	box-sizing: border-box;
+	height: 60px;
+	top: 10px;
+	transition: 1s all;
+  }
+  #bant-top > a {
+	color: white;
+	transition: 1s all;
+  }
+  
+  
+  #bant-top.sticky {
+	position: fixed;
+	top: 0;
+	background: #ffffff;
+	-webkit-box-shadow: 0px 10px 13px -7px #00000098, 5px 5px 15px 5px rgba(0,0,0,0); 
+box-shadow: 0px 10px 13px -7px #00000098, 5px 5px 15px 5px rgba(0,0,0,0);
+transition: 1s all;
+  }
+  #bant-top.sticky .navbar-default .navbar-nav > .active > a {
+	color: rgb(255, 170, 43);
+  }
+
+  #bant-top .header-left .lc
+  {
+	  display: block;
+	  transition: 2s all!important;
+  }
+
+  #bant-top.sticky .header-left .lc
+  {
+	  display: none;
+	  transition: 2s all!important;
+  }
+
+  #bant-top .header-left .lc2
+  {
+	  display: none;
+	  transition: 2s all!important;
+  }
+
+  #bant-top.sticky .header-left .lc2
+  {
+	  display: block;
+	  transition: 2s all!important;
+  }
+
+  #bant-top.sticky .top_nav_right .box_1 {
+	margin-top: -10px!important;
+	transition: 1s all;
+	background: #E26468;
+	padding: 21px 22px;
+  }
+  #bant-top.sticky .top_nav_right .box_1 p a{
+	color: white;
+	transition: 1s all;
+  }
+  #bant-top.sticky .header-left h3 a
+  {
+	color: #00bcd4;
+  }
+
+  .navbarOffsetMargin {
+	padding-top: 45px;
+  }
+  #bant-top.sticky .navbar-default .navbar-nav > li > a {
+	color: rgb(41, 41, 41);
+  }
+
+
 .ban-top-home{
 	background: rgb(9, 206, 206);
 /* background: linear-gradient(90deg, rgba(251,0,0,0.5410539215686274) 0%, rgba(58,164,180,1) 100%); */
@@ -275,7 +419,7 @@ label{
     background: none;
     border: none;
     min-height: inherit;
-    margin: 0;
+    margin: 11;
     float: left;
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
@@ -394,16 +538,16 @@ label{
 }
 
 .menu--shylock .menu__link::before {
-	background: #FDA30E;
+	background: #E26468;
 	-webkit-transition-delay: 0.4s;
 	transition-delay: 0.4s;
 }
 
 .menu--shylock .menu__link::after {
-	background: #FDA30E;
+	background: #E26468;
 }
 a.menu__link {
-    color: #ffffff !important;
+    color: #ffffff;
     font-size: 13px;
     font-weight: normal;
     text-transform: unset;
@@ -420,12 +564,13 @@ a.menu__link2 {
     width: 21%;
 }
 .box_1 {
-    background: #fca822;
+    background: #ffffff;
     padding: 10px 22px;
     text-align: center;
+	transition: 1s all;
 }
 .box_1 h3 {
-    color: #fff;
+    color: rgb(63, 63, 63);
     font-size: 1em;
     margin: 0;
 	text-decoration:none;
@@ -438,8 +583,16 @@ a.menu__link2 {
 
 .box_1 p {
 	margin: 0;
-    color: #999;
+    color: rgb(107, 107, 107);
     font-size: 14px;
+	transition: 1s all;
+
+}
+.box_1 p a{
+
+    color: #E26468;
+	transition: 1s all;
+    
 }
 a.simpleCart_empty {
     color: #fff;
@@ -860,12 +1013,12 @@ position:relative;
   backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
-  background: #FDA30E;
+  background: #687FCB;
 }
 .hvr-outline-out:before {
   content: '';
   position: absolute;
-  border: #FDA30E solid 4px;
+  border: #687FCB solid 4px;
   top: 0;
   right: 0;
   bottom: 0;
@@ -1301,6 +1454,18 @@ h2.resp-accordion {
     width: 100%;
 	height: 200px;
 }
+.product-men2
+{
+	background: rgb(255, 255, 255);
+	color: rgb(74, 108, 136);
+	border: 1px solid #3DAFB5;
+}
+/* .product-men2:hover
+{
+	background: transparent;
+	color: rgb(74, 108, 136);
+	border: 1px solid rgb(74, 108, 136);
+} */
 .product-easy {
     padding: 40px 0;
 }
@@ -1365,7 +1530,7 @@ h2.resp-accordion {
     z-index: 10;
 }
 .product-new-top {
-    background:  #FDA30E none repeat scroll 0 0;
+    background:  #687FCB none repeat scroll 0 0;
     color: #fff;
     display: inline-block;
     left: 10px;
@@ -1689,28 +1854,95 @@ ul.multi-column-dropdown li a:hover{
 }
 /*-- coupons --*/
 .coupons{
-background: linear-gradient(90deg, rgba(255, 255, 255, 0.781), rgba(236, 236, 236, 0.603)), url(../images/servicios.png);
+/* background: linear-gradient(90deg, rgba(255, 255, 255, 0.781), rgba(255, 255, 255, 0.603)), url(../images/servicios.png); */
 background-size:cover;
 -webkit-background-size: cover;
 -o-background-size: cover;
 -ms-background-size: cover;
 -moz-background-size: cover;
+background-attachment: fixed;
 min-height: 470px;
 padding-top:50px;
 padding-bottom:50px;
 }
 
+@media (max-width:320px)  
+{
+	.cinta-servicios
+	{
+		display: none;
+	}
+}
+@media (min-width:992px)  
+{
+	.cinta-servicios
+	{
+		background: #5eb5c0;
+	/* background: linear-gradient(90deg, rgba(6, 55, 66, 0.76), rgb(255, 255, 255)), url(/images/imagen-servicios.jpg); */
+	background-size: 400px 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+	display: block;
+	margin-top: -3%;
+	position: absolute;
+	width: 8%;
+	height: 100%;
+	
+}
+}
+
 .coupons-gd
 {
-	padding: 30px;
+	padding: 20px;
 }
+.coupons-gd-2
+{
+	border: 1px solid #FDA30E;
+    border-radius: 10px;
+	margin: 10px;
+	color: rgb(44, 123, 168)!important;
+}
+.coupons-gd-title
+{
+	padding: 25px;
+	color: rgb(45, 98, 133);
+}
+
+.coupons-gd-2:hover
+{
+	background: #FDA30E;
+	border: 1px solid #FDA30E;
+    border-radius: 10px;
+}
+.coupons-gd-2:hover h4
+{
+ color: white!important;
+}
+.coupons-gd-2:hover p
+{
+ color: white!important;
+}
+
+
 .coupons-gd span {
     background: #FDA30E;
-    padding: 25px 24px;
+	border: 1px solid #FDA30E;
+    padding: 15px 15px;
     border-radius: 100%;
     color: #F3F3F3;
     font-size: 24px;
 }
+
+
+.coupons-gd:hover span {
+    background: #ffffff;
+	border: 1px solid #FDA30E;
+    padding: 15px 15px;
+    border-radius: 100%;
+    color: #FDA30E;
+    font-size: 24px;
+}
+
 .coupons-gd h4 {
     color: rgb(45, 74, 94);
     font-size: 17px;
@@ -1728,7 +1960,7 @@ padding-bottom:50px;
 }
 .coupons-gd p {
     text-align: center;
-    color: rgb(78, 78, 78);
+    color: rgb(45, 98, 133);
     font-size: 15px;
     line-height: 2em;
 }
@@ -2748,7 +2980,7 @@ background:#FDA30E;
 }
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
     background-color: #FDA30E;
-	color: #fff !important;;
+	color: rgb(230, 59, 59) !important;;
 }
 /*-- Ratings --*/
 .rating1 {
@@ -3252,7 +3484,8 @@ td.invert-image a img {
 		font-size: 13px;
 	}
 	.box_1 {
-		padding: 7px 4px;
+		width: 137px;
+    padding: 12px 4px;
 	}
 	.navbar-nav > li > a {
 		padding: 5px 7px;
@@ -4864,7 +5097,7 @@ td.invert-image a img {
 	}
 	.product-men {
 		float: none;
-		width: 74%;
+		width: 100%;
 	}
 	.sign-gd-two ul li i {
 		margin-right: .5em;
@@ -4977,6 +5210,7 @@ td.invert-image a img {
 	.box_1
 	{
 		padding: 16px 0px;
+		transition: 1s all;
 	}
 }
 @media (max-width: 1024px) and (min-width: 320px)
@@ -5018,7 +5252,7 @@ td.invert-image a img {
 		left: 46px;
 	}
 	.top_nav_right {
-		width: 51%;
+		width: 42%;
 	}
 	.navbar-default {
 		width: 49%;
@@ -5092,6 +5326,7 @@ td.invert-image a img {
 	}
 	.coupons-gd {
 		width: 100%;
+		padding: 20px;
 	}
 	.newsright input[type="text"] {
 		width: 63%;
