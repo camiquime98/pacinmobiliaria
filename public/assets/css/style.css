@@ -337,6 +337,7 @@ display: none;
 	-webkit-box-shadow: 0px 10px 13px -7px #00000098, 5px 5px 15px 5px rgba(0,0,0,0); 
 box-shadow: 0px 10px 13px -7px #00000098, 5px 5px 15px 5px rgba(0,0,0,0);
 transition: 1s all;
+	height: 84px;
   }
   #bant-top.sticky .navbar-default .navbar-nav > .active > a {
 	color: rgb(255, 170, 43);
@@ -353,7 +354,14 @@ transition: 1s all;
 	  display: none;
 	  transition: 2s all!important;
   }
-
+  #bant-top #navbar-redes-sociales
+  {
+	  display: none;
+  }
+  #bant-top.sticky #navbar-redes-sociales
+  {
+	  display: block;
+  }
   #bant-top .header-left .lc2
   {
 	  display: none;

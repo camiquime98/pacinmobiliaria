@@ -90,8 +90,14 @@
             </div> --}}
             <!-- //header-bot -->
             <!-- banner -->
+            
             <div class="ban-top" id="bant-top">
+                
                 <div class="container">
+                    <div class="container-fluid text-end" id="navbar-redes-sociales" style="width:100%;">
+                        <img src="images/whatsappnavar.png" alt="" class="p-2" style="width: 20px; height:20px;">
+                        <img src="images/facebook.png" alt="" class="p-2" style="width: 20px; height:20px;">
+                    </div>
                     <div class="col-md-2 header-left">
                         <h3 class="lc"><a href="index.html">L-C</a></h3>
                         <h3 class="lc2"><a href="index.html">LINDA CASA</a></h3>

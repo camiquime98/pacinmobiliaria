@@ -160,7 +160,7 @@
                        
                     </div>
                 </div>
-                                <input type="number" value="1" id="casa" name="casa" class="hidden">
+                                <input type="number" value="0" id="casa" name="casa" class="hidden">
                                 <input type="number" value="0" id="apartamento" name="apartamento" class="hidden">
                                 <input type="number" value="0" id="casacampestre" name="casacampestre" class="hidden">
                                 <input type="number" value="0" id="terreno" name="terreno" class="hidden">
@@ -280,14 +280,14 @@
         var intro = document.getElementById('dropdown1-tab');
         intro.style.background = '#0d6efd';
         intro.style.color = '#fff';
-    document.getElementById("casa").value=1;
+        document.getElementById("casa").value=1;
                 }
     else
     {
         var intro = document.getElementById('dropdown1-tab');
         intro.style.background = '#fff';
         intro.style.color = '#000';
-    document.getElementById("casa").value=0;
+        document.getElementById("casa").value=0;
     }
   }
 

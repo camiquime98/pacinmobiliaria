@@ -79,43 +79,49 @@ class InmueblesController extends Controller
             $casalotes="Casalote";
             $any =1;
          }
+         
+
         $output ="";
     if(isset($busqueda)){
         $output ="No se han encontrado resultados para esa ubicación";
     if ($any==1) {
         $inmuebles=DB::table('inmuebles')
-->orwhere('tipoinmueble',  $casas)
-        ->orwhere( 'tipoinmueble',  $apartamentos)
-        ->orwhere('tipoinmueble',  $casacampestres)
-        ->orwhere( 'tipoinmueble',  $terrenos)
-        ->orwhere( 'tipoinmueble',  $bodegas)
-        ->orwhere( 'tipoinmueble',  $apartaestudios)
-        ->orwhere('tipoinmueble', $casalotes)
         ->where('municipio', 'LIKE','%'.$busqueda.'%')
-    ->get();  
+        ->whereColumn([
+            ['tipoinmueble', '=', $casas],
+            ['tipoinmueble', '=', $apartamentos],
+            ['tipoinmueble', '=', $casacampestres],
+            ['tipoinmueble', '=', $terrenos],
+            ['tipoinmueble', '=', $bodegas],
+            ['tipoinmueble', '=', $apartaestudios],
+            ['tipoinmueble', '=', $casalotes],   
+        ])
+        ->get();
 
 
     $contador=DB::table('inmuebles')
-    ->orwhere('tipoinmueble',  $casas)
-            ->orwhere( 'tipoinmueble',  $apartamentos)
-            ->orwhere('tipoinmueble',  $casacampestres)
-            ->orwhere( 'tipoinmueble',  $terrenos)
-            ->orwhere( 'tipoinmueble',  $bodegas)
-            ->orwhere( 'tipoinmueble',  $apartaestudios)
-            ->orwhere('tipoinmueble', $casalotes)
-            ->where('municipio', 'LIKE','%'.$busqueda.'%')
-        ->count();  }
+    ->where('municipio', 'LIKE','%'.$busqueda.'%')
+    ->whereColumn([
+        ['tipoinmueble', '=', $casas],
+        ['tipoinmueble', '=', $apartamentos],
+        ['tipoinmueble', '=', $casacampestres],
+        ['tipoinmueble', '=', $terrenos],
+        ['tipoinmueble', '=', $bodegas],
+        ['tipoinmueble', '=', $apartaestudios],
+        ['tipoinmueble', '=', $casalotes],   
+    ])
+    ->count();  }
         else{
 
-            $inmuebles=DB::table('inmuebles')
-        ->where('municipio', 'LIKE','%'.$busqueda.'%')
-    ->get();  
+    //         $inmuebles=DB::table('inmuebles')
+    //     ->where('municipio', 'LIKE','%'.$busqueda.'%')
+    // ->get();  
 
 
-    $contador=DB::table('inmuebles')
+    // $contador=DB::table('inmuebles')
    
-            ->where('municipio', 'LIKE','%'.$busqueda.'%')
-        ->count(); 
+    //         ->where('municipio', 'LIKE','%'.$busqueda.'%')
+    //     ->count(); 
 
         }
         
@@ -129,36 +135,54 @@ class InmueblesController extends Controller
      
         $output ="";
         foreach ($inmuebles as $key => $inmueble) {
-            $output.='<div class="col-md-3 col-sm-12">
-            <div class="product-men">
-                    
-              <div class="men-pro-item simpleCart_shelfItem">
-    
-                <div class="men-thumb-item">
-                      <img src="assets/images/a8.png" alt="" class="pro-image-front">
-                      <img src="assets/images/a8.png" alt="" class="pro-image-back">
-                          <div class="men-cart-pro">
-                              <div class="inner-men-cart-pro">
-                                  <a href="show/'.$inmuebles->id .'" class="link-product-add-cart">'.$inmueble->zona .'</a>
-                              </div>
+            $output.='
+            <div class="col-md-3 col-sm-12" style="margin-bottom: 3%;">
+                    <div class="product-men">
+                      <div class="men-pro-item simpleCart_shelfItem" style="border-radius: 10px;">
+                         
+                        <div class="men-thumb-item">
+                            <a href="{{ route ("inicioshow",'.$inmueble->id .') }}"><img src="imagenes-inmueble/{{ $inmueble->folder }}/{{ $inmueble->imagenuna }}" alt="" class="pro-image-front" style="border-top-left-radius: 10px; border-top-right-radius: 10px;"></a>
+                            <a href="{{ route ("inicioshow",'.$inmueble->id.') }}"><img src="imagenes-inmueble/{{ $inmueble->folder }}/{{ $inmueble->imagendos }}" alt="" class="pro-image-back" style="border-top-left-radius: 10px; border-top-right-radius: 10px;"></a>
+                                  <div class="men-cart-pro">
+                                      <div class="inner-men-cart-pro">
+                                          <a href="{{ route("inicioshow", '.$inmueble->valor .') }}" class="link-product-add-cart">{{ $inmueble->municipio }}
+										</a>
+                                      </div>
+                                  </div>
+                                  <a href="{{ route("inicioshow", '.$inmueble->valor .') }}" class=""><span class="product-new-top">{{ $inmueble->gestion }}</span></a>
+                                  
                           </div>
-                          <span class="product-new-top">1+1 Offer</span>
-    
-                  </div>
-                  <div class="item-info-product ">
-                      <h4><a href="show/'.$inmuebles->id .'">'.$inmueble->municipio .'</a></h4>
-                      <div class="info-product-price">
-    
-                          <span class="item_price">$'.$inmueble->valor .'</span>
-                          <del>$520.000</del>
-    
+                          <div class="item-info-product" style="margin-top: 10px;">
+							<a href="{{ route("inicioshow", '.$inmueble->valor .') }}">   
+							<div class="row" style=""> 
+								  <div class="col-md-4 m-0 p-0">
+									  <h5 style="font-weight: 300; font-size: 0.7em;">Habitaciones</h5>
+									  <p style="font-weight: 300; font-size: 0.7em;">{{ $inmueble->alcobas }}</p></div>
+								  <div class="col-md-4 m-0 p-0">
+									  <h5 style="font-weight: 300; font-size: 0.7em;">Baños</h5>
+									  <p style="font-weight: 300; font-size: 0.7em;">{{ $inmueble->banos }}</p></div>
+								  <div class="col-md-4 m-0 p-0">
+									  <h5 style="font-weight: 300; font-size: 0.7em;">Area</h5>
+									<p style="font-weight: 300; font-size: 0.7em;">{{ $inmueble->area }}</p></div>
+							  </div>
+							</a><hr>
+								<center><h5>ZONA - {{ $inmueble->zona }}</h5></center>
+                              <h4><p class="p-1" style="text-align: justify"></p></h4>
+                              <div class="info-product-price text-center">
+                                
+                                  <span class="item_price">${{ '.$inmueble->valor .' }}</span>
+                                
+                                  
+                              </div>
+                              <center><a href="{{ route("inicioshow", '.$inmueble->id .') }}" class="item_add single-item hvr-outline-out button2">{{ '.$inmueble->tipoinmueble .' }}</a></center>								
+                          </div>
                       </div>
-                      <a href="show/'.$inmuebles->id .'" class="item_add single-item hvr-outline-out button2"> Ver mas </a>									
+					 
                   </div>
-              </div>
-              
-          </div>
-          </div>';
+                  </div>
+
+
+            ';
             }
     }
     }
