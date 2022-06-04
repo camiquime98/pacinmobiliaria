@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\inicioController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\UseradminController;
+use App\Http\Controllers\SegurosController;
 use App\Models\inmuebles;
 use App\Http\livewire\Userstable;
 
@@ -23,6 +24,11 @@ Auth::routes();
 Route::post('dropzone/store', [ImageController::class, 'upload_image'])->name('dropzone.store');
 Route::get('/', [App\Http\Controllers\inicioController::class, 'index'])->name('inicio');
 Route::get('/contactanos', [App\Http\Controllers\inicioController::class, 'contactoindex'])->name('contactanos.contactanos');
+
+Route::get('seguros', [App\Http\Controllers\SegurosController::class, 'index'])->name('seguros');
+Route::get('asesoresj', [App\Http\Controllers\AsesoresjController::class, 'index'])->name('asesoresj');
+// Route::get('/contactanos', [App\Http\Controllers\inicioController::class, 'contactoindex'])->name('contactanos.contactanos');
+// Route::get('/contactanos', [App\Http\Controllers\inicioController::class, 'contactoindex'])->name('contactanos.contactanos');
 
 Route::get('/imageinmueble/fetch_image_show', [App\Http\Controllers\ImageController::class, 'fetch_image_show'])->name('imageinmueble.fetch_image_show');
 

@@ -143,7 +143,7 @@
                         <div class="search">
                             <div class="input-group">
                             <i class="fa fa-search text-dark"></i> 
-                            <input type="text" class="form-control" id="buscar" style="width:100%; height:40px; background: rgba(255, 255, 255, 0.6);border-radius:20px;" placeholder="buscar" >
+                            <input type="text" class="form-control" id="buscar" style="width:100%; height:40px; background: rgba(255, 255, 255, 0.6);border-radius:20px;" placeholder="Busca la ciudad ¡aqui!..." >
                             </div>
                         </div>
                     </div>
@@ -152,7 +152,7 @@
                         <button class="btn-search" id="boton" type="button" onclick="buscar();">
                             <i class="fa fa-search" style="padding-left:"></i>
                             <span class="text">
-                              Buscar    
+                              Buscar
                             </span>
                             <span class="loading-animate"></span>
                           </button>

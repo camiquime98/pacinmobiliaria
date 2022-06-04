@@ -31,8 +31,8 @@ border: 1px solid rgb(7, 185, 255);
               <div class="col-md-12">
                 <div class="row">
                   <div class="col-md-6">
-                    <div class="card-title"><h1 style="font-size:20px; color: #FDA30E; text-transform: uppercase;">{{ $inmuebles->gestion }} </h1>
-                      <h5 style="font-size:20px; color: #FDA30E; text-transform: uppercase;">{{ $inmuebles->municipio }} - {{ $inmuebles->departamento }}</h5>
+                    <div class="card-title"><h1 style="font-size:20px; color: #4adfc6; text-transform: uppercase;">{{ $inmuebles->gestion }} </h1>
+                      <h5 style="font-size:20px; color: #4adfc6; text-transform: uppercase;">{{ $inmuebles->municipio }} - {{ $inmuebles->departamento }}</h5>
                         <p class="card-category">Vista detallada del inmueble</p>
                     </div>
                   </div>
@@ -99,7 +99,7 @@ border: 1px solid rgb(7, 185, 255);
                 <div class="row">
                   <div class="col-12 pb-2">
                     <div class="card">
-                      <div class="card-header p-3" style="background: #FDA30E;">
+                      <div class="card-header p-3" style="background: #4adfc6;">
                         <b><h4 style="color: rgb(255, 255, 255);">Ubicación</h4></b>
                       </div>
                       <div class="body">
@@ -124,7 +124,7 @@ border: 1px solid rgb(7, 185, 255);
                   </div>
                   <div class="col-12 pb-2">
                     <div class="card ">
-                      <div class="card-header p-3" style="background: #FDA30E;">
+                      <div class="card-header p-3" style="background: #4adfc6;">
                         <b><h4 style="color: rgb(255, 255, 255);">Detalle del inmueble</h4></b>
                       </div>
                       <div class="card-body">

@@ -115,7 +115,7 @@ iframe {
 
      .row-video{
         position: absolute;
-        max-width: 70%;
+        max-width: 100%;
         width: 100%;
         max-height: 100vh;
         height: 100%;
@@ -127,7 +127,7 @@ iframe {
     {
         width: 100%;
         height: 100%;
-        background: rgba(252, 252, 252, 0.459);
+        background: rgba(252, 252, 252, 0.89);
         z-index: 1;
         position: absolute;
         
@@ -140,6 +140,7 @@ iframe {
     {
         position: relative;
         z-index: 10;
+        top: 70px;
     } 
 
 
@@ -147,12 +148,10 @@ iframe {
   width: 500px;
   background: rgb(255,255,255);
 background: linear-gradient(90deg, rgba(255,255,255,0.9220063025210083) 0%, rgba(255,255,255,0.6530987394957983) 100%);
-  border-radius: 30px;
+  border-radius: 10px;
   overflow: hidden;
-  margin-top: 70px;
   padding-left: 30px;
   padding-right: 30px;
-  padding-top: 15px;
   padding-right: 15px;
 }
 
@@ -465,16 +464,16 @@ textarea.input2 + .focus-input2::after {
 </style>
 
 <div class="container-fuild">
-    <div class="row row-video">
+    <div class="row-video">
         <div class="fondo-video"></div>
         <video  src="/assets/video-contacto/video-contacto.mp4" autoplay muted loop style="height: 100%">
         </video>
     </div>
-    <div class="row contacto">
-        <div class="col-md-6">
-            AQUI VA PUBLICIDAD
+    <div class="row contacto d-flex align-items-center justify-content-center">
+        <div class="col-md-5 d-flex align-items-center justify-content-center">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4177.451428746039!2d-75.29092184327266!3d2.9382518544760914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sco!4v1653788962420!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-        <div class="col-md-6 d-flex align-items-center justify-content-center">
+        <div class="col-md-5 d-flex align-items-center justify-content-center">
             
 
             <div class="wrap-contact2">

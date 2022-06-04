@@ -162,14 +162,14 @@
                                   @else
                                       <li class="menu__item dropdown d-flex justify-content-center">
                                   
-                                    <div class="dropdown">
+                                    <div class="dropdown" style="display: inherit;">
                                     <button class="btn btn-admin dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                       {{ Auth::user()->name }}
                                     </button>
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                       
                                       <a class="dropdown-item"href="{{ route('logout') }}"  onclick="event.preventDefault();
-                                      document.getElementById('logout-form').submit();">{{ __('Salir') }}</a><hr>
+                                      document.getElementById('logout-form').submit();">{{ __('Salir') }}</a><hr style="margin-top: 5px; margin-bottom: 5px;" >
                                               <a href="{{ route('user.index') }}" class="dropdown-item">Perfiles</a>
                                       
                                        

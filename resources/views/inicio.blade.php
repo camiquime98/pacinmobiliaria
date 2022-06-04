@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
-        <title>Smart Shop a Ecommerce Online Shopping Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
+        <title>LINDA CASA</title>
         <!-- for-mobile-apps -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -9,6 +9,8 @@
         Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
         <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
                 function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+<script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
         <!-- //for-mobile-apps -->
         <link href="{{ asset('assets/css/bootstrap.css') }}" rel="stylesheet" type="text/css" media="all" />
         <!-- pignose css -->
@@ -43,6 +45,11 @@
 
 
     <body class="antialiased">
+
+        <div id="button-up">
+            <i class="fas fa-chevron-up"></i>
+        </div>
+
             <!-- header -->
             
             <!-- //header -->
@@ -94,13 +101,50 @@
             <div class="ban-top" id="bant-top">
                 
                 <div class="container">
-                    <div class="container-fluid text-end" id="navbar-redes-sociales" style="width:100%;">
-                        <img src="images/whatsappnavar.png" alt="" class="p-2" style="width: 20px; height:20px;">
-                        <img src="images/facebook.png" alt="" class="p-2" style="width: 20px; height:20px;">
+                    <div class="container-fluid" id="navbar-redes-sociales" style="width:100%;">
+                        <div class="row" style="width: 100%">
+                            <div class="col-md-4">
+                                {{-- <div class="search">
+                                    <input type="search" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Lugar';}" required="">
+                                </div> --}}
+                                {{-- <a href="index.html">inmobiliaria.lindacasa@gmail.com</a> --}}
+                            </div>
+                            <div class="col-md-4" style="display: flex;
+                            justify-content: center;">
+                                <div class="search">
+                                    <input type="search" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Lugar';}" required="">
+                                </div>
+                                {{-- <a href="index.html">inmobiliaria.lindacasa@gmail.com</a> --}}
+                            </div>
+                            <div class="col-md-4" style="display: flex;
+                            justify-content: flex-end;">
+                                
+                                <a href=""><img src="images/whatsapp.png" alt="" class="p-2" style="width: 20px; height:20px; margin:3px;"></a>
+                                <a href="http://"><img src="images/facebook.png" alt="" class="p-2" style="width: 20px; height:20px; margin:3px;"></a>
+                                <a href="http://"><img src="images/gmail.png" alt="" class="p-2" style="width: 20px; height:20px; margin:3px;"></a>
+                            </div>
+                        </div>
+                        {{-- <div class="top_nav_left">
+                            <h3 class=""><a href="index.html">inmobiliaria.lindacasa@gmail.com</a></h3>
+                        </div>
+                        <div class="top_nav_right2">
+                            <div class="search">
+                                <input type="search" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Lugar';}" required="">
+                            </div>
+                            <a href=""><img src="images/whatsapp.png" alt="" class="p-2" style="width: 20px; height:20px; margin:3px;"></a>
+                        <h5 style="margin-top:7px; font-size:12px;"></h5>
+                        <a href="http://"><img src="images/facebook.png" alt="" class="p-2" style="width: 20px; height:20px; margin:3px;"></a>
+                        <a href="http://"><img src="images/gmail.png" alt="" class="p-2" style="width: 20px; height:20px; margin:3px;"></a>
+                        <h5 style="margin-top: 7px; font-size:12px;"></h5>
+                        </div>
+                         --}}
+                        
+                        
                     </div>
+                    {{-- <hr class="navbar-line" style="margin-top: 0px; margin-bottom:5px;"> --}}
                     <div class="col-md-2 header-left">
-                        <h3 class="lc"><a href="index.html">L-C</a></h3>
-                        <h3 class="lc2"><a href="index.html">LINDA CASA</a></h3>
+                        <h3 class="lc"><a href="index.html"><img class="img-responsive img-2" src="images/logo-navar.png"/></a></h3>
+                        <h3 class="lc2"><a href="index.html"><img class="img-responsive" src="images/logo-navar.png"/></a></h3>
                         {{-- <h1><a href="index.html"><img src="assets/images/logo.png"></a></h1> --}}
                     </div>
                     
@@ -148,21 +192,22 @@
                                         </ul>
                                 </li>
                                 <li class="dropdown menu__item">
-                                    <a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">proyectos <span class="caret"></span></a>
+                                    <a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">proyectos y servicios <span class="caret"></span></a>
                                         <ul class="dropdown-menu multi-column columns-3">
                                             <div class="row">
-                                                <div class="col-sm-3 multi-gd-img">
+                                                <div class="col-sm-12 multi-gd-img">
                                                     <ul class="multi-column-dropdown">
-                                                        <li><a href="womens.html">Clothing</a></li>
-                                                        <li><a href="womens.html">Wallets</a></li>
-                                                        <li><a href="womens.html">Footwear</a></li>
-                                                        <li><a href="womens.html">Watches</a></li>
-                                                        <li><a href="womens.html">Accessories</a></li>
-                                                        <li><a href="womens.html">Bags</a></li>
-                                                        <li><a href="womens.html">Caps & Hats</a></li>
+                                                        <li><a href="womens.html">Proyecto de vivienda</a></li>
+                                                        <li><a href="womens.html">Arrendamiento</a></li>
+                                                        <li><a href="womens.html">Ventas</a></li>
+                                                        <li><a href="womens.html">Avaluos</a></li>
+                                                        <li><a href="{{ url('seguros')}}">Seguros</a></li>
+                                                        <li><a href="{{ url('asesoresj')}}">Asesorias juridicas</a></li>
+                                                        <li><a href="womens.html">Asesorias empresariales</a></li>
+                                                        <li><a href="womens.html">Desarrollo de software PYME</a></li>
                                                     </ul>
                                                 </div>
-                                                <div class="col-sm-3 multi-gd-img">
+                                                {{-- <div class="col-sm-3 multi-gd-img">
                                                     <ul class="multi-column-dropdown">
                                                         <li><a href="womens.html">Jewellery</a></li>
                                                         <li><a href="womens.html">Sunglasses</a></li>
@@ -172,10 +217,7 @@
                                                         <li><a href="womens.html">Sunglasses</a></li>
                                                         <li><a href="womens.html">Swimwear</a></li>
                                                     </ul>
-                                                </div>
-                                                <div class="col-sm-6 multi-gd-img multi-gd-text ">
-                                                    <a href="womens.html"><img src="assets/images/woo.jpg" alt=" "/></a>
-                                                </div>
+                                                </div> --}}
                                                 <div class="clearfix"></div>
                                             </div>
                                         </ul>
@@ -216,27 +258,43 @@
                             
                             <ul class="slide-group">
                                 <li>
-                                <div style="max-width: 100%; max-height: 70vh; width: 100%; height: 100%;position: absolute; background:rgba(0, 0, 0, 0.356);">
+                                <div style="max-width: 100%; max-height: 90vh; width: 100%; height: 100%;position: absolute; background:rgba(0, 0, 0, 0.178);">
                                 </div>
-                                
+                                <div class="container" style="position: absolute; top:200px;">
+                                    <div class="row">
+                                        <div class="col-md-12" style="color: #ff4444;">
+                                            <h1>LINDA CASA</h1>
+                                        </div><br><br><br>
+                                        <div class="col-md-12" style="color: #f0f3ff;">
+                                            <h3>las asesosiras juridicas</h3>
+                                            <h4>solo lo encontraras con nosotros</h4>
+                                        </div>
+                                        <br><br><br>
+                                        <div class="col-md-12">
+                                            <a href="http://" calss="btn" style="color:rgb(255, 255, 255)!important; background: #4adfc6; padding:10px 25px;border-radius: 8px;">LLAMAYA YA¡</a>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
                                 <img class="img-responsive" src="assets/images/ba1.jpg" alt="Dummy Image" />
                             
                                 </li>
 
                                 <li>
-                                    <div style="max-width: 100%; max-height: 70vh; width: 100%; height: 100%;position: absolute; background:rgba(0, 0, 0, 0.356);">
+                                    <div style="max-width: 100%; max-height: 90vh; width: 100%; height: 100%;position: absolute; background:rgba(0, 0, 0, 0.171);">
                                     </div>
-                                    <div class="container" style="position: absolute; top:100px;">
+                                    <div class="container" style="position: absolute; top:200px;">
                                         <div class="row">
-                                            <div class="col-md-12">
+                                            <div class="col-md-12" style="color: #ff4444;">
                                                 <h1>LINDA CASA</h1>
-                                            </div><br><br>
-                                            <div class="col-md-12">
-                                                <h3>Empresa de inversion y </h3>
-                                                <h4>proyectos inmobiliarios</h4>
+                                            </div><br><br><br>
+                                            <div class="col-md-12" style="color: #f5f6ff;">
+                                                <h3>Empresa de inversion</h3>
+                                                <h4>y proyectos inmobiliarios</h4>
                                             </div>
+                                            <br><br><br>
                                             <div class="col-md-12">
-                                                
+                                                <a href="http://" calss="btn" style="color:rgb(255, 255, 255)!important; background: #4adfc6; padding:10px 25px;border-radius: 8px;">EMPEZAR</a>
                                             </div>
                                         </div>
                                         
@@ -245,7 +303,24 @@
                                 </li>
                                 
                                 <li>
-                                    <div style="max-width: 100%; max-height: 70vh; width: 100%; height: 100%;position: absolute; background:rgba(0, 0, 0, 0.356);">
+                                    <div style="max-width: 100%; max-height: 90vh; width: 100%; height: 100%;position: absolute; background:rgba(0, 0, 0, 0.171);">
+                                    </div>
+
+                                    <div class="container" style="position: absolute; top:200px;">
+                                        <div class="row">
+                                            <div class="col-md-12" style="color: #ff4444;">
+                                                <h1>LINDA CASA</h1>
+                                            </div><br><br><br>
+                                            <div class="col-md-12" style="color: #f0f3ff;">
+                                                <h3>Pensamos en la seguridad</h3>
+                                                <h4>de nuestros clientes</h4>
+                                            </div>
+                                            <br><br><br>
+                                            <div class="col-md-12">
+                                                <a href="http://" calss="btn" style="color:rgb(255, 255, 255)!important; background: #4adfc6; padding:10px 25px;border-radius: 8px;">COTIZA TU SEGURO YA¡</a>
+                                            </div>
+                                        </div>
+                                        
                                     </div>
                                     
                                     <img class="img-responsive" src="assets/images/ba3.jpg" alt="Dummy Image" />
@@ -294,9 +369,10 @@
             <div class="container" style="margin-top: 40px;">
                 <div class="row" style="margin-bottom: 3%; margin-top:3%;">
                     <div class="col-md-12 text-center">
-                      <h3 style="color: rgb(45, 74, 94);font-weight:800;">El inmueble que quieres esta aqui</h3>
+                      <h3 style="color: rgb(45, 74, 94);font-weight:800;">EL INMUEBLE QUE QUIERES ESTA AQUI</h3>
                     </div>
                 </div>
+                <hr>
                 <div class="row ">
 
 					@foreach($inmuebles as $inmueble) 
@@ -346,6 +422,7 @@
                   </div>
 				  @endforeach
                 </div>
+                <hr>
                 
             </div>
             
@@ -417,9 +494,9 @@
                     <div class="container">
                     <div class="row d-flex justify-content-center" style="margin-top: 10px; margin-bottom:20px;">
                         <div class="col-md-12 text-center" style="margin-top: 20px ;margin-bottom: 20px; color: rgb(45, 74, 94);">
-                            <h3 style="color: rgb(20, 64, 94); font-weight: 600;">La seguridad es nuestra prioridad.</h3>
+                            <h3 style="color: rgb(20, 64, 94); font-weight: 600;">LA SEGURIDAD ES NUESTRA PRIORIDAD.</h3>
                             <br>
-                            <h4 style="color: #FDA30E">Elige la aseguradora de tu preferencia.</h4>
+                            <h4 style="color: rgb(20, 64, 94);">Elige la aseguradora de tu preferencia.</h4>
                         </div>
                         
                         <br>
@@ -428,39 +505,6 @@
                                 {{-- <div class="col-md-6">
                                     <a href="http://" calss="btn" style="color:rgb(255, 255, 255)!important; background: #FDA30E; padding:10px 25px;border-radius: 8px;">COTIZAR</a>
                                 </div> --}}
-                                <div class="col-md-6 col-sm-12">
-                                    <h5 class="card-title">Manejamos diferentes ramos</h5><br>
-                                    <div class="card-title" style="padding: 10px">
-                                        <h5 style="text-align: justify">Elige el ramo que deseas para tu seguro, brindamos toda la información que requieras con nuestra asesora profesional. Somos una empresa que piensa en la seguridad de nuestro clientes.</h5>
-                                    </div>
-                                    <div class="row d-flex justify-content-center">
-                                        <div class="col-md-6" style="margin-top: 5px">
-                                            <div class="card card-seguros" style="border-radius:10px; border:1px solid #3DAFB5; padding: 10px;">
-                                                <div class="card-body">
-                                                  <p class="card-text text-seguros-p">* Seguros vehiculos.</p>
-                                                  <p class="card-text text-seguros-p">* Seguros vida.</p>
-                                                  <p class="card-text text-seguros-p">* Seguros hogar.</p>
-                                                  <p class="card-text text-seguros-p">* Todo riesgo.</p>
-                                                  {{-- <p class="card-text"><li>Seguros vehiculos</li></p>
-                                                  <p class="card-text"><li>Seguros vehiculos</li></p> --}}
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6" style="margin-top: 5px">
-                                            <div class="card card-seguros" style="border-radius:10px; border:1px solid #3DAFB5; padding: 10px;">
-                                                <div class="card-body">
-                                                  <p class="card-text text-seguros-p">* Responsabiliada civil.</p>
-                                                  <p class="card-text text-seguros-p">* Estatales.</p>
-                                                  <p class="card-text text-seguros-p">* Seguros hogar.</p>
-                                                  <p class="card-text text-seguros-p">* Seguros todo riesgo.</p>
-                                                  {{-- <p class="card-text"><li>Seguros vehiculos</li></p>
-                                                  <p class="card-text"><li>Seguros vehiculos</li></p> --}}
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
                                 <div class="col-md-6 col-xs-12 d-flex justify-content-center align-items-center">
                                     <div class="row seguros-body" style="margin-bottom: 3%;">
                                         <div class="col-md-6 col-sm-12 m-0 p-0">
@@ -500,7 +544,7 @@
                                                           </div>
                                                         </div>
                                                         <hr>
-                                                        <center><a href="http://" calss="btn" style="color:rgb(255, 255, 255)!important; background: #FDA30E; padding:10px 25px;border-radius: 8px;">COTIZAR</a></center>
+                                                        <center><a href="http://" calss="btn" style="color:rgb(255, 255, 255)!important; background: #4adfc6; padding:10px 25px;border-radius: 8px;">COTIZAR</a></center>
                                                         
                                                     </div>
                                                 </div>
@@ -509,17 +553,60 @@
                                         
                                       </div>          
                                 </div>
+                                <div class="col-md-6 col-sm-12">
+                                    
+                                    <div class="" style="padding: 15px; ">
+                                        
+                                        <h5 style="text-align: justify">Elige el ramo que deseas para tu seguro, brindamos toda la información que requieras con nuestra asesora profesional. Somos una empresa que  en la seguridad de nuestro clientes.</h5>
+                                    </div>
+
+                                    <div class="row d-flex justify-content-center">
+                                        <div class="col-md-6">
+                                            <div class="" style=" padding: 10px;">
+                                                <div class="card-body">
+                                                  <p class="card-text text-seguros-p">* Seguros vehiculos.</p>
+                                                  <p class="card-text text-seguros-p">* Seguros vida.</p>
+                                                  <p class="card-text text-seguros-p">* Seguros hogar.</p>
+                                                  <p class="card-text text-seguros-p">* Todo riesgo.</p>
+                                                  {{-- <p class="card-text"><li>Seguros vehiculos</li></p>
+                                                  <p class="card-text"><li>Seguros vehiculos</li></p> --}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6" >
+                                            <div class="" style=" padding: 10px;">
+                                                <div class="card-body">
+                                                  <p class="card-text text-seguros-p">* Responsabiliada civil.</p>
+                                                  <p class="card-text text-seguros-p">* Estatales.</p>
+                                                  <p class="card-text text-seguros-p">* Seguros Arrendamiento.</p>
+                                                  <p class="card-text text-seguros-p">* Seguros todo riesgo.</p>
+                                                  {{-- <p class="card-text"><li>Seguros vehiculos</li></p>
+                                                  <p class="card-text"><li>Seguros vehiculos</li></p> --}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 text-center" style="">
+                                            <img src="assets/images/loby-seguros.png" alt="" srcset="" style="width: 90px; height: 60px;">
+                                            <img src="assets/images/mapfre-seguros.png" alt="" srcset=""  style="width: 90px; height: 60px;">
+                                            <img src="assets/images/seguros-mundial.png" alt="" srcset=""  style="width: 90px; height: 60px;">
+                                            <img src="assets/images/seguros-estado.png" alt="" srcset=""  style="width: 90px; height: 50px;">
+                                            <img src="assets/images/seguros-previsora.png" alt="" srcset=""  style="width: 90px; height: 60px;">
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                               
                                 
-                                <div class="col-md-12 d-flex justify-content-center" style="margin-top: 10px;">
+                                {{-- <div class="col-md-12 d-flex justify-content-center" style="margin-top: 10px;">
                                     <div class="row">
                                     <div class="col-md-12 text-center" style="">
-                                        <img src="assets/images/loby-seguros.png" alt="" srcset="" style="width: 150px; height: 80px;">
+                                        <img src="assets/images/loby-seguros.png" alt="" srcset="" style="width: 90px; height: 60px;">
                                         <img src="assets/images/mapfre-seguros.png" alt="" srcset=""  style="width: 150px; height: 80px;">
                                         <img src="assets/images/seguros-mundial.png" alt="" srcset=""  style="width: 150px; height: 80px;">
                                         <img src="assets/images/seguros-estado.png" alt="" srcset=""  style="width: 150px; height: 60px;">
                                         <img src="assets/images/seguros-previsora.png" alt="" srcset=""  style="width: 150px; height: 60px;">
                                     </div>
-                                </div>
+                                </div> --}}
                                     
                                 </div>
                                 
@@ -535,7 +622,7 @@
 
 
 
-            {{-- <div class="product-easy">
+            <div class="product-easy">
                 <div class="container">
                     <script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
                     <script type="text/javascript">
@@ -553,204 +640,56 @@
                             <ul class="resp-tabs-list">
                                 <li class="resp-tab-item" aria-controls="tab_item-0" role="tab"><span>Equipo</span></li> 
                                 <li class="resp-tab-item" aria-controls="tab_item-1" role="tab"><span>Nuestra empresa</span></li> 
-                                <li class="resp-tab-item" aria-controls="tab_item-2" role="tab"><span>Collections</span></li> 
+                                {{-- <li class="resp-tab-item" aria-controls="tab_item-2" role="tab"><span>Collections</span></li>  --}}
                             </ul>				  	 
                             <div class="resp-tabs-container">
                                 <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
-                                    <div class="col-md-3 product-men">
-                                        <div class="men-pro-item simpleCart_shelfItem">
-                                            <div class="men-thumb-item">
-                                                <img src="assets/assets/images/a1.png" alt="" class="pro-image-front">
-                                                <img src="assets/images/a1.png" alt="" class="pro-image-back">
-                                                    <div class="men-cart-pro">
-                                                        <div class="inner-men-cart-pro">
-                                                            <a href="single.html" class="link-product-add-cart">Quick View</a>
-                                                        </div>
-                                                    </div>
-                                                    <span class="product-new-top">New</span>
-                                                    
-                                            </div>
-                                            <div class="item-info-product ">
-                                                <h4><a href="single.html">Air Tshirt Black</a></h4>
-                                                <div class="info-product-price">
-                                                    <span class="item_price">$45.99</span>
-                                                    <del>$69.71</del>
-                                                </div>
-                                                <a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
-                                            </div>
+                                    <div class="col-md-4" style="display: flex; justify-content:center;">
+                                        <div class="card">
+                                        <img src="assets/images/w2.png" alt="" class="pro-image-front" style="width: 180px; height: 200px; border-radius:50%;"><br>
+                                        <h1>Pedro</h1>
                                         </div>
+                                        
                                     </div>
                                     
 
-                                    <div class="col-md-3 product-men">
-                                        <div class="men-pro-item simpleCart_shelfItem">
-                                            <div class="men-thumb-item">
-                                                <img src="assets/images/a4.png" alt="" class="pro-image-front">
-                                               <img src="assets/images/a4.png" alt="" class="pro-image-back">
-                                                    <div class="men-cart-pro">
-                                                        <div class="inner-men-cart-pro">
-                                                            <a href="single.html" class="link-product-add-cart">Quick View</a>
-                                                        </div>
-                                                    </div>
-                                                    <span class="product-new-top">New</span>
-                                                    
+                                    <div class="col-md-4 product-men" style="display: flex; justify-content:center;">
+                                        <div class="card">
+                                            <img src="assets/images/w2.png" alt="" class="pro-image-front" style="width: 180px; height: 200px; border-radius:50%;"><br>
+                                            <h1>Angel</h1>
                                             </div>
-                                            <div class="item-info-product ">
-                                                <h4><a href="single.html">Maroon Puma Tshirt</a></h4>
-                                                <div class="info-product-price">
-                                                    <span class="item_price">$79.99</span>
-                                                    <del>$120.71</del>
-                                                </div>
-                                                <a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
+                                    </div>
+
+                                    <div class="col-md-4 product-men" style="display: flex; justify-content:center;">
+                                        <div class="card">
+                                            <img src="assets/images/w2.png" alt="" class="pro-image-front" style="width: 180px; height: 200px; border-radius:50%;"><br>
+                                            <h1>Cristian</h1>
                                             </div>
-                                        </div>
                                     </div>
                                     
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
-                                    <div class="col-md-3 product-men">
-                                        <div class="men-pro-item simpleCart_shelfItem">
-                                            <div class="men-thumb-item">
-                                                <img src="images/w1.png" alt="" class="pro-image-front">
-                                                <img src="images/w1.png" alt="" class="pro-image-back">
-                                                    <div class="men-cart-pro">
-                                                        <div class="inner-men-cart-pro">
-                                                            <a href="single.html" class="link-product-add-cart">Quick View</a>
-                                                        </div>
-                                                    </div>
-                                                    <span class="product-new-top">New</span>
-                                                    
-                                            </div>
-                                            <div class="item-info-product ">
-                                                <h4><a href="single.html">Wedges</a></h4>
-                                                <div class="info-product-price">
-                                                    <span class="item_price">$45.99</span>
-                                                    <del>$69.71</del>
-                                                </div>
-                                                <a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
-                                            </div>
-                                        </div>
+                                    <div class="col-md-6 product-men d-flex align-items-center">
+                                        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates eligendi doloribus, voluptatum enim temporibus fugit aut nostrum ad dolorum id praesentium quas veniam esse quo dolore optio magni aperiam nam.
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates eligendi doloribus, voluptatum enim temporibus fugit aut nostrum ad dolorum id praesentium quas veniam esse quo dolore optio magni aperiam nam.</p>
                                     </div>
-                                    <div class="col-md-3 product-men">
-                                        <div class="men-pro-item simpleCart_shelfItem">
-                                            <div class="men-thumb-item">
-                                                <img src="assets/images/w2.png" alt="" class="pro-image-front">
-                                                <img src="assets/images/w2.png" alt="" class="pro-image-back">
-                                                    <div class="men-cart-pro">
-                                                        <div class="inner-men-cart-pro">
-                                                            <a href="single.html" class="link-product-add-cart">Quick View</a>
-                                                        </div>
-                                                    </div>
-                                                    <span class="product-new-top">New</span>
-                                                    
-                                            </div>
-                                            <div class="item-info-product ">
-                                                <h4><a href="single.html">Sandals</a></h4>
-                                                <div class="info-product-price">
-                                                    <span class="item_price">$45.99</span>
-                                                    <del>$69.71</del>
-                                                </div>
-                                                <a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
-                                            </div>
-                                        </div>
+                                    <div class="col-md-6 product-men">
+                                        <img src="images/mision.png" alt="" class="pro-image-front" style="height: 300px; width: 370px;">
                                     </div>
-                                    <div class="col-md-3 product-men">
-                                        <div class="men-pro-item simpleCart_shelfItem">
-                                            <div class="men-thumb-item">
-                                                <img src="assets/images/mw1.png" alt="" class="pro-image-front">
-                                                <img src="assets/images/mw1.png" alt="" class="pro-image-back">
-                                                    <div class="men-cart-pro">
-                                                        <div class="inner-men-cart-pro">
-                                                            <a href="single.html" class="link-product-add-cart">Quick View</a>
-                                                        </div>
-                                                    </div>
-                                                    <span class="product-new-top">New</span>
-                                                    
-                                            </div>
-                                            <div class="item-info-product ">
-                                                <h4><a href="single.html">Casual Shoes</a></h4>
-                                                <div class="info-product-price">
-                                                    <span class="item_price">$45.99</span>
-                                                    <del>$69.71</del>
-                                                </div>
-                                                <a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
-                                            </div>
-                                        </div>
+                                    <div class="col-md-6 product-men">
+                                        <img src="images/vision.png" alt="" class="pro-image-front" style="height: 300px; width: 370px;">
                                     </div>
-                                    <div class="col-md-3 product-men">
-                                        <div class="men-pro-item simpleCart_shelfItem">
-                                            <div class="men-thumb-item">
-                                                <img src="assets/images/mw3.png" alt="" class="pro-image-front">
-                                                <img src="assets/images/mw3.png" alt="" class="pro-image-back">
-                                                    <div class="men-cart-pro">
-                                                        <div class="inner-men-cart-pro">
-                                                            <a href="single.html" class="link-product-add-cart">Quick View</a>
-                                                        </div>
-                                                    </div>
-                                                    <span class="product-new-top">New</span>
-                                                    
-                                            </div>
-                                            <div class="item-info-product ">
-                                                <h4><a href="single.html">Sport Shoes</a></h4>
-                                                <div class="info-product-price">
-                                                    <span class="item_price">$45.99</span>
-                                                    <del>$69.71</del>
-                                                </div>
-                                                <a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
-                                            </div>
-                                        </div>
+                                    <div class="col-md-6 product-men">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates eligendi doloribus, voluptatum enim temporibus fugit aut nostrum ad dolorum id praesentium quas veniam esse quo dolore optio magni aperiam nam.
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates eligendi doloribus, voluptatum enim temporibus fugit aut nostrum ad dolorum id praesentium quas veniam esse quo dolore optio magni aperiam nam.
+                                        
                                     </div>
-                                    <div class="col-md-3 product-men yes-marg">
-                                        <div class="men-pro-item simpleCart_shelfItem">
-                                            <div class="men-thumb-item">
-                                                <img src="assets/images/ep2.png" alt="" class="pro-image-front">
-                                                <img src="assets/images/ep2.png" alt="" class="pro-image-back">
-                                                    <div class="men-cart-pro">
-                                                        <div class="inner-men-cart-pro">
-                                                            <a href="single.html" class="link-product-add-cart">Quick View</a>
-                                                        </div>
-                                                    </div>
-                                                    <span class="product-new-top">New</span>
-                                                    
-                                            </div>
-                                            <div class="item-info-product ">
-                                                <h4><a href="single.html">Watches</a></h4>
-                                                <div class="info-product-price">
-                                                    <span class="item_price">$45.99</span>
-                                                    <del>$69.71</del>
-                                                </div>
-                                                <a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 product-men yes-marg">
-                                        <div class="men-pro-item simpleCart_shelfItem">
-                                            <div class="men-thumb-item">
-                                                <img src="assets/images/ep3.png" alt="" class="pro-image-front">
-                                                <img src="assets/images/ep3.png" alt="" class="pro-image-back">
-                                                    <div class="men-cart-pro">
-                                                        <div class="inner-men-cart-pro">
-                                                            <a href="single.html" class="link-product-add-cart">Quick View</a>
-                                                        </div>
-                                                    </div>
-                                                    <span class="product-new-top">New</span>
-                                                    
-                                            </div>
-                                            <div class="item-info-product ">
-                                                <h4><a href="single.html">Watches</a></h4>
-                                                <div class="info-product-price">
-                                                    <span class="item_price">$45.99</span>
-                                                    <del>$69.71</del>
-                                                </div>
-                                                <a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
-                                            </div>
-                                        </div>
-                                    </div>
+                                    
                                     
                                     <div class="clearfix"></div>						
                                 </div>
-                                <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-2">
+                                {{-- <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-2">
                                     <div class="col-md-3 product-men">
                                         <div class="men-pro-item simpleCart_shelfItem">
                                             <div class="men-thumb-item">
@@ -890,18 +829,19 @@
                                         </div>
                                     </div>
                                     <div class="clearfix"></div>		
-                                </div>	
+                                </div>	 --}}
                             </div>	
                         </div>
                     </div>
                 </div>
-            </div> --}}
+            </div>
             <!-- //product-nav -->
-            
+            <hr>
 
             <div class="coupons" style="margin-bottom: 5px;">
                 <div class="cinta-servicios"></div>
-                <div class="container">
+                <div class="cinta-servicios-derecha"></div>
+                <div class="container" style="">
                     <div class="coupons-grids text-center">
                         <div class="row">
                             <div class="col-md-2 coupons-gd-title">
@@ -1142,6 +1082,37 @@
                                 header.classList.remove('navbarOffsetMargin');
                             }
                             });
+
+                             // Scroll up
+
+                            document.getElementById("button-up").addEventListener("click", scrollUp);
+
+                            function scrollUp(){
+
+                                var currentScroll = document.documentElement.scrollTop;
+
+                                if (currentScroll > 0){
+                                    window.requestAnimationFrame(scrollUp);
+                                    window.scrollTo (0, currentScroll - (currentScroll / 10));
+                                }
+                            }
+
+
+                            ///
+
+                            buttonUp = document.getElementById("button-up");
+
+                            window.onscroll = function(){
+
+                                var scroll = document.documentElement.scrollTop;
+
+                                if (scroll > 200){
+                                    buttonUp.style.transform = "scale(1)";
+                                }else if(scroll < 300){
+                                    buttonUp.style.transform = "scale(0)";
+                                }
+
+                            }
                       </script>      
     </body>
 </html>

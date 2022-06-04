@@ -40,6 +40,7 @@
 color: white;
 transition: 1s all;
 font-weight: 650;
+height: 38px;
   }
   .btn-agregar:hover
   {
@@ -56,7 +57,7 @@ color: #3a898f;
               <div class="col-md-9">
               <b><h1 style="color: #0d6efd;">Inmuebles registrados</h1></b>
               </div>  
-              <div class="col-md-3 d-flex justify-content-end">
+              <div class="col-md-3 d-flex align-items-center justify-content-center">
                   <a class="btn btn-md btn-agregar" href="{{ route('inmueble.create') }}">Agregar inmueble</a>   
                 </div>
             </div>

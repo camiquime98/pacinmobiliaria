@@ -44,6 +44,7 @@ class InmueblesController extends Controller
         $apartaestudio = $request->get('apartaestudio');
         $casalote = $request->get('casalote'); 
 
+        $inmuebles = '';
         $casas = 'x';
         $apartamentos = 'x';
         $casacampestres = 'x';
@@ -52,84 +53,50 @@ class InmueblesController extends Controller
         $apartaestudios = 'x';
         $casalotes = 'x';
         $any =2;
-        if ($casa==1) {
-           $casas='Casa';
-           $any =1;
-        }
-        if ($apartamento==1) {
-            $apartamentos='Apartamento';
-            $any =1;
-         }
-         if ($casacampestre==1) {
-            $casacampestres="Casacampestre";
-            $any =1;
-         }
-         if ($terreno==1) {
-            $terrenos="Terreno";
-            $any =1;
-         }
-         if ($bodega==1) {
-            $bodegas="Bodega";
-            $any =1;
-         }
-         if ($apartaestudio==1) {
-            $apartaestudios="Apartamento";
-         }
-         if ( $casalote==1) {
-            $casalotes="Casalote";
-            $any =1;
-         }
-         
+        $contador = 2;
+        
 
+         
         $output ="";
-    if(isset($busqueda)){
-        $output ="No se han encontrado resultados para esa ubicación";
-    if ($any==1) {
-        $inmuebles=DB::table('inmuebles')
-        ->where('municipio', 'LIKE','%'.$busqueda.'%')
-        ->whereColumn([
-            ['tipoinmueble', '=', $casas],
-            ['tipoinmueble', '=', $apartamentos],
-            ['tipoinmueble', '=', $casacampestres],
-            ['tipoinmueble', '=', $terrenos],
-            ['tipoinmueble', '=', $bodegas],
-            ['tipoinmueble', '=', $apartaestudios],
-            ['tipoinmueble', '=', $casalotes],   
-        ])
+
+
+    if ($casa == 1) {
+        $casas = "Casa";
+    }
+
+
+        $inmuebles = DB::table('inmuebles')
+        ->where('municipio', $busqueda)
+        ->orWhere(function($query, $casas) {
+            $query->where('tipoinmueble', $casas)
+                  ->where('municipio', 'neiva');
+        })
         ->get();
 
 
-    $contador=DB::table('inmuebles')
-    ->where('municipio', 'LIKE','%'.$busqueda.'%')
-    ->whereColumn([
-        ['tipoinmueble', '=', $casas],
-        ['tipoinmueble', '=', $apartamentos],
-        ['tipoinmueble', '=', $casacampestres],
-        ['tipoinmueble', '=', $terrenos],
-        ['tipoinmueble', '=', $bodegas],
-        ['tipoinmueble', '=', $apartaestudios],
-        ['tipoinmueble', '=', $casalotes],   
-    ])
-    ->count();  }
-        else{
+        if(isset($busqueda)){
+        $output ="No se han encontrado resultados para esa ubicación";
+    // if ($any==1) {
+    //      }
+    //     else{
 
-    //         $inmuebles=DB::table('inmuebles')
-    //     ->where('municipio', 'LIKE','%'.$busqueda.'%')
-    // ->get();  
+    // //         $inmuebles=DB::table('inmuebles')
+    // //     ->where('municipio', 'LIKE','%'.$busqueda.'%')
+    // // ->get();  
 
 
-    // $contador=DB::table('inmuebles')
+    // // $contador=DB::table('inmuebles')
    
-    //         ->where('municipio', 'LIKE','%'.$busqueda.'%')
-    //     ->count(); 
+    // //         ->where('municipio', 'LIKE','%'.$busqueda.'%')
+    // //     ->count(); 
 
-        }
+    //     }
         
     
     if($contador<1){
         $output ="No se han encontrado resultados para esa ubicación"; 
     }
-   
+
     else
     {
      
@@ -141,15 +108,15 @@ class InmueblesController extends Controller
                       <div class="men-pro-item simpleCart_shelfItem" style="border-radius: 10px;">
                          
                         <div class="men-thumb-item">
-                            <a href="{{ route ("inicioshow",'.$inmueble->id .') }}"><img src="imagenes-inmueble/{{ $inmueble->folder }}/{{ $inmueble->imagenuna }}" alt="" class="pro-image-front" style="border-top-left-radius: 10px; border-top-right-radius: 10px;"></a>
-                            <a href="{{ route ("inicioshow",'.$inmueble->id.') }}"><img src="imagenes-inmueble/{{ $inmueble->folder }}/{{ $inmueble->imagendos }}" alt="" class="pro-image-back" style="border-top-left-radius: 10px; border-top-right-radius: 10px;"></a>
+                            <a href="{{ route ("inicioshow",'.$inmueble->id .') }}"><img src="imagenes-inmueble/{{ '.$inmueble->folder.' }}/{{ '.$inmueble->imagenuna.' }}" alt="" class="pro-image-front" style="border-top-left-radius: 10px; border-top-right-radius: 10px;"></a>
+                            <a href="{{ route ("inicioshow",'.$inmueble->id.') }}"><img src="imagenes-inmueble/{{ '.$inmueble->folder.' }}/{{ '.$inmueble->imagendos.' }}" alt="" class="pro-image-back" style="border-top-left-radius: 10px; border-top-right-radius: 10px;"></a>
                                   <div class="men-cart-pro">
                                       <div class="inner-men-cart-pro">
-                                          <a href="{{ route("inicioshow", '.$inmueble->valor .') }}" class="link-product-add-cart">{{ $inmueble->municipio }}
+                                          <a href="{{ route("inicioshow", '.$inmueble->valor .') }}" class="link-product-add-cart">{{ '.$inmueble->municipio.' }}
 										</a>
                                       </div>
                                   </div>
-                                  <a href="{{ route("inicioshow", '.$inmueble->valor .') }}" class=""><span class="product-new-top">{{ $inmueble->gestion }}</span></a>
+                                  <a href="{{ route("inicioshow", '.$inmueble->valor .') }}" class=""><span class="product-new-top">{{ '.$inmueble->gestion.' }}</span></a>
                                   
                           </div>
                           <div class="item-info-product" style="margin-top: 10px;">
@@ -157,16 +124,16 @@ class InmueblesController extends Controller
 							<div class="row" style=""> 
 								  <div class="col-md-4 m-0 p-0">
 									  <h5 style="font-weight: 300; font-size: 0.7em;">Habitaciones</h5>
-									  <p style="font-weight: 300; font-size: 0.7em;">{{ $inmueble->alcobas }}</p></div>
+									  <p style="font-weight: 300; font-size: 0.7em;">{{ '.$inmueble->alcobas.' }}</p></div>
 								  <div class="col-md-4 m-0 p-0">
 									  <h5 style="font-weight: 300; font-size: 0.7em;">Baños</h5>
-									  <p style="font-weight: 300; font-size: 0.7em;">{{ $inmueble->banos }}</p></div>
+									  <p style="font-weight: 300; font-size: 0.7em;">{{ '.$inmueble->banos.' }}</p></div>
 								  <div class="col-md-4 m-0 p-0">
 									  <h5 style="font-weight: 300; font-size: 0.7em;">Area</h5>
-									<p style="font-weight: 300; font-size: 0.7em;">{{ $inmueble->area }}</p></div>
+									<p style="font-weight: 300; font-size: 0.7em;">{{ '.$inmueble->area.' }}</p></div>
 							  </div>
 							</a><hr>
-								<center><h5>ZONA - {{ $inmueble->zona }}</h5></center>
+								<center><h5>ZONA - {{ '.$inmueble->zona.' }}</h5></center>
                               <h4><p class="p-1" style="text-align: justify"></p></h4>
                               <div class="info-product-price text-center">
                                 

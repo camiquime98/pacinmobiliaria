@@ -5,10 +5,20 @@
   </a>
     
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light" style="background:rgb(45, 74, 94); height:40px; border-radius:0px;">
+        <nav class="navbar navbar-expand-md navbar-light" style="background:rgb(255, 255, 255); height:40px; border-radius:0px; margin-bottom:0px;">
             <div class="container">
-                <a class="menu__link menu__item--current text-white" href="{{ url('/') }}">
-                    INMOBILIARIA CAP
+                <h3 class=""><a href="index.html"><img class="img-responsive img-2" src="images/logo-navar.png" style="width: 15%;"/></a></h3>
+                <a class="menu__link2 menu__item--current" href="{{ url('/') }}">
+                    LINDA CASA
+                </a>
+                <a class="menu__link2 menu__item--current" href="{{ url('seguros') }}">
+                    SEGUROS
+                </a>
+                <a class="menu__link2 menu__item--current" href="{{ url('asesoresj') }}">
+                    ASESOR JURIDICO
+                </a>
+                <a class="menu__link2 menu__item--current" href="{{ url('/') }}">
+                    SOFTWARE PYME
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -29,7 +39,7 @@
                         @guest
                             @if (Route::has('login'))
                                 <li class="menu__item">
-                                    <a class="menu__link" href="{{ route('login') }}">{{ __('Ingresar') }}</a>
+                                    <a class="menu__link2" href="{{ route('login') }}">{{ __('Ingresar') }}</a>
                                 </li>
                             @endif
 

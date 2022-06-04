@@ -15,7 +15,7 @@
 
 .pignose-layerslider .slide-visual {
 	width: 1000px;
-	height: 500px;
+	height: 90vh;
 	margin: 0 auto;
 	position: relative;
 }
@@ -47,12 +47,12 @@
 }
 
 .pignose-layerslider .slide-visual .script-wrap {
-	background: #3DAFB5;
+	background: #0f58e0;
 	width: 276px;
 	height: 288px;
 	padding: 20px;
 	position: absolute;
-	top: 80px;
+	top: 137px;
 	right: 100px;
 }
 
