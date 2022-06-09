@@ -117,13 +117,13 @@
                    <h3 class="titulo-s" style="color:#fff; font-weight: 800;text-transform: none; font-size:25px;">Busca tu inmueble</h3>
             <div class="col-md-9 d-flex justify-content-center" style="width: 100%;">
                 <div class="row d-flex justify-content-center" style="width: 100%;">
-                    <div class="col-md-3 d-flex justify-content-center m-0 pb-3" style="width:100%;">
-                        <ul id="myTab" class="nav nav-tabs" role="tablist" style="border-bottom: none;">
-                            <li role="presentation" class="btn btn-primary"style="max-height:40px; border-radius:40px;">
+                    <div class="col-md-3 d-flex justify-content-center m-0 pb-3" style="width:100%; padding:0px;">
+                        <ul id="myTab" class="nav nav-tabs" role="tablist" style="border-bottom: none; width: 93%;">
+                            <li role="presentation" class="btn btn-primary"style="max-height:40px; border-radius:40px; width: 100%;">
             
                                 <div class="dropdown">
                                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-top:-5px; background-color: transparent; border: none; ">
-                                      ¿Seleccione tu filtro?
+                                      tipo de inmueble
                                     </button>
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                       <a class="dropdown-item" id="dropdown1-tab"onclick="casa();">Casa</a>
@@ -139,16 +139,16 @@
                                     </li>
                                   </ul> 
                     </div>
-                    <div class="col-md-7 col-sm-12 m-0 p-0 ">
+                    <div class="col-md-6 col-sm-12 m-0 p-0 ">
                         <div class="search">
                             <div class="input-group">
                             <i class="fa fa-search text-dark"></i> 
-                            <input type="text" class="form-control" id="buscar" style="width:100%; height:40px; background: rgba(255, 255, 255, 0.6);border-radius:20px;" placeholder="Busca la ciudad ¡aqui!..." >
+                            <input type="text" class="form-control" id="buscar" style="width:100%; height:40px; background: rgba(255, 255, 255, 0.6);border-radius:8px;" placeholder="Busca la ciudad ¡aqui!..." ><p>Busca la cuidad que deseas</p>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="col-md-2 m-0 p-0 d-flex justify-content-center">
+                    <div class="col-md-3 m-0 p-0 d-flex justify-content-center">
                         <button class="btn-search" id="boton" type="button" onclick="buscar();">
                             <i class="fa fa-search" style="padding-left:"></i>
                             <span class="text">
@@ -211,39 +211,51 @@
                         
                     </ul>	 --}}
                     <div class="container" id="Busqueda">
-                        <div class="row">
-                            <div class="col-md-12 pb-3 p-3">
-                                
-                            </div>
+                        <div class="row ">
+
                             @foreach($inmuebles as $inmueble) 
-                          <div class="col-md-3 col-sm-12">
+                          <div class="col-md-3 col-sm-12" style="margin-bottom: 3%;">
                             <div class="product-men">
-                                    
                               <div class="men-pro-item simpleCart_shelfItem" style="border-radius: 10px;">
-                    
+                                 
                                 <div class="men-thumb-item">
-                                     <a href="{{ route ('inmueble.show',$inmueble->id) }}"><img src="imagenes-inmueble/{{ $inmueble->folder }}/{{ $inmueble->imagenuna }}" alt="" class="pro-image-front"  style="border-top-left-radius: 10px; border-top-right-radius: 10px;"></a>
-                                      <a href="{{ route ('inmueble.show',$inmueble->id) }}"> <img src="imagenes-inmueble/{{ $inmueble->folder }}/{{ $inmueble->imagendos }}" alt=""class="pro-image-back"  style="border-top-left-radius: 10px; border-top-right-radius: 10px;"></a>
+                                    <a href="{{ route ('inicioshow',$inmueble->id) }}"><img src="imagenes-inmueble/{{ $inmueble->folder }}/{{ $inmueble->imagenuna }}" alt="" class="pro-image-front" style="border-top-left-radius: 10px; border-top-right-radius: 10px;"></a>
+                                    <a href="{{ route ('inicioshow',$inmueble->id) }}"><img src="imagenes-inmueble/{{ $inmueble->folder }}/{{ $inmueble->imagendos }}" alt="" class="pro-image-back" style="border-top-left-radius: 10px; border-top-right-radius: 10px;"></a>
                                           <div class="men-cart-pro">
                                               <div class="inner-men-cart-pro">
-                                                  <a href="{{ route ('inmueble.show',$inmueble->id) }}" class="link-product-add-cart">{{ $inmueble->zona }}</a>
+                                                  <a href="{{ route('inmueble.show', $inmueble->id) }}" class="link-product-add-cart">{{ $inmueble->municipio }} - {{ $inmueble->departamento }}
+                                                </a>
                                               </div>
                                           </div>
-                                          <span class="product-new-top">1+1 Offer</span>
-                    
+                                          <a href="{{ route('inicioshow', $inmueble->id) }}" class=""><span class="product-new-top">{{ $inmueble->gestion }}</span></a>
+                                          
                                   </div>
-                                  <div class="item-info-product ">
-                                      <h4><a href="" class="">{{$inmueble->municipio}}</a></h4>
-                                      <div class="info-product-price">
-                    
-                                          <span class="item_price">${{ $inmueble->valor }}</span>
-                                          <del>$520.000</del>
-                    
+                                  <div class="item-info-product" style="margin-top: 10px;">
+                                    <a href="{{ route('inicioshow', $inmueble->id) }}">   
+                                    <div class="row" style=""> 
+                                          <div class="col-md-4 m-0 p-0">
+                                              <h5 style="font-weight: 300; font-size: 0.7em;">Habitaciones</h5>
+                                              <p style="font-weight: 300; font-size: 0.7em;">{{ $inmueble->alcobas }}</p></div>
+                                          <div class="col-md-4 m-0 p-0">
+                                              <h5 style="font-weight: 300; font-size: 0.7em;">Baños</h5>
+                                              <p style="font-weight: 300; font-size: 0.7em;">{{ $inmueble->banos }}</p></div>
+                                          <div class="col-md-4 m-0 p-0">
+                                              <h5 style="font-weight: 300; font-size: 0.7em;">Area</h5>
+                                            <p style="font-weight: 300; font-size: 0.7em;">{{ $inmueble->area }}</p></div>
                                       </div>
-                                      <a href="{{ route('inmueble.show', $inmueble->id) }}" class="item_add single-item hvr-outline-out button2"> Ver mas </a>									
+                                    </a><hr>
+                                        <center><h5>ZONA - {{ $inmueble->zona }}</h5></center>
+                                      <h4><p class="p-1" style="text-align: justify"></p></h4>
+                                      <div class="info-product-price text-center">
+                                        
+                                          <span class="item_price">${{ $inmueble->valor }}</span>
+                                        
+                                          
+                                      </div>
+                                      <center><a href="{{ route('inmueble.show', $inmueble->id) }}" class="item_add single-item hvr-outline-out button2">{{ $inmueble->tipoinmueble }}</a></center>								
                                   </div>
                               </div>
-                              
+                             
                           </div>
                           </div>
                           @endforeach
@@ -423,6 +435,12 @@ div.classList.add('loading');
               }
             })
     }
+    function miFunc(id) 
+    {
+    var ruta = "/inmueble/" + id;
+    window.location.href=ruta;
+    }
+
     </script>
     <script language="javascript" type="text/javascript">  
         $(document).ready(function() 

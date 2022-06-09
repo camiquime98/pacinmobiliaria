@@ -557,7 +557,7 @@
                                     
                                     <div class="" style="padding: 15px; ">
                                         
-                                        <h5 style="text-align: justify">Elige el ramo que deseas para tu seguro, brindamos toda la información que requieras con nuestra asesora profesional. Somos una empresa que  en la seguridad de nuestro clientes.</h5>
+                                        <h5 style="text-align: justify">Elige el ramo que deseas para tu seguro, brindamos toda la información que requieras con nuestra asesora profesional. Somos una empresa que piensa en la seguridad de nuestro clientes.</h5>
                                     </div>
 
                                     <div class="row d-flex justify-content-center">
@@ -579,7 +579,7 @@
                                                   <p class="card-text text-seguros-p">* Responsabiliada civil.</p>
                                                   <p class="card-text text-seguros-p">* Estatales.</p>
                                                   <p class="card-text text-seguros-p">* Seguros Arrendamiento.</p>
-                                                  <p class="card-text text-seguros-p">* Seguros todo riesgo.</p>
+                                                  <p class="card-text text-seguros-p">* Pyme.</p>
                                                   {{-- <p class="card-text"><li>Seguros vehiculos</li></p>
                                                   <p class="card-text"><li>Seguros vehiculos</li></p> --}}
                                                 </div>
