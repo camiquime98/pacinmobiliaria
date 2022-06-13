@@ -32,9 +32,6 @@ class InmueblesController extends Controller
     }
     public function buscar_inmueble(Request $request)
     {
-
-
-
         $busqueda = $request->get('busqueda');
         $casa = $request->get('casa');
         $apartamento = $request->get('apartamento');
@@ -176,7 +173,7 @@ class InmueblesController extends Controller
                             <a onclick="miFunc('.$id.')"><img src="imagenes-inmueble/'.$inmueble->folder.'/'.$inmueble->imagendos.'" alt="" class="pro-image-back" style="border-top-left-radius: 10px; border-top-right-radius: 10px;"></a>
                                   <div class="men-cart-pro">
                                       <div class="inner-men-cart-pro">
-                                          <a onclick="miFunc('.$id.')" class="link-product-add-cart">'.$inmueble->municipio.' 
+                                          <a onclick="miFunc('.$id.')" class="link-product-add-cart">'.$inmueble->municipio.' - '.$inmueble->departamento.' 
 										</a>
                                       </div>
                                   </div>

@@ -115,6 +115,7 @@
         <div class="container">
             <div class="row height d-flex justify-content-center align-items-center" style="color: #fff">
                    <h3 class="titulo-s" style="color:#fff; font-weight: 800;text-transform: none; font-size:25px;">Busca tu inmueble</h3>
+            
             <div class="col-md-9 d-flex justify-content-center" style="width: 100%;">
                 <div class="row d-flex justify-content-center" style="width: 100%;">
                     <div class="col-md-3 d-flex justify-content-center m-0 pb-3" style="width:100%; padding:0px;">
@@ -174,6 +175,7 @@
                                   
                 </div>
             </div>
+            
         </div>
         
     </div>
@@ -188,14 +190,11 @@
                         $("#inmuebles").show();
                         $("#busquedainmuebles").hide();
                         
-                        </script>
+                    </script>
                         
                   
             </div>
         </div>
-       
-            
-            </p>
         
     </div>  
 

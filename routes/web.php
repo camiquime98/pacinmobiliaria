@@ -37,6 +37,8 @@ Route::get('/imageinmueble/fetch_image_modal', [App\Http\Controllers\ImageContro
 
 Route::get('buscar_inmueble', [App\Http\Controllers\inmueblesController::class, 'buscar_inmueble'])->name('buscar_inmueble');
 
+Route::get('buscarinmueble', [App\Http\Controllers\inicioController::class, 'buscarinmueble'])->name('buscarinmueble');
+
 
 
 
