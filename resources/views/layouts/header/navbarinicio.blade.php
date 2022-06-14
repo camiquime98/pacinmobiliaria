@@ -138,13 +138,12 @@
                           {{-- <li class="nav-item nav-item2"><a href="#" class="nav-link nav-link2">About</a></li>
                           <li class="nav-item nav-item2"><a href="#" class="nav-link nav-link2">Work</a></li>
                           <li class="nav-item nav-item2"><a href="#" class="nav-link nav-link2">Blog</a></li> --}}
-                          {{-- <li class="nav-item nav-item2"><a href="{{ route('inmueble.index')}}" class="nav-link nav-link2">inmuebles</a></li> --}}
-
-                          <li class="nav-item nav-item2"><a href="{{ route('inmueble.index')}}" class="nav-link nav-link2">inmuebles</a></li>
-           
-  
                         
-                          
+                          {{-- <li class="nav-item nav-item2"><a href="{{ route('inmueble.index')}}" class="nav-link nav-link2">inmuebles</a></li> --}}
+                     
+                          <li class="nav-item nav-item2"><a href="{{ route('inmueble.index')}}" class="nav-link nav-link2">inmuebles</a></li>
+                       
+
                                   
                                   @guest
                                   @if (Route::has('login'))
@@ -288,16 +287,13 @@
         
                 <div class="dropdown">
           <button class="btn btn-admin dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            {{ Auth::user()->name }}
+            {{ Auth::user()->name}}
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             
             <a class="dropdown-item"href="{{ route('logout') }}"  onclick="event.preventDefault();
             document.getElementById('logout-form').submit();">{{ __('Salir') }}</a><hr>
                     <a href="{{ route('user.index') }}" class="dropdown-item">Perfiles</a>
-            
-             
-            
           </div>
         </div>
         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
